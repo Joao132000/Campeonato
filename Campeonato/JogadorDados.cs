@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Data.SqlClient;
+using System.Data;
 namespace Campeonato
 {
     class JogadorDados
@@ -20,6 +21,7 @@ namespace Campeonato
         public string DataNascimento { get => dataNascimento; set => dataNascimento = value; }
         public string NumeroCamisa { get => numeroCamisa; set => numeroCamisa = value; }
 
+        ConexaoDados obj = new ConexaoDados();
 
 
     }

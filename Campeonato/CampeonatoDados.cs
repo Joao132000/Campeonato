@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace Campeonato
 {
@@ -11,6 +13,7 @@ namespace Campeonato
         private int idCampeonato;
         private string nomeCampeonato;
         private string ano;
+        private string tipoCampeonato;
         private string campeao;
         private string viceCampeao;
 
@@ -19,5 +22,10 @@ namespace Campeonato
         public string Ano { get => ano; set => ano = value; }
         public string Campeao { get => campeao; set => campeao = value; }
         public string ViceCampeao { get => viceCampeao; set => viceCampeao = value; }
+        public string TipoCampeonato { get => tipoCampeonato; set => tipoCampeonato = value; }
+
+        ConexaoDados obj = new ConexaoDados();
+
+
     }
 }

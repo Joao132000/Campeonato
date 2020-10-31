@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace Campeonato
 {
@@ -25,5 +27,56 @@ namespace Campeonato
         public int IdCampeonato { get => idCampeonato; set => idCampeonato = value; }
         public int IdEstadio { get => idEstadio; set => idEstadio = value; }
         public string DataJogo { get => dataJogo; set => dataJogo = value; }
+
+        ConexaoDados obj = new ConexaoDados();
+
+        public void InlcuirDados()
+        {
+            string sql = "";
+            sql += "Insert into Jogo (idEquipe1, idEquipe2, resultadoEquipe1, resultadoEquipe2, idCampeonato, idEstadio, dataJogo) " +
+                "values('" + IdEquipe1 + "', '" + IdEquipe2
+                + "','" + ResultadoEquipe1 + "','" + ResultadoEquipe2 + "','" + idCampeonato + "','" + IdEstadio + "','" + DataJogo + "')";
+            obj.Executar(sql);
+        }
+
+        public void AlterarDados()
+        {
+            string sql = "";
+            sql += "Update Jogo set idEquipe1 = '" + IdEquipe1.ToString() + "', idEquipe2=" +
+                IdEquipe2.ToString() + ", resultadoEquipe1='" + ResultadoEquipe1.ToString() + "', " +
+                "resultadoEquipe2= " + resultadoEquipe2.ToString() + ", idCampeonato='" + IdCampeonato.ToString()
+                + ", idEstadio='" + IdEstadio.ToString() + ", dataJogo='" + DataJogo 
+                + "where idproduto = " + IdJogo.ToString();
+            obj.Executar(sql);
+        }
+
+        public void DeletarDados()
+        {
+            string sql = "";
+            sql += "delete from Jogo where idJogo=" + IdJogo.ToString();
+            obj.Executar(sql);
+        }
+
+        public DataSet ListarDados()
+        {
+            string sql = "";
+            sql = "Select * from Jogo";
+            return obj.Listar(sql);
+        }
+
+        public void ConsultarDados()
+        {
+            string sql = "";
+            sql = "Select * from Jogo where idJogo = " + IdJogo.ToString();
+            obj.Consultar(sql);
+            string[] aux = obj.Campos.Split(';');
+            IdEquipe1 = int.Parse(aux[1]);
+            IdEquipe2 = int.Parse(aux[2]);
+            ResultadoEquipe1 = int.Parse(aux[3]);
+            ResultadoEquipe2 = int.Parse(aux[4]);
+            IdCampeonato = int.Parse(aux[5]);
+            IdEstadio = int.Parse(aux[6]);
+            DataJogo = aux[7];
+        }
     }
 }
