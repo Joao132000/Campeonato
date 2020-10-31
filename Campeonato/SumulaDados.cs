@@ -24,5 +24,50 @@ namespace Campeonato
 
         ConexaoDados obj = new ConexaoDados();
 
+        public void InlcuirDados()
+        {
+            string sql = "";
+            sql += "Insert into Sumula (idJogador, idJogo, gol, cartao) " +
+                "values('" + IdJogador + "', '" + IdJogo
+                + "','" + Gol + "','" + Cartao + "')";
+            obj.Executar(sql);
+        }
+
+        public void AlterarDados()
+        {
+            string sql = "";
+            sql += "Update Sumula set idJogador = '" + IdJogador.ToString() + "', idJogo=" +
+                IdJogo.ToString() + ", gol='" + Gol.ToString() + "', " +
+                "cartao= " + Cartao
+                + "where idSumula = " + IdSumula.ToString();
+            obj.Executar(sql);
+        }
+
+        public void DeletarDados()
+        {
+            string sql = "";
+            sql += "delete from Sumula where idSumula=" + IdSumula.ToString();
+            obj.Executar(sql);
+        }
+
+        public DataSet ListarDados()
+        {
+            string sql = "";
+            sql = "Select * from Sumula";
+            return obj.Listar(sql);
+        }
+
+        public void ConsultarDados()
+        {
+            string sql = "";
+            sql = "Select * from Sumula where idSumula = " + IdSumula.ToString();
+            obj.Consultar(sql);
+            string[] aux = obj.Campos.Split(';');
+            IdJogador = int.Parse(aux[1]);
+            IdJogo = int.Parse(aux[2]);
+            Gol = int.Parse(aux[3]);
+            Cartao = aux[4];
+        }
+
     }
 }

@@ -13,16 +13,63 @@ namespace Campeonato
         private int idEquipe;
         private string nomeJogador;
         private string dataNascimento;
-        private string numeroCamisa;
+        private int numeroCamisa;
 
         public int IdJogador { get => idJogador; set => idJogador = value; }
         public int IdEquipe { get => idEquipe; set => idEquipe = value; }
         public string NomeJogador { get => nomeJogador; set => nomeJogador = value; }
         public string DataNascimento { get => dataNascimento; set => dataNascimento = value; }
-        public string NumeroCamisa { get => numeroCamisa; set => numeroCamisa = value; }
+        public int NumeroCamisa { get => numeroCamisa; set => numeroCamisa = value; }
 
         ConexaoDados obj = new ConexaoDados();
 
+        public void InlcuirDados()
+        {
+            string sql = "";
+            sql += "Insert into Jogador (idEquipe, nomeJogador, dataNascimento, numeroCamisa) " +
+                "values('" + IdEquipe + "', '" + NomeJogador
+                + "','" + DataNascimento + "','" + NumeroCamisa + "')";
+            obj.Executar(sql);
+        }
+
+        public void AlterarDados()
+        {
+            string sql = "";
+            sql += "Update Jogador set idEquipe = '" + IdEquipe.ToString() + "', nomeJogador=" +
+                NomeJogador + ", dataNascimento='" + DataNascimento + "', " +
+                "numeroCamisa= " + NumeroCamisa.ToString()
+                + "where idJogador = " + IdJogador.ToString();
+            obj.Executar(sql);
+        }
+
+        public void DeletarDados()
+        {
+            string sql = "";
+            sql += "delete from Jogador where idJogador=" + IdJogador.ToString();
+            obj.Executar(sql);
+        }
+
+        public DataSet ListarDados()
+        {
+            string sql = "";
+            sql = "Select * from Jogador";
+            return obj.Listar(sql);
+        }
+
+        public void ConsultarDados()
+        {
+            string sql = "";
+            sql = "Select * from Jogador where idJogador = " + IdJogador.ToString();
+            obj.Consultar(sql);
+            string[] aux = obj.Campos.Split(';');
+            IdEquipe = int.Parse(aux[1]);
+            NomeJogador = aux[2];
+            DataNascimento = aux[3];
+            NumeroCamisa = int.Parse(aux[4]);
+        }
 
     }
 }
+
+    
+
