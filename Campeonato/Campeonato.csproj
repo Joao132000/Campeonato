@@ -66,6 +66,12 @@
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Jogador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Jogador.Designer.cs">
+      <DependentUpon>Frm_Jogador.cs</DependentUpon>
+    </Compile>
     <Compile Include="JogadorDados.cs" />
     <Compile Include="JogoDados.cs" />
     <Compile Include="Program.cs" />
@@ -73,6 +79,9 @@
     <Compile Include="SumulaDados.cs" />
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Jogador.resx">
+      <DependentUpon>Frm_Jogador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -82,6 +91,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -99,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\Jogador-de-Futebol-1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

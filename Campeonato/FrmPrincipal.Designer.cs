@@ -30,9 +30,6 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.jogadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.incluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.alterarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.excluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.equipeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.incluirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.alterarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,7 +55,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.menuStrip1.BackColor = System.Drawing.Color.Transparent;
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.jogadorToolStripMenuItem,
@@ -67,40 +64,19 @@
             this.campeonatoToolStripMenuItem,
             this.estadioToolStripMenuItem,
             this.sumulaToolStripMenuItem});
-            this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.menuStrip1.Location = new System.Drawing.Point(20, 60);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(117, 450);
+            this.menuStrip1.Size = new System.Drawing.Size(760, 29);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // jogadorToolStripMenuItem
             // 
-            this.jogadorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.incluirToolStripMenuItem,
-            this.alterarToolStripMenuItem,
-            this.excluirToolStripMenuItem});
             this.jogadorToolStripMenuItem.Name = "jogadorToolStripMenuItem";
-            this.jogadorToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.jogadorToolStripMenuItem.Size = new System.Drawing.Size(78, 25);
             this.jogadorToolStripMenuItem.Text = "Jogador";
-            // 
-            // incluirToolStripMenuItem
-            // 
-            this.incluirToolStripMenuItem.Name = "incluirToolStripMenuItem";
-            this.incluirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.incluirToolStripMenuItem.Text = "Incluir";
-            // 
-            // alterarToolStripMenuItem
-            // 
-            this.alterarToolStripMenuItem.Name = "alterarToolStripMenuItem";
-            this.alterarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.alterarToolStripMenuItem.Text = "Alterar";
-            // 
-            // excluirToolStripMenuItem
-            // 
-            this.excluirToolStripMenuItem.Name = "excluirToolStripMenuItem";
-            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.excluirToolStripMenuItem.Text = "Excluir";
+            this.jogadorToolStripMenuItem.Click += new System.EventHandler(this.jogadorToolStripMenuItem_Click);
             // 
             // equipeToolStripMenuItem
             // 
@@ -109,25 +85,25 @@
             this.alterarToolStripMenuItem1,
             this.excluirToolStripMenuItem1});
             this.equipeToolStripMenuItem.Name = "equipeToolStripMenuItem";
-            this.equipeToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.equipeToolStripMenuItem.Size = new System.Drawing.Size(104, 25);
             this.equipeToolStripMenuItem.Text = "Equipe";
             // 
             // incluirToolStripMenuItem1
             // 
             this.incluirToolStripMenuItem1.Name = "incluirToolStripMenuItem1";
-            this.incluirToolStripMenuItem1.Size = new System.Drawing.Size(109, 22);
+            this.incluirToolStripMenuItem1.Size = new System.Drawing.Size(127, 26);
             this.incluirToolStripMenuItem1.Text = "Incluir";
             // 
             // alterarToolStripMenuItem1
             // 
             this.alterarToolStripMenuItem1.Name = "alterarToolStripMenuItem1";
-            this.alterarToolStripMenuItem1.Size = new System.Drawing.Size(109, 22);
+            this.alterarToolStripMenuItem1.Size = new System.Drawing.Size(127, 26);
             this.alterarToolStripMenuItem1.Text = "Alterar";
             // 
             // excluirToolStripMenuItem1
             // 
             this.excluirToolStripMenuItem1.Name = "excluirToolStripMenuItem1";
-            this.excluirToolStripMenuItem1.Size = new System.Drawing.Size(109, 22);
+            this.excluirToolStripMenuItem1.Size = new System.Drawing.Size(127, 26);
             this.excluirToolStripMenuItem1.Text = "Excluir";
             // 
             // jogoToolStripMenuItem
@@ -137,25 +113,25 @@
             this.alterarToolStripMenuItem2,
             this.excluirToolStripMenuItem2});
             this.jogoToolStripMenuItem.Name = "jogoToolStripMenuItem";
-            this.jogoToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.jogoToolStripMenuItem.Size = new System.Drawing.Size(104, 25);
             this.jogoToolStripMenuItem.Text = "Jogo";
             // 
             // incluirToolStripMenuItem2
             // 
             this.incluirToolStripMenuItem2.Name = "incluirToolStripMenuItem2";
-            this.incluirToolStripMenuItem2.Size = new System.Drawing.Size(109, 22);
+            this.incluirToolStripMenuItem2.Size = new System.Drawing.Size(127, 26);
             this.incluirToolStripMenuItem2.Text = "Incluir";
             // 
             // alterarToolStripMenuItem2
             // 
             this.alterarToolStripMenuItem2.Name = "alterarToolStripMenuItem2";
-            this.alterarToolStripMenuItem2.Size = new System.Drawing.Size(109, 22);
+            this.alterarToolStripMenuItem2.Size = new System.Drawing.Size(127, 26);
             this.alterarToolStripMenuItem2.Text = "Alterar";
             // 
             // excluirToolStripMenuItem2
             // 
             this.excluirToolStripMenuItem2.Name = "excluirToolStripMenuItem2";
-            this.excluirToolStripMenuItem2.Size = new System.Drawing.Size(109, 22);
+            this.excluirToolStripMenuItem2.Size = new System.Drawing.Size(127, 26);
             this.excluirToolStripMenuItem2.Text = "Excluir";
             // 
             // campeonatoToolStripMenuItem
@@ -165,25 +141,25 @@
             this.alterarToolStripMenuItem3,
             this.excluirToolStripMenuItem3});
             this.campeonatoToolStripMenuItem.Name = "campeonatoToolStripMenuItem";
-            this.campeonatoToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
+            this.campeonatoToolStripMenuItem.Size = new System.Drawing.Size(104, 25);
             this.campeonatoToolStripMenuItem.Text = "Campeonato";
             // 
             // incluirToolStripMenuItem3
             // 
             this.incluirToolStripMenuItem3.Name = "incluirToolStripMenuItem3";
-            this.incluirToolStripMenuItem3.Size = new System.Drawing.Size(109, 22);
+            this.incluirToolStripMenuItem3.Size = new System.Drawing.Size(127, 26);
             this.incluirToolStripMenuItem3.Text = "Incluir";
             // 
             // alterarToolStripMenuItem3
             // 
             this.alterarToolStripMenuItem3.Name = "alterarToolStripMenuItem3";
-            this.alterarToolStripMenuItem3.Size = new System.Drawing.Size(109, 22);
+            this.alterarToolStripMenuItem3.Size = new System.Drawing.Size(127, 26);
             this.alterarToolStripMenuItem3.Text = "Alterar";
             // 
             // excluirToolStripMenuItem3
             // 
             this.excluirToolStripMenuItem3.Name = "excluirToolStripMenuItem3";
-            this.excluirToolStripMenuItem3.Size = new System.Drawing.Size(109, 22);
+            this.excluirToolStripMenuItem3.Size = new System.Drawing.Size(127, 26);
             this.excluirToolStripMenuItem3.Text = "Excluir";
             // 
             // estadioToolStripMenuItem
@@ -193,25 +169,25 @@
             this.alterarToolStripMenuItem4,
             this.excluirToolStripMenuItem4});
             this.estadioToolStripMenuItem.Name = "estadioToolStripMenuItem";
-            this.estadioToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.estadioToolStripMenuItem.Size = new System.Drawing.Size(104, 25);
             this.estadioToolStripMenuItem.Text = "Estadio";
             // 
             // incluirToolStripMenuItem4
             // 
             this.incluirToolStripMenuItem4.Name = "incluirToolStripMenuItem4";
-            this.incluirToolStripMenuItem4.Size = new System.Drawing.Size(109, 22);
+            this.incluirToolStripMenuItem4.Size = new System.Drawing.Size(127, 26);
             this.incluirToolStripMenuItem4.Text = "Incluir";
             // 
             // alterarToolStripMenuItem4
             // 
             this.alterarToolStripMenuItem4.Name = "alterarToolStripMenuItem4";
-            this.alterarToolStripMenuItem4.Size = new System.Drawing.Size(109, 22);
+            this.alterarToolStripMenuItem4.Size = new System.Drawing.Size(127, 26);
             this.alterarToolStripMenuItem4.Text = "Alterar";
             // 
             // excluirToolStripMenuItem4
             // 
             this.excluirToolStripMenuItem4.Name = "excluirToolStripMenuItem4";
-            this.excluirToolStripMenuItem4.Size = new System.Drawing.Size(109, 22);
+            this.excluirToolStripMenuItem4.Size = new System.Drawing.Size(127, 26);
             this.excluirToolStripMenuItem4.Text = "Excluir";
             // 
             // sumulaToolStripMenuItem
@@ -221,25 +197,25 @@
             this.alterarToolStripMenuItem5,
             this.excluirToolStripMenuItem5});
             this.sumulaToolStripMenuItem.Name = "sumulaToolStripMenuItem";
-            this.sumulaToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.sumulaToolStripMenuItem.Size = new System.Drawing.Size(104, 25);
             this.sumulaToolStripMenuItem.Text = "Sumula";
             // 
             // incluirToolStripMenuItem5
             // 
             this.incluirToolStripMenuItem5.Name = "incluirToolStripMenuItem5";
-            this.incluirToolStripMenuItem5.Size = new System.Drawing.Size(109, 22);
+            this.incluirToolStripMenuItem5.Size = new System.Drawing.Size(127, 26);
             this.incluirToolStripMenuItem5.Text = "Incluir";
             // 
             // alterarToolStripMenuItem5
             // 
             this.alterarToolStripMenuItem5.Name = "alterarToolStripMenuItem5";
-            this.alterarToolStripMenuItem5.Size = new System.Drawing.Size(109, 22);
+            this.alterarToolStripMenuItem5.Size = new System.Drawing.Size(127, 26);
             this.alterarToolStripMenuItem5.Text = "Alterar";
             // 
             // excluirToolStripMenuItem5
             // 
             this.excluirToolStripMenuItem5.Name = "excluirToolStripMenuItem5";
-            this.excluirToolStripMenuItem5.Size = new System.Drawing.Size(109, 22);
+            this.excluirToolStripMenuItem5.Size = new System.Drawing.Size(127, 26);
             this.excluirToolStripMenuItem5.Text = "Excluir";
             // 
             // FrmPrincipal
@@ -250,7 +226,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmPrincipal";
-            this.Text = "Principal";
+            this.Text = "Futebol";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -262,9 +238,6 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem jogadorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem incluirToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem alterarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem equipeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem incluirToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem alterarToolStripMenuItem1;

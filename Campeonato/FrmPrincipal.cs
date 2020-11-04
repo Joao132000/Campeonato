@@ -10,13 +10,22 @@ using System.Windows.Forms;
 
 namespace Campeonato
 {
-    public partial class FrmPrincipal : Form
+    public partial class FrmPrincipal : MetroFramework.Forms.MetroForm
     {
         public FrmPrincipal()
         {
             InitializeComponent();
         }
 
-        
+        private void incluirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+         
+        }
+
+        private void jogadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Jogador J = new Frm_Jogador();
+            J.ShowDialog();
+        }
     }
 }
