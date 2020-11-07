@@ -31,6 +31,9 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.jogadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.equipeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.incluirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.alterarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.excluirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.jogoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.incluirToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.alterarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,9 +43,6 @@
             this.alterarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.excluirToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.estadioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.incluirToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.alterarToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.excluirToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.sumulaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.incluirToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.alterarToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
@@ -78,10 +78,31 @@
             // 
             // equipeToolStripMenuItem
             // 
+            this.equipeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.incluirToolStripMenuItem1,
+            this.alterarToolStripMenuItem1,
+            this.excluirToolStripMenuItem1});
             this.equipeToolStripMenuItem.Name = "equipeToolStripMenuItem";
             this.equipeToolStripMenuItem.Size = new System.Drawing.Size(69, 25);
             this.equipeToolStripMenuItem.Text = "Equipe";
-            this.equipeToolStripMenuItem.Click += new System.EventHandler(this.equipeToolStripMenuItem_Click);
+            // 
+            // incluirToolStripMenuItem1
+            // 
+            this.incluirToolStripMenuItem1.Name = "incluirToolStripMenuItem1";
+            this.incluirToolStripMenuItem1.Size = new System.Drawing.Size(127, 26);
+            this.incluirToolStripMenuItem1.Text = "Incluir";
+            // 
+            // alterarToolStripMenuItem1
+            // 
+            this.alterarToolStripMenuItem1.Name = "alterarToolStripMenuItem1";
+            this.alterarToolStripMenuItem1.Size = new System.Drawing.Size(127, 26);
+            this.alterarToolStripMenuItem1.Text = "Alterar";
+            // 
+            // excluirToolStripMenuItem1
+            // 
+            this.excluirToolStripMenuItem1.Name = "excluirToolStripMenuItem1";
+            this.excluirToolStripMenuItem1.Size = new System.Drawing.Size(127, 26);
+            this.excluirToolStripMenuItem1.Text = "Excluir";
             // 
             // jogoToolStripMenuItem
             // 
@@ -141,31 +162,10 @@
             // 
             // estadioToolStripMenuItem
             // 
-            this.estadioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.incluirToolStripMenuItem4,
-            this.alterarToolStripMenuItem4,
-            this.excluirToolStripMenuItem4});
             this.estadioToolStripMenuItem.Name = "estadioToolStripMenuItem";
             this.estadioToolStripMenuItem.Size = new System.Drawing.Size(72, 25);
             this.estadioToolStripMenuItem.Text = "Estadio";
-            // 
-            // incluirToolStripMenuItem4
-            // 
-            this.incluirToolStripMenuItem4.Name = "incluirToolStripMenuItem4";
-            this.incluirToolStripMenuItem4.Size = new System.Drawing.Size(127, 26);
-            this.incluirToolStripMenuItem4.Text = "Incluir";
-            // 
-            // alterarToolStripMenuItem4
-            // 
-            this.alterarToolStripMenuItem4.Name = "alterarToolStripMenuItem4";
-            this.alterarToolStripMenuItem4.Size = new System.Drawing.Size(127, 26);
-            this.alterarToolStripMenuItem4.Text = "Alterar";
-            // 
-            // excluirToolStripMenuItem4
-            // 
-            this.excluirToolStripMenuItem4.Name = "excluirToolStripMenuItem4";
-            this.excluirToolStripMenuItem4.Size = new System.Drawing.Size(127, 26);
-            this.excluirToolStripMenuItem4.Text = "Excluir";
+            this.estadioToolStripMenuItem.Click += new System.EventHandler(this.estadioToolStripMenuItem_Click);
             // 
             // sumulaToolStripMenuItem
             // 
@@ -223,6 +223,9 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem jogadorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem equipeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem incluirToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem alterarToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem jogoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem incluirToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem alterarToolStripMenuItem2;
@@ -232,9 +235,6 @@
         private System.Windows.Forms.ToolStripMenuItem alterarToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem estadioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem incluirToolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem alterarToolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem sumulaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem incluirToolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem alterarToolStripMenuItem5;
