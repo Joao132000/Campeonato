@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlTypes;
 
 namespace Campeonato
 {
@@ -67,8 +68,18 @@ namespace Campeonato
             cd.Parameters.Clear();
             cd.Parameters.Add("@BINARIO", SqlDbType.Image);
             cd.Parameters["@BINARIO"].Value = ParametroFoto;
+            if (ParametroFoto == null)
+            {
+                cd.Parameters["@BINARIO"].Value = SqlBinary.Null;
+            }
+            else
+            {
+                cd.Parameters["@BINARIO"].Value = ParametroFoto;
+            }
+
             cd.ExecuteNonQuery();
             cn.Close();
+
         }
         public void ConsultarImagem(string sql, ref byte[] ParametroFoto)
         {
