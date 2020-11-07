@@ -8,6 +8,8 @@ using System.Data;
 
 namespace Campeonato
 {
+    //oi
+    //oi
     class ConexaoDados
     {
         private SqlConnection cn = new SqlConnection();
