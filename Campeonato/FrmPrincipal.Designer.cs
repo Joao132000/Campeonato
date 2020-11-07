@@ -50,6 +50,7 @@
             this.incluirToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.alterarToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.excluirToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,25 +86,25 @@
             this.alterarToolStripMenuItem1,
             this.excluirToolStripMenuItem1});
             this.equipeToolStripMenuItem.Name = "equipeToolStripMenuItem";
-            this.equipeToolStripMenuItem.Size = new System.Drawing.Size(104, 25);
+            this.equipeToolStripMenuItem.Size = new System.Drawing.Size(69, 25);
             this.equipeToolStripMenuItem.Text = "Equipe";
             // 
             // incluirToolStripMenuItem1
             // 
             this.incluirToolStripMenuItem1.Name = "incluirToolStripMenuItem1";
-            this.incluirToolStripMenuItem1.Size = new System.Drawing.Size(127, 26);
+            this.incluirToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
             this.incluirToolStripMenuItem1.Text = "Incluir";
             // 
             // alterarToolStripMenuItem1
             // 
             this.alterarToolStripMenuItem1.Name = "alterarToolStripMenuItem1";
-            this.alterarToolStripMenuItem1.Size = new System.Drawing.Size(127, 26);
+            this.alterarToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
             this.alterarToolStripMenuItem1.Text = "Alterar";
             // 
             // excluirToolStripMenuItem1
             // 
             this.excluirToolStripMenuItem1.Name = "excluirToolStripMenuItem1";
-            this.excluirToolStripMenuItem1.Size = new System.Drawing.Size(127, 26);
+            this.excluirToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
             this.excluirToolStripMenuItem1.Text = "Excluir";
             // 
             // jogoToolStripMenuItem
@@ -113,7 +114,7 @@
             this.alterarToolStripMenuItem2,
             this.excluirToolStripMenuItem2});
             this.jogoToolStripMenuItem.Name = "jogoToolStripMenuItem";
-            this.jogoToolStripMenuItem.Size = new System.Drawing.Size(104, 25);
+            this.jogoToolStripMenuItem.Size = new System.Drawing.Size(55, 25);
             this.jogoToolStripMenuItem.Text = "Jogo";
             // 
             // incluirToolStripMenuItem2
@@ -141,7 +142,7 @@
             this.alterarToolStripMenuItem3,
             this.excluirToolStripMenuItem3});
             this.campeonatoToolStripMenuItem.Name = "campeonatoToolStripMenuItem";
-            this.campeonatoToolStripMenuItem.Size = new System.Drawing.Size(104, 25);
+            this.campeonatoToolStripMenuItem.Size = new System.Drawing.Size(111, 25);
             this.campeonatoToolStripMenuItem.Text = "Campeonato";
             // 
             // incluirToolStripMenuItem3
@@ -169,7 +170,7 @@
             this.alterarToolStripMenuItem4,
             this.excluirToolStripMenuItem4});
             this.estadioToolStripMenuItem.Name = "estadioToolStripMenuItem";
-            this.estadioToolStripMenuItem.Size = new System.Drawing.Size(104, 25);
+            this.estadioToolStripMenuItem.Size = new System.Drawing.Size(72, 25);
             this.estadioToolStripMenuItem.Text = "Estadio";
             // 
             // incluirToolStripMenuItem4
@@ -197,7 +198,7 @@
             this.alterarToolStripMenuItem5,
             this.excluirToolStripMenuItem5});
             this.sumulaToolStripMenuItem.Name = "sumulaToolStripMenuItem";
-            this.sumulaToolStripMenuItem.Size = new System.Drawing.Size(104, 25);
+            this.sumulaToolStripMenuItem.Size = new System.Drawing.Size(75, 25);
             this.sumulaToolStripMenuItem.Text = "Sumula";
             // 
             // incluirToolStripMenuItem5
@@ -217,6 +218,12 @@
             this.excluirToolStripMenuItem5.Name = "excluirToolStripMenuItem5";
             this.excluirToolStripMenuItem5.Size = new System.Drawing.Size(127, 26);
             this.excluirToolStripMenuItem5.Text = "Excluir";
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(0, 0);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.TabIndex = 0;
             // 
             // FrmPrincipal
             // 
@@ -258,6 +265,7 @@
         private System.Windows.Forms.ToolStripMenuItem incluirToolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem alterarToolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem5;
+        private MetroFramework.Controls.MetroButton metroButton1;
     }
 }
 
