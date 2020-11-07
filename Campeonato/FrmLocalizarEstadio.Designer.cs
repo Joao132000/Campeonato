@@ -39,7 +39,7 @@
             // 
             this.cmdPesquisar.Location = new System.Drawing.Point(268, 73);
             this.cmdPesquisar.Name = "cmdPesquisar";
-            this.cmdPesquisar.Size = new System.Drawing.Size(94, 23);
+            this.cmdPesquisar.Size = new System.Drawing.Size(105, 23);
             this.cmdPesquisar.TabIndex = 0;
             this.cmdPesquisar.Text = "Pesquisar";
             this.cmdPesquisar.Click += new System.EventHandler(this.cmdPesquisar_Click);
@@ -65,7 +65,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(75, 136);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(287, 158);
+            this.dataGridView1.Size = new System.Drawing.Size(298, 167);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEnter);
             this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick_1);
