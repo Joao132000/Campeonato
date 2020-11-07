@@ -27,5 +27,7 @@ namespace Campeonato
             MessageBox.Show("Registro incluído com sucesso");
 
         }
+
+       
     }
 }
