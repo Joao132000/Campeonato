@@ -66,6 +66,12 @@
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_EditarJogador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_EditarJogador.Designer.cs">
+      <DependentUpon>Frm_EditarJogador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Jogador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,9 @@
     <Compile Include="SumulaDados.cs" />
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_EditarJogador.resx">
+      <DependentUpon>Frm_EditarJogador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Jogador.resx">
       <DependentUpon>Frm_Jogador.cs</DependentUpon>
