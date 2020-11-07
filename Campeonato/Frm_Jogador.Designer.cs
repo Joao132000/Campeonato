@@ -39,7 +39,8 @@
             this.cmdLocalizar = new MetroFramework.Controls.MetroButton();
             this.cmd_Excluir = new MetroFramework.Controls.MetroButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.Mtxt_Data = new System.Windows.Forms.MaskedTextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -104,7 +105,7 @@
             // 
             this.txt_Numero.BackColor = System.Drawing.Color.White;
             this.txt_Numero.CustomBackground = true;
-            this.txt_Numero.Location = new System.Drawing.Point(170, 184);
+            this.txt_Numero.Location = new System.Drawing.Point(170, 188);
             this.txt_Numero.Name = "txt_Numero";
             this.txt_Numero.Size = new System.Drawing.Size(77, 23);
             this.txt_Numero.TabIndex = 7;
@@ -125,6 +126,7 @@
             this.cmdLocalizar.Size = new System.Drawing.Size(75, 31);
             this.cmdLocalizar.TabIndex = 10;
             this.cmdLocalizar.Text = "Localizar";
+            this.cmdLocalizar.Click += new System.EventHandler(this.cmdLocalizar_Click);
             // 
             // cmd_Excluir
             // 
@@ -133,6 +135,7 @@
             this.cmd_Excluir.Size = new System.Drawing.Size(83, 31);
             this.cmd_Excluir.TabIndex = 11;
             this.cmd_Excluir.Text = "Excluir";
+            this.cmd_Excluir.Click += new System.EventHandler(this.cmd_Excluir_Click);
             // 
             // panel1
             // 
@@ -143,21 +146,31 @@
             this.panel1.Size = new System.Drawing.Size(237, 305);
             this.panel1.TabIndex = 12;
             // 
-            // maskedTextBox1
+            // Mtxt_Data
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(170, 157);
-            this.maskedTextBox1.Mask = "00/00/0000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(77, 20);
-            this.maskedTextBox1.TabIndex = 14;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            this.Mtxt_Data.Location = new System.Drawing.Point(170, 157);
+            this.Mtxt_Data.Mask = "00/00/0000";
+            this.Mtxt_Data.Name = "Mtxt_Data";
+            this.Mtxt_Data.Size = new System.Drawing.Size(77, 20);
+            this.Mtxt_Data.TabIndex = 14;
+            this.Mtxt_Data.ValidatingType = typeof(System.DateTime);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(232, 254);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Frm_Jogador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(569, 393);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Mtxt_Data);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cmd_Excluir);
             this.Controls.Add(this.cmdLocalizar);
@@ -171,6 +184,7 @@
             this.Controls.Add(this.metroLabel1);
             this.Name = "Frm_Jogador";
             this.Text = "Jogador";
+            this.Load += new System.EventHandler(this.Frm_Jogador_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,6 +203,7 @@
         private MetroFramework.Controls.MetroButton cmdLocalizar;
         private MetroFramework.Controls.MetroButton cmd_Excluir;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox Mtxt_Data;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -35,8 +35,8 @@ namespace Campeonato
         public void AlterarDados()
         {
             string sql = "";
-            sql += "Update Jogador set idEquipe = '" + IdEquipe.ToString() + "', nomeJogador=" +
-                NomeJogador + ", dataNascimento='" + DataNascimento + "', " +
+            sql += "Update Jogador set idEquipe = '" + IdEquipe.ToString() + "', nomeJogador='" +
+                NomeJogador + "', dataNascimento='" + DataNascimento + "', " +
                 "numeroCamisa= " + NumeroCamisa.ToString()
                 + "where idJogador = " + IdJogador.ToString();
             obj.Executar(sql);
@@ -53,6 +53,13 @@ namespace Campeonato
         {
             string sql = "";
             sql = "Select * from Jogador";
+            return obj.Listar(sql);
+        }
+
+        public DataSet PesquisarJogador()
+        {
+            string sql = "";
+            sql = "Select * from Jogador where nomeJogador ='"+nomeJogador+"'";
             return obj.Listar(sql);
         }
 
