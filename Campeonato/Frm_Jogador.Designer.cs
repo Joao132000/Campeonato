@@ -111,11 +111,12 @@
             // 
             // cmd_Processar
             // 
-            this.cmd_Processar.Location = new System.Drawing.Point(113, 299);
+            this.cmd_Processar.Location = new System.Drawing.Point(121, 299);
             this.cmd_Processar.Name = "cmd_Processar";
             this.cmd_Processar.Size = new System.Drawing.Size(83, 31);
             this.cmd_Processar.TabIndex = 8;
             this.cmd_Processar.Text = "Salvar";
+            this.cmd_Processar.Click += new System.EventHandler(this.cmd_Processar_Click);
             // 
             // cmdLocalizar
             // 
@@ -137,9 +138,9 @@
             // 
             this.panel1.BackgroundImage = global::Campeonato.Properties.Resources.Jogador_de_Futebol_1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(359, 35);
+            this.panel1.Location = new System.Drawing.Point(327, 63);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(205, 335);
+            this.panel1.Size = new System.Drawing.Size(237, 305);
             this.panel1.TabIndex = 12;
             // 
             // maskedTextBox1
