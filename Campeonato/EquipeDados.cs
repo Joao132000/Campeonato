@@ -14,7 +14,9 @@ namespace Campeonato
         private int idEquipe;
         private string nomeEquipe;
         private string cidadeEquipe;
-
+        /// <summary>
+        /// 
+        /// </summary>
         public int IdEquipe { get => idEquipe; set => idEquipe = value; }
         public string NomeEquipe { get => nomeEquipe; set => nomeEquipe = value; }
         public string CidadeEquipe { get => cidadeEquipe; set => cidadeEquipe = value; }
