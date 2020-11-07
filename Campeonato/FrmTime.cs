@@ -51,6 +51,8 @@ namespace Campeonato
             {
                 if (DialogResult.OK == MessageBox.Show("Deseja realmente salvar?", "Alerta", MessageBoxButtons.OKCancel))
                 {
+                    dados.NomeEquipe = txtNome.Text;
+                    dados.CidadeEquipe = txtCidade.Text;
                     dados.AlterarDados();
                     MessageBox.Show("Registro alterado com sucesso!!!!");
 
@@ -65,6 +67,7 @@ namespace Campeonato
             txtNome.Enabled = true;
             cmdSalvar.Enabled = true;
             cmdExcluir.Enabled = true;
+            cmdImagem.Enabled = true;
 
             status = "Editando";
 
