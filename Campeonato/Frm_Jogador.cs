@@ -16,5 +16,16 @@ namespace Campeonato
         {
             InitializeComponent();
         }
+
+        private JogadorDados dados = new JogadorDados();
+
+        private void cmd_Processar_Click(object sender, EventArgs e)
+        {
+            dados.NomeJogador = txt_Nome.Text;
+            dados.IdEquipe = 1;
+            dados.InlcuirDados();
+            MessageBox.Show("Registro incluído com sucesso");
+
+        }
     }
 }
