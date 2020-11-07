@@ -8,6 +8,7 @@ using System.Data;
 
 namespace Campeonato
 {
+    //Alfenas
     class EquipeDados
     {
         private int idEquipe;
@@ -26,7 +27,7 @@ namespace Campeonato
             sql += "Insert into Equipe (nomeEquipe, cidadeEquipe) values ('" + NomeEquipe + "','" + CidadeEquipe + "')";
             obj.Executar(sql);
         }
-
+        
         public void AlterarDados()
         {
             string sql = "";
