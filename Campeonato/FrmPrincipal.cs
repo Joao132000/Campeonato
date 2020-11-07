@@ -17,15 +17,18 @@ namespace Campeonato
             InitializeComponent();
         }
 
-        private void incluirToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-         
-        }
+       
 
         private void jogadorToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Frm_Jogador J = new Frm_Jogador();
             J.ShowDialog();
+        }
+
+        private void estadioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEstadio E = new FrmEstadio();
+            E.ShowDialog();
         }
     }
 }
