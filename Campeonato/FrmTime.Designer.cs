@@ -39,6 +39,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cmdImagem = new MetroFramework.Controls.MetroButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,11 +139,21 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(499, 253);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(83, 19);
+            this.metroLabel3.TabIndex = 18;
+            this.metroLabel3.Text = "metroLabel3";
+            // 
             // FrmTime
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(605, 276);
+            this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.cmdImagem);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cmdEditar);
@@ -174,5 +185,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroButton cmdImagem;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
     }
 }
