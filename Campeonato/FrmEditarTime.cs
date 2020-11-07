@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Campeonato
 {
-    public partial class FrmEditarTime : MetroFramework.Forms.MetroForm 
+    public partial class FrmEditarTime : MetroFramework.Forms.MetroForm
     {
         public FrmEditarTime()
         {
@@ -31,11 +31,11 @@ namespace Campeonato
         {
             dados.NomeEquipe = "";
             dataGridView1.DataSource = dados.ListarDados().Tables[0];
-            dataGridView1.Columns[0].Visible = false; 
-            dataGridView1.ReadOnly = true; 
-            dataGridView1.MultiSelect = false; 
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.ReadOnly = true;
+            dataGridView1.MultiSelect = false;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Rows[0].Selected = true; 
+            dataGridView1.Rows[0].Selected = true;
         }
 
         private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)

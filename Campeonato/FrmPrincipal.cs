@@ -30,5 +30,10 @@ namespace Campeonato
             FrmEstadio E = new FrmEstadio();
             E.ShowDialog();
         }
+        private void equipeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTime T = new FrmTime();
+            T.ShowDialog();
+        }
     }
 }

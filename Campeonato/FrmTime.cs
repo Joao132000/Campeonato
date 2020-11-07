@@ -11,7 +11,7 @@ using System.IO;
 
 namespace Campeonato
 {
-    public partial class FrmTime : MetroFramework.Forms.MetroForm 
+    public partial class FrmTime : MetroFramework.Forms.MetroForm
     {
         public FrmTime()
         {
@@ -20,6 +20,14 @@ namespace Campeonato
 
         EquipeDados dados = new EquipeDados();
         private string status = "Inserindo";
+
+        private void cmdNovo_Click(object sender, EventArgs e)
+        {
+            txtCidade.Enabled = true;
+            txtNome.Enabled = true;
+            cmdSalvar.Enabled = true;
+            cmdImagem.Enabled = true;
+        }
 
         private void cmdSalvar_Click(object sender, EventArgs e)
         {
@@ -49,16 +57,8 @@ namespace Campeonato
                     txtCidade.Text = "";
                     txtNome.Text = "";
                 }
-            }       
+            }
         }
-        private void cmdNovo_Click(object sender, EventArgs e)
-        {
-            txtCidade.Enabled = true;
-            txtNome.Enabled = true;
-            cmdSalvar.Enabled = true;
-            cmdImagem.Enabled = true;
-        }
-
         private void cmdEditar_Click(object sender, EventArgs e)
         {
             txtCidade.Enabled = true;
