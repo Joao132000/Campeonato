@@ -65,6 +65,7 @@
             // 
             // cmbEstado
             // 
+            this.cmbEstado.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cmbEstado.FormattingEnabled = true;
             this.cmbEstado.ItemHeight = 23;
             this.cmbEstado.Items.AddRange(new object[] {

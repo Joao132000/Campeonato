@@ -160,6 +160,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(569, 393);
             this.Controls.Add(this.maskedTextBox1);
+
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cmd_Excluir);
             this.Controls.Add(this.cmdLocalizar);
