@@ -86,7 +86,7 @@
             // 
             this.cmb_Time.FormattingEnabled = true;
             this.cmb_Time.ItemHeight = 23;
-            this.cmb_Time.Location = new System.Drawing.Point(170, 216);
+            this.cmb_Time.Location = new System.Drawing.Point(170, 219);
             this.cmb_Time.Name = "cmb_Time";
             this.cmb_Time.Size = new System.Drawing.Size(121, 29);
             this.cmb_Time.TabIndex = 4;
@@ -145,7 +145,7 @@
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(170, 158);
+            this.maskedTextBox1.Location = new System.Drawing.Point(170, 157);
             this.maskedTextBox1.Mask = "00/00/0000";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(77, 20);

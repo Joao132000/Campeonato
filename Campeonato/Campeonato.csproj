@@ -49,12 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Ain.Designer.cs">
-      <DependentUpon>Ain.cs</DependentUpon>
-    </Compile>
     <Compile Include="CampeonatoDados.cs" />
     <Compile Include="ConexaoDados.cs" />
     <Compile Include="EquipeDados.cs" />
