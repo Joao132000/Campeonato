@@ -17,10 +17,7 @@ namespace Campeonato
             InitializeComponent();
         }
 
-        private void incluirToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-         
-        }
+       
 
         private void jogadorToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -28,10 +25,10 @@ namespace Campeonato
             J.ShowDialog();
         }
 
-        private void equipeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void estadioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmTime T = new FrmTime();
-            T.ShowDialog();
+            FrmEstadio E = new FrmEstadio();
+            E.ShowDialog();
         }
     }
 }
