@@ -13,14 +13,16 @@ namespace Campeonato
         private SqlConnection cn = new SqlConnection();
         private SqlCommand cd = new SqlCommand();
 
+        private string campos;
+        public string Campos { get => campos; set => campos = value; }
+
         private void Conectar()
         {
             string s = "";
-            s = @"Server=.\SQLEXPRESS;Database=Futebol;UID=sa;PWD=156315";
+            s = @"Server=.\SQLEXPRESS;Database=Futebol;UID=sa;PWD=123";
             cn.ConnectionString = s;
             cn.Open();
         }
-
         public void Executar(string sql)
         {
             Conectar();
@@ -28,8 +30,7 @@ namespace Campeonato
             cd.CommandText = sql;
             cd.ExecuteNonQuery();
             cn.Close();
-        }
-
+        }       
         public DataSet Listar(string sql)
         {
             Conectar();
@@ -39,10 +40,6 @@ namespace Campeonato
             cn.Close();
             return ds;
         }
-
-        private string campos;
-        public string Campos { get => campos; set => campos = value; }
-
         public void Consultar(string sql)
         {
             Conectar();
@@ -56,6 +53,37 @@ namespace Campeonato
                 {
                     Campos += dr[i].ToString() + ";";
 
+                }
+            }
+            cn.Close();
+        }
+        public void ExecutarFoto(string sql, byte[] ParametroFoto)
+        {
+            Conectar();
+            cd.Connection = cn;
+            cd.CommandText = sql;
+            cd.Parameters.Clear();
+            cd.Parameters.Add("@BINARIO", SqlDbType.Image);
+            cd.Parameters["@BINARIO"].Value = ParametroFoto;
+            cd.ExecuteNonQuery();
+            cn.Close();
+        }
+        public void ConsultarImagem(string sql, ref byte[] ParametroFoto)
+        {
+            Conectar();
+            cd.CommandText = sql;
+            cd.Connection = cn;
+            SqlDataReader dr = cd.ExecuteReader();
+            campos = "";
+            if (dr.Read())
+            {
+                for (int i = 0; i < dr.FieldCount - 1; i++)
+                {
+                    campos += dr[i].ToString() + ";";
+                }
+                if (!(dr["Foto"] is System.DBNull))
+                {
+                    ParametroFoto = (byte[])dr["Foto"];
                 }
             }
             cn.Close();
