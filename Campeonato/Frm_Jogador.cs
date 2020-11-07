@@ -46,6 +46,7 @@ namespace Campeonato
                     MessageBox.Show("Dados alterados com sucesso!");
                     cmdLocalizar.Enabled = true;
                     cmd_Excluir.Text = "Excluir";
+                    cmdLocalizar.Text = "Localizar";
                 }
             }
         }
