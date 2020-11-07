@@ -104,7 +104,7 @@
             // 
             this.txt_Numero.BackColor = System.Drawing.Color.White;
             this.txt_Numero.CustomBackground = true;
-            this.txt_Numero.Location = new System.Drawing.Point(170, 184);
+            this.txt_Numero.Location = new System.Drawing.Point(170, 188);
             this.txt_Numero.Name = "txt_Numero";
             this.txt_Numero.Size = new System.Drawing.Size(77, 23);
             this.txt_Numero.TabIndex = 7;
@@ -156,7 +156,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(569, 393);
+            this.ClientSize = new System.Drawing.Size(592, 404);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cmd_Excluir);
