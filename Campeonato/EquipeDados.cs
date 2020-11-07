@@ -36,7 +36,9 @@ namespace Campeonato
             sql += "Update Equipe set nomeEquipe = '" + NomeEquipe + "', cidadeEquipe='" + CidadeEquipe + "',Foto = @BINARIO where idEquipe= " + IdEquipe.ToString();
             obj.ExecutarFoto(sql,Foto);
         }
-
+         /// <summary>
+         /// /alfenas1233213214564444
+         /// </summary>
         public void DeletarDados()
         {
             string sql = "";
