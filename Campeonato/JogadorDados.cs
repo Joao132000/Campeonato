@@ -47,6 +47,7 @@ namespace Campeonato
             string sql = "";
             sql += "delete from Jogador where idJogador=" + IdJogador.ToString();
             obj.Executar(sql);
+            //n
         }
 
         public DataSet ListarDados()
