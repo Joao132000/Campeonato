@@ -72,11 +72,11 @@
             // 
             // cmdAddResult
             // 
-            this.cmdAddResult.Location = new System.Drawing.Point(426, 289);
+            this.cmdAddResult.Location = new System.Drawing.Point(400, 289);
             this.cmdAddResult.Name = "cmdAddResult";
-            this.cmdAddResult.Size = new System.Drawing.Size(129, 64);
+            this.cmdAddResult.Size = new System.Drawing.Size(204, 48);
             this.cmdAddResult.TabIndex = 3;
-            this.cmdAddResult.Text = "Adicionar Resultado";
+            this.cmdAddResult.Text = "Campeão/Vice-Campeão";
             this.cmdAddResult.Click += new System.EventHandler(this.cmdAddResult_Click);
             // 
             // txtNome
@@ -155,7 +155,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Campeonato.Properties.Resources.Trofeu;
-            this.pictureBox1.Location = new System.Drawing.Point(388, 63);
+            this.pictureBox1.Location = new System.Drawing.Point(400, 63);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(204, 220);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

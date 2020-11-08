@@ -29,20 +29,11 @@ namespace Campeonato
             dados.Campeao = txtCamp.Text;
             dados.ViceCampeao = txtVice.Text;
             dados.AlterarDadosCampeao_Vice();
-            MessageBox.Show("Resultado Adicionado com sucesso");
+            MessageBox.Show("Atualizado com sucesso");
             txtVice.Clear();
             txtCamp.Clear();
         }
 
-        private void cmdAlterar_Click(object sender, EventArgs e)
-        {
-            dados.Campeao = txtCamp.Text;
-            dados.ViceCampeao = txtVice.Text;
-            dados.AlterarDadosCampeao_Vice();
-            MessageBox.Show("Resultado Alterado com sucesso");
-            txtVice.Clear();
-            txtCamp.Clear();
-        }
 
         private void FrmCampeao_ViceCampeao_Load(object sender, EventArgs e)
         {

@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cmdAlterar = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.cmdAdicionar = new MetroFramework.Controls.MetroButton();
+            this.cmdAtualizar = new MetroFramework.Controls.MetroButton();
             this.txtCamp = new MetroFramework.Controls.MetroTextBox();
             this.txtVice = new MetroFramework.Controls.MetroTextBox();
             this.cmdPesquisar = new MetroFramework.Controls.MetroButton();
@@ -40,15 +39,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // cmdAlterar
-            // 
-            this.cmdAlterar.Location = new System.Drawing.Point(280, 357);
-            this.cmdAlterar.Name = "cmdAlterar";
-            this.cmdAlterar.Size = new System.Drawing.Size(75, 23);
-            this.cmdAlterar.TabIndex = 0;
-            this.cmdAlterar.Text = "Alterar";
-            this.cmdAlterar.Click += new System.EventHandler(this.cmdAlterar_Click);
             // 
             // metroLabel1
             // 
@@ -68,14 +58,14 @@
             this.metroLabel2.TabIndex = 2;
             this.metroLabel2.Text = "Vice-Campeão:";
             // 
-            // cmdAdicionar
+            // cmdAtualizar
             // 
-            this.cmdAdicionar.Location = new System.Drawing.Point(107, 357);
-            this.cmdAdicionar.Name = "cmdAdicionar";
-            this.cmdAdicionar.Size = new System.Drawing.Size(75, 23);
-            this.cmdAdicionar.TabIndex = 3;
-            this.cmdAdicionar.Text = "Adicionar";
-            this.cmdAdicionar.Click += new System.EventHandler(this.cmdAdicionar_Click);
+            this.cmdAtualizar.Location = new System.Drawing.Point(178, 357);
+            this.cmdAtualizar.Name = "cmdAtualizar";
+            this.cmdAtualizar.Size = new System.Drawing.Size(75, 23);
+            this.cmdAtualizar.TabIndex = 3;
+            this.cmdAtualizar.Text = "Atualizar";
+            this.cmdAtualizar.Click += new System.EventHandler(this.cmdAdicionar_Click);
             // 
             // txtCamp
             // 
@@ -136,10 +126,9 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtVice);
             this.Controls.Add(this.txtCamp);
-            this.Controls.Add(this.cmdAdicionar);
+            this.Controls.Add(this.cmdAtualizar);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
-            this.Controls.Add(this.cmdAlterar);
             this.Name = "FrmCampeao_ViceCampeao";
             this.Text = "Campeao e Vice-Campeao do Campeonato";
             this.Load += new System.EventHandler(this.FrmCampeao_ViceCampeao_Load);
@@ -150,11 +139,9 @@
         }
 
         #endregion
-
-        private MetroFramework.Controls.MetroButton cmdAlterar;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroButton cmdAdicionar;
+        private MetroFramework.Controls.MetroButton cmdAtualizar;
         private MetroFramework.Controls.MetroTextBox txtCamp;
         private MetroFramework.Controls.MetroTextBox txtVice;
         private MetroFramework.Controls.MetroButton cmdPesquisar;
