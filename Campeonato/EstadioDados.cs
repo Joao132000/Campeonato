@@ -44,7 +44,8 @@ namespace Campeonato
         public DataSet ListarDados()
         {
             string sql = "";
-            sql = "Select * from Estadio where nomeEstadio like'"+NomeEstadio+"%'";
+            sql = "Select * from Estadio";
+            // where nomeEstadio like'"+NomeEstadio+"%'
             return obj.Listar(sql);
         }
 
