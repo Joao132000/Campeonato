@@ -41,9 +41,6 @@
             this.excluirToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.estadioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sumulaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.incluirToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.alterarToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.excluirToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -145,31 +142,10 @@
             // 
             // sumulaToolStripMenuItem
             // 
-            this.sumulaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.incluirToolStripMenuItem5,
-            this.alterarToolStripMenuItem5,
-            this.excluirToolStripMenuItem5});
             this.sumulaToolStripMenuItem.Name = "sumulaToolStripMenuItem";
             this.sumulaToolStripMenuItem.Size = new System.Drawing.Size(75, 25);
-            this.sumulaToolStripMenuItem.Text = "Sumula";
-            // 
-            // incluirToolStripMenuItem5
-            // 
-            this.incluirToolStripMenuItem5.Name = "incluirToolStripMenuItem5";
-            this.incluirToolStripMenuItem5.Size = new System.Drawing.Size(127, 26);
-            this.incluirToolStripMenuItem5.Text = "Incluir";
-            // 
-            // alterarToolStripMenuItem5
-            // 
-            this.alterarToolStripMenuItem5.Name = "alterarToolStripMenuItem5";
-            this.alterarToolStripMenuItem5.Size = new System.Drawing.Size(127, 26);
-            this.alterarToolStripMenuItem5.Text = "Alterar";
-            // 
-            // excluirToolStripMenuItem5
-            // 
-            this.excluirToolStripMenuItem5.Name = "excluirToolStripMenuItem5";
-            this.excluirToolStripMenuItem5.Size = new System.Drawing.Size(127, 26);
-            this.excluirToolStripMenuItem5.Text = "Excluir";
+            this.sumulaToolStripMenuItem.Text = "Súmula";
+            this.sumulaToolStripMenuItem.Click += new System.EventHandler(this.sumulaToolStripMenuItem_Click);
             // 
             // metroButton1
             // 
@@ -209,9 +185,6 @@
         private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem estadioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sumulaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem incluirToolStripMenuItem5;
-        private System.Windows.Forms.ToolStripMenuItem alterarToolStripMenuItem5;
-        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem5;
         private MetroFramework.Controls.MetroButton metroButton1;
     }
 }

@@ -155,7 +155,7 @@
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.metroLabel2);
             this.Name = "FrmTime";
-            this.Text = "FrmTime";
+            this.Text = "Equipe";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

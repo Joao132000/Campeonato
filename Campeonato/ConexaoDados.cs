@@ -9,8 +9,6 @@ using System.Data.SqlTypes;
 
 namespace Campeonato
 {
-    //oi
-    //oi
     class ConexaoDados
     {
         private SqlConnection cn = new SqlConnection();
