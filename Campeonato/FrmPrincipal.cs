@@ -36,10 +36,10 @@ namespace Campeonato
             T.ShowDialog();
         }
 
-        private void jogoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void sumulaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_SeleçãoJogo Jogo = new frm_SeleçãoJogo();
-            Jogo.ShowDialog();
+            FrmSumula S = new FrmSumula();
+            S.ShowDialog();
         }
     }
 }

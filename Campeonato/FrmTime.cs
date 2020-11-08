@@ -39,7 +39,7 @@ namespace Campeonato
                     dados.CidadeEquipe = txtCidade.Text;
                     dados.IncluirDados();
                     MessageBox.Show("Registro incluído com sucesso!!!!");
-
+                    pictureBox1.Image = Properties.Resources._36601;
                     txtCidade.Text = "";
                     txtNome.Text = "";
                 }
@@ -55,7 +55,7 @@ namespace Campeonato
                     dados.CidadeEquipe = txtCidade.Text;
                     dados.AlterarDados();
                     MessageBox.Show("Registro alterado com sucesso!!!!");
-
+                    pictureBox1.Image = Properties.Resources._36601;
                     txtCidade.Text = "";
                     txtNome.Text = "";
                 }

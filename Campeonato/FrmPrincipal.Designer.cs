@@ -32,7 +32,13 @@
             this.jogadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.equipeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.jogoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.incluirToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.alterarToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.excluirToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.campeonatoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.incluirToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.alterarToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.excluirToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.estadioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sumulaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
@@ -73,16 +79,59 @@
             // 
             // jogoToolStripMenuItem
             // 
+            this.jogoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.incluirToolStripMenuItem2,
+            this.alterarToolStripMenuItem2,
+            this.excluirToolStripMenuItem2});
             this.jogoToolStripMenuItem.Name = "jogoToolStripMenuItem";
             this.jogoToolStripMenuItem.Size = new System.Drawing.Size(55, 25);
             this.jogoToolStripMenuItem.Text = "Jogo";
-            this.jogoToolStripMenuItem.Click += new System.EventHandler(this.jogoToolStripMenuItem_Click);
+            // 
+            // incluirToolStripMenuItem2
+            // 
+            this.incluirToolStripMenuItem2.Name = "incluirToolStripMenuItem2";
+            this.incluirToolStripMenuItem2.Size = new System.Drawing.Size(127, 26);
+            this.incluirToolStripMenuItem2.Text = "Incluir";
+            // 
+            // alterarToolStripMenuItem2
+            // 
+            this.alterarToolStripMenuItem2.Name = "alterarToolStripMenuItem2";
+            this.alterarToolStripMenuItem2.Size = new System.Drawing.Size(127, 26);
+            this.alterarToolStripMenuItem2.Text = "Alterar";
+            // 
+            // excluirToolStripMenuItem2
+            // 
+            this.excluirToolStripMenuItem2.Name = "excluirToolStripMenuItem2";
+            this.excluirToolStripMenuItem2.Size = new System.Drawing.Size(127, 26);
+            this.excluirToolStripMenuItem2.Text = "Excluir";
             // 
             // campeonatoToolStripMenuItem
             // 
+            this.campeonatoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.incluirToolStripMenuItem3,
+            this.alterarToolStripMenuItem3,
+            this.excluirToolStripMenuItem3});
             this.campeonatoToolStripMenuItem.Name = "campeonatoToolStripMenuItem";
             this.campeonatoToolStripMenuItem.Size = new System.Drawing.Size(111, 25);
             this.campeonatoToolStripMenuItem.Text = "Campeonato";
+            // 
+            // incluirToolStripMenuItem3
+            // 
+            this.incluirToolStripMenuItem3.Name = "incluirToolStripMenuItem3";
+            this.incluirToolStripMenuItem3.Size = new System.Drawing.Size(127, 26);
+            this.incluirToolStripMenuItem3.Text = "Incluir";
+            // 
+            // alterarToolStripMenuItem3
+            // 
+            this.alterarToolStripMenuItem3.Name = "alterarToolStripMenuItem3";
+            this.alterarToolStripMenuItem3.Size = new System.Drawing.Size(127, 26);
+            this.alterarToolStripMenuItem3.Text = "Alterar";
+            // 
+            // excluirToolStripMenuItem3
+            // 
+            this.excluirToolStripMenuItem3.Name = "excluirToolStripMenuItem3";
+            this.excluirToolStripMenuItem3.Size = new System.Drawing.Size(127, 26);
+            this.excluirToolStripMenuItem3.Text = "Excluir";
             // 
             // estadioToolStripMenuItem
             // 
@@ -95,7 +144,8 @@
             // 
             this.sumulaToolStripMenuItem.Name = "sumulaToolStripMenuItem";
             this.sumulaToolStripMenuItem.Size = new System.Drawing.Size(75, 25);
-            this.sumulaToolStripMenuItem.Text = "Sumula";
+            this.sumulaToolStripMenuItem.Text = "Súmula";
+            this.sumulaToolStripMenuItem.Click += new System.EventHandler(this.sumulaToolStripMenuItem_Click);
             // 
             // metroButton1
             // 
@@ -126,7 +176,13 @@
         private System.Windows.Forms.ToolStripMenuItem jogadorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem equipeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem jogoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem incluirToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem alterarToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem campeonatoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem incluirToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem alterarToolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem estadioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sumulaToolStripMenuItem;
         private MetroFramework.Controls.MetroButton metroButton1;

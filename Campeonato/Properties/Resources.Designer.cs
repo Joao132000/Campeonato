@@ -63,6 +63,16 @@ namespace Campeonato.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _36601 {
+            get {
+                object obj = ResourceManager.GetObject("36601", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Jogador_de_Futebol_1 {
             get {
                 object obj = ResourceManager.GetObject("Jogador-de-Futebol-1", resourceCulture);
