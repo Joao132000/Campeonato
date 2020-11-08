@@ -1,0 +1,165 @@
+﻿namespace Campeonato
+{
+    partial class FrmCampeao_ViceCampeao
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.cmdAlterar = new MetroFramework.Controls.MetroButton();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.cmdAdicionar = new MetroFramework.Controls.MetroButton();
+            this.txtCamp = new MetroFramework.Controls.MetroTextBox();
+            this.txtVice = new MetroFramework.Controls.MetroTextBox();
+            this.cmdPesquisar = new MetroFramework.Controls.MetroButton();
+            this.txtNomeCamp = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // cmdAlterar
+            // 
+            this.cmdAlterar.Location = new System.Drawing.Point(280, 357);
+            this.cmdAlterar.Name = "cmdAlterar";
+            this.cmdAlterar.Size = new System.Drawing.Size(75, 23);
+            this.cmdAlterar.TabIndex = 0;
+            this.cmdAlterar.Text = "Alterar";
+            this.cmdAlterar.Click += new System.EventHandler(this.cmdAlterar_Click);
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(52, 264);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(70, 19);
+            this.metroLabel1.TabIndex = 1;
+            this.metroLabel1.Text = "Campeão:";
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(52, 307);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(100, 19);
+            this.metroLabel2.TabIndex = 2;
+            this.metroLabel2.Text = "Vice-Campeão:";
+            // 
+            // cmdAdicionar
+            // 
+            this.cmdAdicionar.Location = new System.Drawing.Point(107, 357);
+            this.cmdAdicionar.Name = "cmdAdicionar";
+            this.cmdAdicionar.Size = new System.Drawing.Size(75, 23);
+            this.cmdAdicionar.TabIndex = 3;
+            this.cmdAdicionar.Text = "Adicionar";
+            this.cmdAdicionar.Click += new System.EventHandler(this.cmdAdicionar_Click);
+            // 
+            // txtCamp
+            // 
+            this.txtCamp.Location = new System.Drawing.Point(203, 264);
+            this.txtCamp.Name = "txtCamp";
+            this.txtCamp.Size = new System.Drawing.Size(220, 23);
+            this.txtCamp.TabIndex = 4;
+            // 
+            // txtVice
+            // 
+            this.txtVice.Location = new System.Drawing.Point(203, 307);
+            this.txtVice.Name = "txtVice";
+            this.txtVice.Size = new System.Drawing.Size(220, 23);
+            this.txtVice.TabIndex = 5;
+            // 
+            // cmdPesquisar
+            // 
+            this.cmdPesquisar.Location = new System.Drawing.Point(366, 77);
+            this.cmdPesquisar.Name = "cmdPesquisar";
+            this.cmdPesquisar.Size = new System.Drawing.Size(82, 23);
+            this.cmdPesquisar.TabIndex = 9;
+            this.cmdPesquisar.Text = "Pesquisar";
+            this.cmdPesquisar.Click += new System.EventHandler(this.cmdPesquisar_Click_1);
+            // 
+            // txtNomeCamp
+            // 
+            this.txtNomeCamp.Location = new System.Drawing.Point(178, 80);
+            this.txtNomeCamp.Name = "txtNomeCamp";
+            this.txtNomeCamp.Size = new System.Drawing.Size(122, 23);
+            this.txtNomeCamp.TabIndex = 8;
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(42, 84);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(130, 19);
+            this.metroLabel3.TabIndex = 7;
+            this.metroLabel3.Text = "Nome Campeonato:";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(42, 106);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(406, 141);
+            this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // FrmCampeao_ViceCampeao
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(651, 443);
+            this.Controls.Add(this.cmdPesquisar);
+            this.Controls.Add(this.txtNomeCamp);
+            this.Controls.Add(this.metroLabel3);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.txtVice);
+            this.Controls.Add(this.txtCamp);
+            this.Controls.Add(this.cmdAdicionar);
+            this.Controls.Add(this.metroLabel2);
+            this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.cmdAlterar);
+            this.Name = "FrmCampeao_ViceCampeao";
+            this.Text = "Campeao e Vice-Campeao do Campeonato";
+            this.Load += new System.EventHandler(this.FrmCampeao_ViceCampeao_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private MetroFramework.Controls.MetroButton cmdAlterar;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroButton cmdAdicionar;
+        private MetroFramework.Controls.MetroTextBox txtCamp;
+        private MetroFramework.Controls.MetroTextBox txtVice;
+        private MetroFramework.Controls.MetroButton cmdPesquisar;
+        private MetroFramework.Controls.MetroTextBox txtNomeCamp;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private System.Windows.Forms.DataGridView dataGridView1;
+    }
+}

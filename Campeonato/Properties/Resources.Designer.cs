@@ -69,5 +69,26 @@ namespace Campeonato.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_transparent_computer_icons_icon_design_trophy_psd_background_photography_silhouette_black_and_white {
+            get {
+                object obj = ResourceManager.GetObject("png-transparent-computer-icons-icon-design-trophy-psd-background-photography-silh" +
+                        "ouette-black-and-white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Trofeu {
+            get {
+                object obj = ResourceManager.GetObject("Trofeu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

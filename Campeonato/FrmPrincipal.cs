@@ -41,5 +41,11 @@ namespace Campeonato
             frm_SeleçãoJogo Jogo = new frm_SeleçãoJogo();
             Jogo.ShowDialog();
         }
+
+        private void campeonatoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCampeonato Camp = new FrmCampeonato();
+            Camp.ShowDialog();
+        }
     }
 }

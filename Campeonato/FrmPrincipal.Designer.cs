@@ -83,6 +83,7 @@
             this.campeonatoToolStripMenuItem.Name = "campeonatoToolStripMenuItem";
             this.campeonatoToolStripMenuItem.Size = new System.Drawing.Size(111, 25);
             this.campeonatoToolStripMenuItem.Text = "Campeonato";
+            this.campeonatoToolStripMenuItem.Click += new System.EventHandler(this.campeonatoToolStripMenuItem_Click);
             // 
             // estadioToolStripMenuItem
             // 
