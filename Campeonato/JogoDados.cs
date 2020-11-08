@@ -18,7 +18,7 @@ namespace Campeonato
         private int idCampeonato;
         private int idEstadio;
         private string dataJogo;
-
+        private string pesquisa;
         public int IdJogo { get => idJogo; set => idJogo = value; }
         public int IdEquipe1 { get => idEquipe1; set => idEquipe1 = value; }
         public int IdEquipe2 { get => idEquipe2; set => idEquipe2 = value; }
@@ -27,6 +27,7 @@ namespace Campeonato
         public int IdCampeonato { get => idCampeonato; set => idCampeonato = value; }
         public int IdEstadio { get => idEstadio; set => idEstadio = value; }
         public string DataJogo { get => dataJogo; set => dataJogo = value; }
+        public string Pesquisa { get => pesquisa; set => pesquisa = value; }
 
         ConexaoDados obj = new ConexaoDados();
 
@@ -42,11 +43,11 @@ namespace Campeonato
         public void AlterarDados()
         {
             string sql = "";
-            sql += "Update Jogo set idEquipe1 = '" + IdEquipe1.ToString() + "', idEquipe2=" +
-                IdEquipe2.ToString() + ", resultadoEquipe1='" + ResultadoEquipe1.ToString() + "', " +
-                "resultadoEquipe2= " + resultadoEquipe2.ToString() + ", idCampeonato='" + IdCampeonato.ToString()
-                + ", idEstadio='" + IdEstadio.ToString() + ", dataJogo='" + DataJogo 
-                + "where idproduto = " + IdJogo.ToString();
+            sql += "Update Jogo set idEquipe1 = " + IdEquipe1.ToString() + ", idEquipe2=" +
+                IdEquipe2.ToString() + ", resultadoEquipe1=" + ResultadoEquipe1.ToString() + ", " +
+                "resultadoEquipe2= " + resultadoEquipe2.ToString() + ", idCampeonato=" + IdCampeonato.ToString()
+                + ", idEstadio=" + IdEstadio.ToString() + ", dataJogo='" + DataJogo 
+                + "' where idJogo = " + IdJogo.ToString();
             obj.Executar(sql);
         }
 
@@ -61,6 +62,18 @@ namespace Campeonato
         {
             string sql = "";
             sql = "Select * from Jogo";
+            return obj.Listar(sql);
+        }
+        public DataSet PesquisarPorCampeonato()
+        {
+            string sql = "";
+            sql = "Select * from JogosConsulta where Campeonato like '%"+Pesquisa+"%'";
+            return obj.Listar(sql);
+        }
+        public DataSet ListarDadosEdicao()
+        {
+            string sql = "";
+            sql = "Select * from JogosConsulta";
             return obj.Listar(sql);
         }
 

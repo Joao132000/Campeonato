@@ -59,7 +59,7 @@ namespace Campeonato
         public DataSet PesquisarJogador()
         {
             string sql = "";
-            sql = "Select * from Jogador where nomeJogador ='"+nomeJogador+"'";
+            sql = "Select * from Jogador where nomeJogador Like '"+nomeJogador+"%'";
             return obj.Listar(sql);
         }
 

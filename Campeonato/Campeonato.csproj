@@ -60,11 +60,29 @@
     <Compile Include="ConexaoDados.cs" />
     <Compile Include="EquipeDados.cs" />
     <Compile Include="EstadioDados.cs" />
+    <Compile Include="frm_EditarJogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_EditarJogo.Designer.cs">
+      <DependentUpon>frm_EditarJogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SeleçãoJogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SeleçãoJogo.Designer.cs">
+      <DependentUpon>frm_SeleçãoJogo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmEditarTime.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmEditarTime.Designer.cs">
       <DependentUpon>FrmEditarTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJogo.Designer.cs">
+      <DependentUpon>frmJogo.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLocalizarEstadio.cs">
       <SubType>Form</SubType>
@@ -107,8 +125,17 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SumulaDados.cs" />
+    <EmbeddedResource Include="frm_EditarJogo.resx">
+      <DependentUpon>frm_EditarJogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SeleçãoJogo.resx">
+      <DependentUpon>frm_SeleçãoJogo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmEditarTime.resx">
       <DependentUpon>FrmEditarTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJogo.resx">
+      <DependentUpon>frmJogo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLocalizarEstadio.resx">
       <DependentUpon>FrmLocalizarEstadio.cs</DependentUpon>

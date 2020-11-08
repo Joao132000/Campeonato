@@ -35,5 +35,11 @@ namespace Campeonato
             FrmTime T = new FrmTime();
             T.ShowDialog();
         }
+
+        private void jogoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_SeleçãoJogo Jogo = new frm_SeleçãoJogo();
+            Jogo.ShowDialog();
+        }
     }
 }
