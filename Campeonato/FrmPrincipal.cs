@@ -47,5 +47,11 @@ namespace Campeonato
             FrmCampeonato Camp = new FrmCampeonato();
             Camp.ShowDialog();
         }
+
+        private void sumulaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmSumula S = new FrmSumula();
+            S.ShowDialog();
+        }
     }
 }

@@ -19,6 +19,8 @@ namespace Campeonato
         private int idEstadio;
         private string dataJogo;
         private string pesquisa;
+        private string auxJogo;
+
         public int IdJogo { get => idJogo; set => idJogo = value; }
         public int IdEquipe1 { get => idEquipe1; set => idEquipe1 = value; }
         public int IdEquipe2 { get => idEquipe2; set => idEquipe2 = value; }
@@ -28,6 +30,7 @@ namespace Campeonato
         public int IdEstadio { get => idEstadio; set => idEstadio = value; }
         public string DataJogo { get => dataJogo; set => dataJogo = value; }
         public string Pesquisa { get => pesquisa; set => pesquisa = value; }
+        public string AuxJogo { get => auxJogo; set => auxJogo = value; }
 
         ConexaoDados obj = new ConexaoDados();
 
@@ -91,5 +94,19 @@ namespace Campeonato
             IdEstadio = int.Parse(aux[6]);
             DataJogo = aux[7];
         }
+        public DataSet ListarDadosJogo()
+        {
+            string sql = "";
+            sql = "Select * from TimeSumula";
+            return obj.Listar(sql);
+        }
+        public void ConsultarDadosJogo()
+        {
+            string sql = "";
+            sql = "Select * from TimeSumula where idJogo = " + IdJogo.ToString();
+            obj.Consultar(sql);
+            string[] aux = obj.Campos.Split(';');
+            AuxJogo = aux[1];
+            }
     }
 }

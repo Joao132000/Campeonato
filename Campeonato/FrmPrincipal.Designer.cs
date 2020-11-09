@@ -96,7 +96,8 @@
             // 
             this.sumulaToolStripMenuItem.Name = "sumulaToolStripMenuItem";
             this.sumulaToolStripMenuItem.Size = new System.Drawing.Size(75, 25);
-            this.sumulaToolStripMenuItem.Text = "Sumula";
+            this.sumulaToolStripMenuItem.Text = "Súmula";
+            this.sumulaToolStripMenuItem.Click += new System.EventHandler(this.sumulaToolStripMenuItem_Click);
             // 
             // metroButton1
             // 
