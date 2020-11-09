@@ -36,6 +36,18 @@ namespace Campeonato
             T.ShowDialog();
         }
 
+        private void jogoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_SeleçãoJogo Jogo = new frm_SeleçãoJogo();
+            Jogo.ShowDialog();
+        }
+
+        private void campeonatoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCampeonato Camp = new FrmCampeonato();
+            Camp.ShowDialog();
+        }
+
         private void sumulaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmSumula S = new FrmSumula();

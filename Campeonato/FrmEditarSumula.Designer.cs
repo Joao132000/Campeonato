@@ -37,36 +37,36 @@
             // 
             // cmdPesquisar
             // 
-            this.cmdPesquisar.Location = new System.Drawing.Point(277, 58);
+            this.cmdPesquisar.Location = new System.Drawing.Point(277, 66);
             this.cmdPesquisar.Name = "cmdPesquisar";
             this.cmdPesquisar.Size = new System.Drawing.Size(93, 35);
-            this.cmdPesquisar.TabIndex = 16;
+            this.cmdPesquisar.TabIndex = 20;
             this.cmdPesquisar.Text = "Pesquisar";
             this.cmdPesquisar.Click += new System.EventHandler(this.cmdPesquisar_Click);
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(78, 70);
+            this.txtNome.Location = new System.Drawing.Point(78, 78);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(159, 23);
-            this.txtNome.TabIndex = 15;
+            this.txtNome.TabIndex = 19;
             // 
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(23, 70);
+            this.metroLabel2.Location = new System.Drawing.Point(23, 78);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(49, 19);
-            this.metroLabel2.TabIndex = 14;
+            this.metroLabel2.TabIndex = 18;
             this.metroLabel2.Text = "Nome:";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 113);
+            this.dataGridView1.Location = new System.Drawing.Point(23, 121);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(229, 150);
-            this.dataGridView1.TabIndex = 13;
+            this.dataGridView1.Size = new System.Drawing.Size(672, 150);
+            this.dataGridView1.TabIndex = 17;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEnter);
             // 
@@ -74,13 +74,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(459, 304);
+            this.ClientSize = new System.Drawing.Size(717, 288);
             this.Controls.Add(this.cmdPesquisar);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FrmEditarSumula";
-            this.Text = "Editar Súmula";
+            this.Text = "Localizar Súmula";
             this.Load += new System.EventHandler(this.FrmEditarSumula_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

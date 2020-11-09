@@ -15,12 +15,16 @@ namespace Campeonato
         private int idJogo;
         private int gol;
         private string cartao;
+        private string pesquisa;
+        private string auxNomeJogador;
 
         public int IdSumula { get => idSumula; set => idSumula = value; }
         public int IdJogador { get => idJogador; set => idJogador = value; }
         public int IdJogo { get => idJogo; set => idJogo = value; }
         public int Gol { get => gol; set => gol = value; }
         public string Cartao { get => cartao; set => cartao = value; }
+        public string Pesquisa { get => pesquisa; set => pesquisa = value; }
+        public string AuxNomeJogador { get => auxNomeJogador; set => auxNomeJogador = value; }
 
         ConexaoDados obj = new ConexaoDados();
 
@@ -36,10 +40,11 @@ namespace Campeonato
         public void AlterarDados()
         {
             string sql = "";
-            sql += "Update Sumula set idJogador = '" + IdJogador.ToString() + "', idJogo=" +
-                IdJogo.ToString() + ", gol='" + Gol.ToString() + "', " +
-                "cartao= " + Cartao
-                + "where idSumula = " + IdSumula.ToString();
+            sql += "Update Sumula set idJogador = " + IdJogador.ToString() + ", idJogo=" +
+                IdJogo.ToString() + ", gol=" + Gol.ToString() + ", " +
+                "cartao= '" + Cartao
+
+                + "' where idSumula = " + IdSumula.ToString();
             obj.Executar(sql);
         }
 
@@ -53,7 +58,13 @@ namespace Campeonato
         public DataSet ListarDados()
         {
             string sql = "";
-            sql = "Select * from Sumula";
+            sql = "Select * from SumulaDados where Jogador LIKE'" + auxNomeJogador + "%'";
+            return obj.Listar(sql);
+        }
+        public DataSet ListarDadosJogador()
+        {
+            string sql = "";
+            sql = "Select * from SumulaDados ";
             return obj.Listar(sql);
         }
 

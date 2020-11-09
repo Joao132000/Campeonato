@@ -60,17 +60,59 @@
     <Compile Include="ConexaoDados.cs" />
     <Compile Include="EquipeDados.cs" />
     <Compile Include="EstadioDados.cs" />
+    <Compile Include="FrmCampeao_ViceCampeao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCampeao_ViceCampeao.Designer.cs">
+      <DependentUpon>FrmCampeao_ViceCampeao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCampeonato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCampeonato.Designer.cs">
+      <DependentUpon>FrmCampeonato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditarCampeonato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditarCampeonato.Designer.cs">
+      <DependentUpon>FrmEditarCampeonato.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmEditarSumula.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmEditarSumula.Designer.cs">
       <DependentUpon>FrmEditarSumula.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSumula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSumula.Designer.cs">
+      <DependentUpon>FrmSumula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_EditarJogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_EditarJogo.Designer.cs">
+      <DependentUpon>frm_EditarJogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SeleçãoJogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SeleçãoJogo.Designer.cs">
+      <DependentUpon>frm_SeleçãoJogo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmEditarTime.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmEditarTime.Designer.cs">
       <DependentUpon>FrmEditarTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJogo.Designer.cs">
+      <DependentUpon>frmJogo.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLocalizarEstadio.cs">
       <SubType>Form</SubType>
@@ -83,12 +125,6 @@
     </Compile>
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmSumula.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmSumula.Designer.cs">
-      <DependentUpon>FrmSumula.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmTime.cs">
       <SubType>Form</SubType>
@@ -119,20 +155,38 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SumulaDados.cs" />
+    <EmbeddedResource Include="FrmCampeao_ViceCampeao.resx">
+      <DependentUpon>FrmCampeao_ViceCampeao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCampeonato.resx">
+      <DependentUpon>FrmCampeonato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditarCampeonato.resx">
+      <DependentUpon>FrmEditarCampeonato.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmEditarSumula.resx">
       <DependentUpon>FrmEditarSumula.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmSumula.resx">
+      <DependentUpon>FrmSumula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_EditarJogo.resx">
+      <DependentUpon>frm_EditarJogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SeleçãoJogo.resx">
+      <DependentUpon>frm_SeleçãoJogo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmEditarTime.resx">
       <DependentUpon>FrmEditarTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJogo.resx">
+      <DependentUpon>frmJogo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLocalizarEstadio.resx">
       <DependentUpon>FrmLocalizarEstadio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmSumula.resx">
-      <DependentUpon>FrmSumula.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTime.resx">
       <DependentUpon>FrmTime.cs</DependentUpon>
@@ -175,7 +229,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
-    <None Include="Resources\36601.png" />
+    <None Include="Resources\png-transparent-computer-icons-icon-design-trophy-psd-background-photography-silhouette-black-and-white.png" />
+    <None Include="Resources\Trofeu.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

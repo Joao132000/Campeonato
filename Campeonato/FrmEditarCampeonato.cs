@@ -10,21 +10,23 @@ using System.Windows.Forms;
 
 namespace Campeonato
 {
-    public partial class FrmLocalizarEstadio : MetroFramework.Forms.MetroForm
+    public partial class FrmEditarCampeonato : MetroFramework.Forms.MetroForm
     {
-        public FrmLocalizarEstadio()
+        public FrmEditarCampeonato()
         {
             InitializeComponent();
         }
+        CampeonatoDados dados = new CampeonatoDados();
 
-        EstadioDados dados = new EstadioDados();
-
-        private void FrmLocalizarEstadio_Load(object sender, EventArgs e)
+        private void FrmEditarCampeonato_Load(object sender, EventArgs e)
         {
-            dados.NomeEstadio = "";
+            dados.NomeCampeonato = "";
             dataGridView1.DataSource = dados.ListarDados().Tables[0];
 
             dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[4].Visible = false;
+            dataGridView1.Columns[5].Visible = false;
+
 
 
             dataGridView1.ReadOnly = true;
@@ -35,7 +37,7 @@ namespace Campeonato
 
         private void cmdPesquisar_Click(object sender, EventArgs e)
         {
-            dados.NomeEstadio = txtNomeEstadio.Text;
+            dados.NomeCampeonato = txtNomeCamp.Text;
             dataGridView1.DataSource = dados.ListarDadosParaConsulta().Tables[0];
         }
 
@@ -45,11 +47,14 @@ namespace Campeonato
         private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             Id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+
         }
 
-        private void dataGridView1_DoubleClick_1(object sender, EventArgs e)
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             Close();
         }
+
+       
     }
 }
