@@ -63,9 +63,80 @@ namespace Campeonato.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1388222 {
+            get {
+                object obj = ResourceManager.GetObject("1388222", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _36601 {
             get {
                 object obj = ResourceManager.GetObject("36601", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap camisa {
+            get {
+                object obj = ResourceManager.GetObject("camisa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_tela_2020_11_10_115448 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de tela 2020-11-10 115448", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Estadio {
+            get {
+                object obj = ResourceManager.GetObject("Estadio", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FC {
+            get {
+                object obj = ResourceManager.GetObject("FC", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Fundo_Branco {
+            get {
+                object obj = ResourceManager.GetObject("Fundo Branco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap grupo_de_team_players_athlete_sports_icon_do_futebol_fósforo_de_futebol_d_isométrico_team_players_campeonato_ostentando_da_73533185 {
+            get {
+                object obj = ResourceManager.GetObject("grupo-de-team-players-athlete-sports-icon-do-futebol-fósforo-de-futebol-d-isométr" +
+                        "ico-team-players-campeonato-ostentando-da-73533185", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,10 +154,30 @@ namespace Campeonato.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Jogo {
+            get {
+                object obj = ResourceManager.GetObject("Jogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap png_transparent_computer_icons_icon_design_trophy_psd_background_photography_silhouette_black_and_white {
             get {
                 object obj = ResourceManager.GetObject("png-transparent-computer-icons-icon-design-trophy-psd-background-photography-silh" +
                         "ouette-black-and-white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sumula {
+            get {
+                object obj = ResourceManager.GetObject("Sumula", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

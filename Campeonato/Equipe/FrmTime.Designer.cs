@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.cmdImagem = new MetroFramework.Controls.MetroButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cmdEditar = new MetroFramework.Controls.MetroButton();
             this.cmdExcluir = new MetroFramework.Controls.MetroButton();
             this.cmdNovo = new MetroFramework.Controls.MetroButton();
@@ -39,28 +38,19 @@
             this.txtNome = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // cmdImagem
             // 
             this.cmdImagem.Enabled = false;
-            this.cmdImagem.Location = new System.Drawing.Point(450, 181);
+            this.cmdImagem.Location = new System.Drawing.Point(449, 181);
             this.cmdImagem.Name = "cmdImagem";
             this.cmdImagem.Size = new System.Drawing.Size(83, 31);
             this.cmdImagem.TabIndex = 27;
             this.cmdImagem.Text = "Carregar";
             this.cmdImagem.Click += new System.EventHandler(this.cmdImagem_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(405, 31);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(177, 144);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 26;
-            this.pictureBox1.TabStop = false;
             // 
             // cmdEditar
             // 
@@ -138,6 +128,17 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Image = global::Campeonato.Properties.Resources._36601;
+            this.pictureBox1.Location = new System.Drawing.Point(405, 31);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(177, 144);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 26;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmTime
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -154,7 +155,7 @@
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.metroLabel2);
             this.Name = "FrmTime";
-            this.Text = "FrmTime";
+            this.Text = "Time";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

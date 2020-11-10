@@ -31,16 +31,18 @@
             this.components = new System.ComponentModel.Container();
             this.txt_Time1 = new MetroFramework.Controls.MetroTextBox();
             this.txt_Time2 = new MetroFramework.Controls.MetroTextBox();
-            this.pb_Time1 = new System.Windows.Forms.PictureBox();
-            this.pb_Imagem2 = new System.Windows.Forms.PictureBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.lbl_Tempo = new MetroFramework.Controls.MetroLabel();
             this.lbl_Campeonato = new MetroFramework.Controls.MetroLabel();
             this.cmd_Iniciar = new MetroFramework.Controls.MetroButton();
             this.cmd_PreencherSumula = new MetroFramework.Controls.MetroButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Time1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pb_Imagem2 = new System.Windows.Forms.PictureBox();
+            this.pb_Time1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Imagem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Time1)).BeginInit();
             this.SuspendLayout();
             // 
             // txt_Time1
@@ -62,26 +64,6 @@
             this.txt_Time2.Name = "txt_Time2";
             this.txt_Time2.Size = new System.Drawing.Size(91, 23);
             this.txt_Time2.TabIndex = 1;
-            // 
-            // pb_Time1
-            // 
-            this.pb_Time1.Enabled = false;
-            this.pb_Time1.Location = new System.Drawing.Point(30, 106);
-            this.pb_Time1.Name = "pb_Time1";
-            this.pb_Time1.Size = new System.Drawing.Size(91, 81);
-            this.pb_Time1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_Time1.TabIndex = 2;
-            this.pb_Time1.TabStop = false;
-            // 
-            // pb_Imagem2
-            // 
-            this.pb_Imagem2.Enabled = false;
-            this.pb_Imagem2.Location = new System.Drawing.Point(216, 106);
-            this.pb_Imagem2.Name = "pb_Imagem2";
-            this.pb_Imagem2.Size = new System.Drawing.Size(91, 81);
-            this.pb_Imagem2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_Imagem2.TabIndex = 3;
-            this.pb_Imagem2.TabStop = false;
             // 
             // metroLabel1
             // 
@@ -124,7 +106,7 @@
             // 
             // cmd_PreencherSumula
             // 
-            this.cmd_PreencherSumula.Location = new System.Drawing.Point(23, 310);
+            this.cmd_PreencherSumula.Location = new System.Drawing.Point(23, 287);
             this.cmd_PreencherSumula.Name = "cmd_PreencherSumula";
             this.cmd_PreencherSumula.Size = new System.Drawing.Size(116, 29);
             this.cmd_PreencherSumula.TabIndex = 8;
@@ -135,11 +117,42 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Campeonato.Properties.Resources.Jogo;
+            this.pictureBox1.Location = new System.Drawing.Point(323, 86);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(206, 210);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pb_Imagem2
+            // 
+            this.pb_Imagem2.Enabled = false;
+            this.pb_Imagem2.Location = new System.Drawing.Point(216, 106);
+            this.pb_Imagem2.Name = "pb_Imagem2";
+            this.pb_Imagem2.Size = new System.Drawing.Size(91, 81);
+            this.pb_Imagem2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_Imagem2.TabIndex = 3;
+            this.pb_Imagem2.TabStop = false;
+            // 
+            // pb_Time1
+            // 
+            this.pb_Time1.Enabled = false;
+            this.pb_Time1.Location = new System.Drawing.Point(30, 106);
+            this.pb_Time1.Name = "pb_Time1";
+            this.pb_Time1.Size = new System.Drawing.Size(91, 81);
+            this.pb_Time1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_Time1.TabIndex = 2;
+            this.pb_Time1.TabStop = false;
+            // 
             // frmJogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(542, 375);
+            this.ClientSize = new System.Drawing.Size(542, 338);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cmd_PreencherSumula);
             this.Controls.Add(this.cmd_Iniciar);
             this.Controls.Add(this.lbl_Campeonato);
@@ -152,8 +165,9 @@
             this.Name = "frmJogo";
             this.Text = "Jogo";
             this.Load += new System.EventHandler(this.frmJogo_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Time1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Imagem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Time1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,5 +185,6 @@
         private MetroFramework.Controls.MetroButton cmd_Iniciar;
         private MetroFramework.Controls.MetroButton cmd_PreencherSumula;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

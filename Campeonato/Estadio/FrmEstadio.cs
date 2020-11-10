@@ -100,5 +100,7 @@ namespace Campeonato
             cmdNovo.Enabled = true;
             cmdSalvar.Enabled = false;
         }
+
+       
     }
 }

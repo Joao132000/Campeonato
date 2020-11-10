@@ -229,6 +229,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\Jogo.png" />
+    <None Include="Resources\Sumula.jpg" />
+    <None Include="Resources\366011.png" />
+    <None Include="Resources\1388222.png" />
+    <None Include="Resources\Captura de tela 2020-11-10 115448.png" />
+    <None Include="Resources\grupo-de-team-players-athlete-sports-icon-do-futebol-fósforo-de-futebol-d-isométrico-team-players-campeonato-ostentando-da-73533185.jpg" />
+    <None Include="Resources\Fundo Branco.png" />
+    <None Include="Resources\FC.png" />
+    <None Include="Resources\camisa.jpg" />
+    <None Include="Resources\Estadio.png" />
     <None Include="Resources\png-transparent-computer-icons-icon-design-trophy-psd-background-photography-silhouette-black-and-white.png" />
     <None Include="Resources\Trofeu.jpg" />
   </ItemGroup>

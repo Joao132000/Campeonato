@@ -125,5 +125,7 @@ namespace Campeonato
                 MessageBox.Show("Registro excluído com sucesso!!!!");
             }
         }
+
+       
     }
 }

@@ -36,6 +36,8 @@
             this.cmdSalvar = new MetroFramework.Controls.MetroButton();
             this.cmdExcluir = new MetroFramework.Controls.MetroButton();
             this.cmdNovo = new MetroFramework.Controls.MetroButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -137,11 +139,22 @@
             this.cmdNovo.Text = "Novo";
             this.cmdNovo.Click += new System.EventHandler(this.cmdNovo_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Campeonato.Properties.Resources.Estadio;
+            this.pictureBox1.Location = new System.Drawing.Point(324, 105);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(187, 195);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmEstadio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(440, 372);
+            this.ClientSize = new System.Drawing.Size(574, 387);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cmdNovo);
             this.Controls.Add(this.cmdExcluir);
             this.Controls.Add(this.cmdSalvar);
@@ -153,6 +166,7 @@
             this.Name = "FrmEstadio";
             this.Text = "Estadio";
             this.Load += new System.EventHandler(this.FrmEstadio_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,5 +182,6 @@
         private MetroFramework.Controls.MetroButton cmdSalvar;
         private MetroFramework.Controls.MetroButton cmdExcluir;
         private MetroFramework.Controls.MetroButton cmdNovo;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
