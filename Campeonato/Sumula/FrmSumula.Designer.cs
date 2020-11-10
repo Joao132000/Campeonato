@@ -31,7 +31,6 @@
             this.cmdExcluir = new MetroFramework.Controls.MetroButton();
             this.cmbCartao = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.cmbGols = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.cmbJogo = new MetroFramework.Controls.MetroComboBox();
@@ -41,6 +40,7 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.cmbJogador = new MetroFramework.Controls.MetroComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cmbGols = new MetroFramework.Controls.MetroComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,37 +78,14 @@
             this.metroLabel4.TabIndex = 45;
             this.metroLabel4.Text = "Cartão";
             // 
-            // cmbGols
-            // 
-            this.cmbGols.Enabled = false;
-            this.cmbGols.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.cmbGols.FormattingEnabled = true;
-            this.cmbGols.ItemHeight = 23;
-            this.cmbGols.Items.AddRange(new object[] {
-            "00",
-            "01",
-            "02",
-            "03",
-            "04",
-            "05",
-            "06",
-            "07",
-            "08",
-            "09",
-            "10"});
-            this.cmbGols.Location = new System.Drawing.Point(409, 82);
-            this.cmbGols.Name = "cmbGols";
-            this.cmbGols.Size = new System.Drawing.Size(60, 29);
-            this.cmbGols.TabIndex = 44;
-            // 
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(425, 60);
+            this.metroLabel3.Location = new System.Drawing.Point(418, 60);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(29, 19);
+            this.metroLabel3.Size = new System.Drawing.Size(42, 19);
             this.metroLabel3.TabIndex = 43;
-            this.metroLabel3.Text = "Gol";
+            this.metroLabel3.Text = "Gol(s)";
             // 
             // metroLabel2
             // 
@@ -188,16 +165,37 @@
             this.pictureBox1.TabIndex = 48;
             this.pictureBox1.TabStop = false;
             // 
+            // cmbGols
+            // 
+            this.cmbGols.FormattingEnabled = true;
+            this.cmbGols.ItemHeight = 23;
+            this.cmbGols.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.cmbGols.Location = new System.Drawing.Point(409, 82);
+            this.cmbGols.Name = "cmbGols";
+            this.cmbGols.Size = new System.Drawing.Size(60, 29);
+            this.cmbGols.TabIndex = 49;
+            // 
             // FrmSumula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(603, 294);
+            this.Controls.Add(this.cmbGols);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cmdExcluir);
             this.Controls.Add(this.cmbCartao);
             this.Controls.Add(this.metroLabel4);
-            this.Controls.Add(this.cmbGols);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.cmbJogo);
@@ -220,7 +218,6 @@
         private MetroFramework.Controls.MetroButton cmdExcluir;
         private MetroFramework.Controls.MetroComboBox cmbCartao;
         private MetroFramework.Controls.MetroLabel metroLabel4;
-        private MetroFramework.Controls.MetroComboBox cmbGols;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroComboBox cmbJogo;
@@ -230,5 +227,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroComboBox cmbJogador;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private MetroFramework.Controls.MetroComboBox cmbGols;
     }
 }

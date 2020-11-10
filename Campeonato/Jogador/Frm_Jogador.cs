@@ -78,6 +78,8 @@ namespace Campeonato
                     txt_Nome.Text = "";
                     txt_Numero.Text = "";
                     Mtxt_Data.Text = "";
+                    cmb_Time.SelectedIndex = -1;
+
                     cmdLocalizar.Text = "Localizar";
                     cmd_Excluir.Text = "Excluir";
                 }
@@ -89,6 +91,8 @@ namespace Campeonato
             cmb_Time.DisplayMember = "nomeEquipe";
             cmb_Time.ValueMember = "idEquipe";
             cmb_Time.DataSource = Times.ListarDados().Tables[0];
+            cmb_Time.SelectedIndex = -1;
+
         }
 
         private void cmd_Excluir_Click(object sender, EventArgs e)
@@ -102,6 +106,8 @@ namespace Campeonato
                     txt_Nome.Text = "";
                     txt_Numero.Text = "";
                     Mtxt_Data.Text = "";
+                    cmb_Time.SelectedIndex = -1;
+
                 }
             }
             else
@@ -113,6 +119,7 @@ namespace Campeonato
                 txt_Nome.Text = "";
                 txt_Numero.Text = "";
                 Mtxt_Data.Text = "";
+                cmb_Time.SelectedItem = null;
             }
         }
     }

@@ -103,10 +103,14 @@ namespace Campeonato
             dados.IdSumula = ES.Id;
 
             dados.ConsultarDados();
+            
+            cmbCartao.Text = dados.Cartao;
+            cmbGols.Text = dados.Gol.ToString();
 
             dadosjogador.IdJogador = dados.IdJogador;
             dadosjogador.ConsultarDados();
             cmbJogador.Text = dadosjogador.NomeJogador;
+            
 
             dados.ConsultarDados();
             dadosjogo.IdJogo = dados.IdJogo;
