@@ -36,6 +36,7 @@
             this.estadioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sumulaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,11 +107,21 @@
             this.metroButton1.Size = new System.Drawing.Size(75, 23);
             this.metroButton1.TabIndex = 0;
             // 
+            // metroButton2
+            // 
+            this.metroButton2.Location = new System.Drawing.Point(71, 169);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(75, 23);
+            this.metroButton2.TabIndex = 1;
+            this.metroButton2.Text = "metroButton2";
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmPrincipal";
@@ -133,6 +144,7 @@
         private System.Windows.Forms.ToolStripMenuItem estadioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sumulaToolStripMenuItem;
         private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton metroButton2;
     }
 }
 

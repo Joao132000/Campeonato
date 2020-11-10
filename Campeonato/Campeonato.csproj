@@ -78,6 +78,19 @@
     <Compile Include="Campeonato\FrmEditarCampeonato.Designer.cs">
       <DependentUpon>FrmEditarCampeonato.cs</DependentUpon>
     </Compile>
+    <Compile Include="Organizacao_Campeonato\FrmClassificacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Organizacao_Campeonato\FrmClassificacao.Designer.cs">
+      <DependentUpon>FrmClassificacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassesDados\Organizacao_CampeonatoDados.cs" />
+    <Compile Include="Organizacao_Campeonato\FrmOrganizaçaoCampeonato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Organizacao_Campeonato\FrmOrganizaçaoCampeonato.Designer.cs">
+      <DependentUpon>FrmOrganizaçaoCampeonato.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sumula\FrmEditarSumula.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +176,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Campeonato\FrmEditarCampeonato.resx">
       <DependentUpon>FrmEditarCampeonato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Organizacao_Campeonato\FrmClassificacao.resx">
+      <DependentUpon>FrmClassificacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Organizacao_Campeonato\FrmOrganizaçaoCampeonato.resx">
+      <DependentUpon>FrmOrganizaçaoCampeonato.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sumula\FrmEditarSumula.resx">
       <DependentUpon>FrmEditarSumula.cs</DependentUpon>

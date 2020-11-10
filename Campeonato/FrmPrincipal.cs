@@ -53,5 +53,11 @@ namespace Campeonato
             FrmSumula S = new FrmSumula();
             S.ShowDialog();
         }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            FrmOrganizaçaoCampeonato forg = new FrmOrganizaçaoCampeonato();
+            forg.ShowDialog();
+        }
     }
 }

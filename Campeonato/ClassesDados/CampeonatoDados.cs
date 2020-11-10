@@ -35,6 +35,7 @@ namespace Campeonato
             obj.Executar(sql);
         }
 
+
         public void AlterarDados()
         {
             string sql = "";
