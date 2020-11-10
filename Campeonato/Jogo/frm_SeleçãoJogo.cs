@@ -126,7 +126,7 @@ namespace Campeonato
             }
             else
             {
-                MessageBox.Show("Ação cancela com sucesso!");
+                MessageBox.Show("Ação cancelada com sucesso!");
                 cmd_Ok.Text = "Adicionar";
                 cmd_Localizar.Text = "Editar";
                 cmd_Excluir.Visible = false;

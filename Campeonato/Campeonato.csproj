@@ -56,68 +56,68 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CampeonatoDados.cs" />
-    <Compile Include="ConexaoDados.cs" />
-    <Compile Include="EquipeDados.cs" />
-    <Compile Include="EstadioDados.cs" />
-    <Compile Include="FrmCampeao_ViceCampeao.cs">
+    <Compile Include="ClassesDados\CampeonatoDados.cs" />
+    <Compile Include="ClassesDados\ConexaoDados.cs" />
+    <Compile Include="ClassesDados\EquipeDados.cs" />
+    <Compile Include="ClassesDados\EstadioDados.cs" />
+    <Compile Include="Campeonato\FrmCampeao_ViceCampeao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCampeao_ViceCampeao.Designer.cs">
+    <Compile Include="Campeonato\FrmCampeao_ViceCampeao.Designer.cs">
       <DependentUpon>FrmCampeao_ViceCampeao.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCampeonato.cs">
+    <Compile Include="Campeonato\FrmCampeonato.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmCampeonato.Designer.cs">
+    <Compile Include="Campeonato\FrmCampeonato.Designer.cs">
       <DependentUpon>FrmCampeonato.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEditarCampeonato.cs">
+    <Compile Include="Campeonato\FrmEditarCampeonato.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEditarCampeonato.Designer.cs">
+    <Compile Include="Campeonato\FrmEditarCampeonato.Designer.cs">
       <DependentUpon>FrmEditarCampeonato.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEditarSumula.cs">
+    <Compile Include="Sumula\FrmEditarSumula.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEditarSumula.Designer.cs">
+    <Compile Include="Sumula\FrmEditarSumula.Designer.cs">
       <DependentUpon>FrmEditarSumula.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmSumula.cs">
+    <Compile Include="Sumula\FrmSumula.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSumula.Designer.cs">
+    <Compile Include="Sumula\FrmSumula.Designer.cs">
       <DependentUpon>FrmSumula.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_EditarJogo.cs">
+    <Compile Include="Jogo\frm_EditarJogo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_EditarJogo.Designer.cs">
+    <Compile Include="Jogo\frm_EditarJogo.Designer.cs">
       <DependentUpon>frm_EditarJogo.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_SeleçãoJogo.cs">
+    <Compile Include="Jogo\frm_SeleçãoJogo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_SeleçãoJogo.Designer.cs">
+    <Compile Include="Jogo\frm_SeleçãoJogo.Designer.cs">
       <DependentUpon>frm_SeleçãoJogo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmEditarTime.cs">
+    <Compile Include="Equipe\FrmEditarTime.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEditarTime.Designer.cs">
+    <Compile Include="Equipe\FrmEditarTime.Designer.cs">
       <DependentUpon>FrmEditarTime.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmJogo.cs">
+    <Compile Include="Jogo\frmJogo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmJogo.Designer.cs">
+    <Compile Include="Jogo\frmJogo.Designer.cs">
       <DependentUpon>frmJogo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmLocalizarEstadio.cs">
+    <Compile Include="Estadio\FrmLocalizarEstadio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmLocalizarEstadio.Designer.cs">
+    <Compile Include="Estadio\FrmLocalizarEstadio.Designer.cs">
       <DependentUpon>FrmLocalizarEstadio.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPrincipal.cs">
@@ -126,78 +126,78 @@
     <Compile Include="FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmTime.cs">
+    <Compile Include="Equipe\FrmTime.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmTime.Designer.cs">
+    <Compile Include="Equipe\FrmTime.Designer.cs">
       <DependentUpon>FrmTime.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_EditarJogador.cs">
+    <Compile Include="Jogador\Frm_EditarJogador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_EditarJogador.Designer.cs">
+    <Compile Include="Jogador\Frm_EditarJogador.Designer.cs">
       <DependentUpon>Frm_EditarJogador.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Jogador.cs">
+    <Compile Include="Jogador\Frm_Jogador.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Jogador.Designer.cs">
+    <Compile Include="Jogador\Frm_Jogador.Designer.cs">
       <DependentUpon>Frm_Jogador.cs</DependentUpon>
     </Compile>
-    <Compile Include="JogadorDados.cs" />
-    <Compile Include="FrmEstadio.cs">
+    <Compile Include="ClassesDados\JogadorDados.cs" />
+    <Compile Include="Estadio\FrmEstadio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmEstadio.Designer.cs">
+    <Compile Include="Estadio\FrmEstadio.Designer.cs">
       <DependentUpon>FrmEstadio.cs</DependentUpon>
     </Compile>
-    <Compile Include="JogoDados.cs" />
+    <Compile Include="ClassesDados\JogoDados.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SumulaDados.cs" />
-    <EmbeddedResource Include="FrmCampeao_ViceCampeao.resx">
+    <Compile Include="ClassesDados\SumulaDados.cs" />
+    <EmbeddedResource Include="Campeonato\FrmCampeao_ViceCampeao.resx">
       <DependentUpon>FrmCampeao_ViceCampeao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCampeonato.resx">
+    <EmbeddedResource Include="Campeonato\FrmCampeonato.resx">
       <DependentUpon>FrmCampeonato.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEditarCampeonato.resx">
+    <EmbeddedResource Include="Campeonato\FrmEditarCampeonato.resx">
       <DependentUpon>FrmEditarCampeonato.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEditarSumula.resx">
+    <EmbeddedResource Include="Sumula\FrmEditarSumula.resx">
       <DependentUpon>FrmEditarSumula.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmSumula.resx">
+    <EmbeddedResource Include="Sumula\FrmSumula.resx">
       <DependentUpon>FrmSumula.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_EditarJogo.resx">
+    <EmbeddedResource Include="Jogo\frm_EditarJogo.resx">
       <DependentUpon>frm_EditarJogo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_SeleçãoJogo.resx">
+    <EmbeddedResource Include="Jogo\frm_SeleçãoJogo.resx">
       <DependentUpon>frm_SeleçãoJogo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEditarTime.resx">
+    <EmbeddedResource Include="Equipe\FrmEditarTime.resx">
       <DependentUpon>FrmEditarTime.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmJogo.resx">
+    <EmbeddedResource Include="Jogo\frmJogo.resx">
       <DependentUpon>frmJogo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmLocalizarEstadio.resx">
+    <EmbeddedResource Include="Estadio\FrmLocalizarEstadio.resx">
       <DependentUpon>FrmLocalizarEstadio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmTime.resx">
+    <EmbeddedResource Include="Equipe\FrmTime.resx">
       <DependentUpon>FrmTime.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_EditarJogador.resx">
+    <EmbeddedResource Include="Jogador\Frm_EditarJogador.resx">
       <DependentUpon>Frm_EditarJogador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Jogador.resx">
+    <EmbeddedResource Include="Jogador\Frm_Jogador.resx">
       <DependentUpon>Frm_Jogador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEstadio.resx">
+    <EmbeddedResource Include="Estadio\FrmEstadio.resx">
       <DependentUpon>FrmEstadio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

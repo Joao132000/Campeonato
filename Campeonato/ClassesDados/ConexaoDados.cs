@@ -20,7 +20,7 @@ namespace Campeonato
         private void Conectar()
         {
             string s = "";
-            s = @"Server=.\SQLEXPRESS;Database=Futebol;UID=sa;PWD=156315";
+            s = @"Server=.\SQLEXPRESS;Database=Futebol;UID=sa;PWD=123";
             cn.ConnectionString = s;
             cn.Open();
         }
