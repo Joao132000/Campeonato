@@ -24,7 +24,7 @@ namespace Campeonato
         private void cmdPesquisar_Click(object sender, EventArgs e)
         {
             dados.NomeEquipe = txtNome.Text;
-            dataGridView1.DataSource = dados.ListarDados().Tables[0];
+            dataGridView1.DataSource = dados.ListarDadosParaConsulta().Tables[0];
         }
 
         private void FrmEditarTime_Load(object sender, EventArgs e)
