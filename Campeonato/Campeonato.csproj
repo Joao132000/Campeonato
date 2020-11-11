@@ -248,6 +248,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.txt" />
+    <None Include="Resources\CampeonatoMenu.jpg" />
+    <None Include="Resources\EstadioMenu.png" />
+    <None Include="Resources\JogadorMenu.png" />
+    <None Include="Resources\MINEIRÃO_VAZIO.jpg" />
+    <None Include="Resources\Campo123.jpg" />
+    <None Include="Resources\Campo1.jpg" />
+    <None Include="Resources\Campo.jpg" />
     <None Include="Resources\Jogo.png" />
     <None Include="Resources\Sumula.jpg" />
     <None Include="Resources\366011.png" />

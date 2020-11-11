@@ -91,9 +91,11 @@
             this.cmbTipo.FormattingEnabled = true;
             this.cmbTipo.ItemHeight = 23;
             this.cmbTipo.Items.AddRange(new object[] {
-            "Brasileiro",
+            "Regional",
             "Estadual",
-            "Regional"});
+            "Nacional",
+            "Continental",
+            "Mundial"});
             this.cmbTipo.Location = new System.Drawing.Point(261, 216);
             this.cmbTipo.Name = "cmbTipo";
             this.cmbTipo.Size = new System.Drawing.Size(121, 29);

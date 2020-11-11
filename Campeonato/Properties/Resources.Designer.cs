@@ -93,6 +93,46 @@ namespace Campeonato.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CampeonatoMenu {
+            get {
+                object obj = ResourceManager.GetObject("CampeonatoMenu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Campo {
+            get {
+                object obj = ResourceManager.GetObject("Campo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Campo1 {
+            get {
+                object obj = ResourceManager.GetObject("Campo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Campo123 {
+            get {
+                object obj = ResourceManager.GetObject("Campo123", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Captura_de_tela_2020_11_10_115448 {
             get {
                 object obj = ResourceManager.GetObject("Captura de tela 2020-11-10 115448", resourceCulture);
@@ -106,6 +146,16 @@ namespace Campeonato.Properties {
         internal static System.Drawing.Bitmap Estadio {
             get {
                 object obj = ResourceManager.GetObject("Estadio", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap EstadioMenu {
+            get {
+                object obj = ResourceManager.GetObject("EstadioMenu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -154,9 +204,29 @@ namespace Campeonato.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap JogadorMenu {
+            get {
+                object obj = ResourceManager.GetObject("JogadorMenu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Jogo {
             get {
                 object obj = ResourceManager.GetObject("Jogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MINEIRÃO_VAZIO {
+            get {
+                object obj = ResourceManager.GetObject("MINEIRÃO_VAZIO", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

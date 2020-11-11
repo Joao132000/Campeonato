@@ -12,8 +12,6 @@ namespace Campeonato
     {
         private int idCampeonato;
         private int idEquipe;
-        private string nomeCampeonato;
-        private string nomeEquipe;
         private int pontos;
 
         public int IdCampeonato { get => idCampeonato; set => idCampeonato = value; }

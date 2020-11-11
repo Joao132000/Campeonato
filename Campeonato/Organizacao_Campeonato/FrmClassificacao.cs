@@ -27,10 +27,6 @@ namespace Campeonato
             dados.IdCampeonato = int.Parse(cmbCampeonato.SelectedValue.ToString());
             dataGridView1.DataSource = dados.ListarDadosParaConsulta().Tables[0];
 
-            //dataGridView1.Columns[0].Visible = false;
-            //dataGridView1.Columns[1].Visible = false;
-            //dataGridView1.Columns[2].Visible = false;
-
             dataGridView1.ReadOnly = true;
             dataGridView1.MultiSelect = false;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -42,7 +38,6 @@ namespace Campeonato
             cmbCampeonato.ValueMember = "idCampeonato";
             cmbCampeonato.DisplayMember = "nomeCampeonato";
             cmbCampeonato.DataSource = dadosCampenato.ListarDados().Tables[0];
-            
         }
 
         private int i;

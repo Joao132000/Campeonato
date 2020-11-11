@@ -10,42 +10,17 @@ using System.Windows.Forms;
 
 namespace Campeonato
 {
-    public partial class FrmPrincipal : MetroFramework.Forms.MetroForm
+    public partial class FrmPrincipal : Form
     {
         public FrmPrincipal()
         {
             InitializeComponent();
         }
 
-       
-
-        private void jogadorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Frm_Jogador J = new Frm_Jogador();
-            J.ShowDialog();
-        }
-
-        private void estadioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmEstadio E = new FrmEstadio();
-            E.ShowDialog();
-        }
-        private void equipeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmTime T = new FrmTime();
-            T.ShowDialog();
-        }
-
         private void jogoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frm_SeleçãoJogo Jogo = new frm_SeleçãoJogo();
             Jogo.ShowDialog();
-        }
-
-        private void campeonatoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmCampeonato Camp = new FrmCampeonato();
-            Camp.ShowDialog();
         }
 
         private void sumulaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -58,6 +33,30 @@ namespace Campeonato
         {
             FrmOrganizaçaoCampeonato forg = new FrmOrganizaçaoCampeonato();
             forg.ShowDialog();
+        }
+        //---------------------------------------------------------------
+        private void cmdTime_Click(object sender, EventArgs e)
+        {
+            FrmTime T = new FrmTime();
+            T.ShowDialog();
+        }
+
+        private void cmdJogador_Click(object sender, EventArgs e)
+        {
+            Frm_Jogador J = new Frm_Jogador();
+            J.ShowDialog();
+        }
+
+        private void cmdEstadio_Click(object sender, EventArgs e)
+        {
+            FrmEstadio E = new FrmEstadio();
+            E.ShowDialog();
+        }
+
+        private void cmdCampeonato_Click(object sender, EventArgs e)
+        {
+            FrmCampeonato Camp = new FrmCampeonato();
+            Camp.ShowDialog();
         }
     }
 }
