@@ -25,6 +25,8 @@ namespace Campeonato
 
         private void OrganizaçaoCampeonato_Load(object sender, EventArgs e)
         {
+            listTimes.Items.Clear();
+
             cmbCampeonatos.DisplayMember = "nomeCampeonato";
             cmbCampeonatos.ValueMember = "idCampeonato";
             cmbCampeonatos.DataSource = dadosCampeonato.ListarDados().Tables[0];
@@ -36,16 +38,18 @@ namespace Campeonato
 
         private void cmdAdicionar_Click(object sender, EventArgs e)
         {
-            dados.NomeCampeonato = cmbCampeonatos.Text;
-            dados.NomeEquipe = cmbTimes.Text;
+            dadosCampeonato.NomeCampeonato = cmbCampeonatos.Text;
+            dadosEquipe.NomeEquipe = cmbTimes.Text;
             dados.IncluirDados();
-            listTimes.Items.Add(dados.NomeEquipe);
+            listTimes.Items.Add(dadosEquipe.NomeEquipe);
         }
 
         private void cmbCampeonatos_SelectedIndexChanged(object sender, EventArgs e)
         {
             idCampeonato = int.Parse(cmbCampeonatos.SelectedValue.ToString());
             dados.IdCampeonato = idCampeonato;
+            listTimes.Items.Clear();
+
         }
 
         private void cmbTimes_SelectedIndexChanged(object sender, EventArgs e)

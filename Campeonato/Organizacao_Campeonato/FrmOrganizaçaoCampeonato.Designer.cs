@@ -35,6 +35,7 @@
             this.cmdAdicionar = new MetroFramework.Controls.MetroButton();
             this.listTimes = new System.Windows.Forms.ListBox();
             this.cmdTabela = new MetroFramework.Controls.MetroButton();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
             // cmbCampeonatos
@@ -87,27 +88,35 @@
             // listTimes
             // 
             this.listTimes.FormattingEnabled = true;
-            this.listTimes.Items.AddRange(new object[] {
-            "Times:"});
-            this.listTimes.Location = new System.Drawing.Point(341, 83);
+            this.listTimes.Location = new System.Drawing.Point(341, 109);
             this.listTimes.Name = "listTimes";
-            this.listTimes.Size = new System.Drawing.Size(252, 303);
+            this.listTimes.Size = new System.Drawing.Size(252, 277);
             this.listTimes.TabIndex = 5;
             // 
             // cmdTabela
             // 
-            this.cmdTabela.Location = new System.Drawing.Point(64, 303);
+            this.cmdTabela.Location = new System.Drawing.Point(91, 305);
             this.cmdTabela.Name = "cmdTabela";
-            this.cmdTabela.Size = new System.Drawing.Size(241, 68);
+            this.cmdTabela.Size = new System.Drawing.Size(181, 51);
             this.cmdTabela.TabIndex = 7;
-            this.cmdTabela.Text = "Gerar Tabela";
+            this.cmdTabela.Text = "Finalizar";
             this.cmdTabela.Click += new System.EventHandler(this.cmdTabela_Click);
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(341, 76);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(171, 19);
+            this.metroLabel3.TabIndex = 8;
+            this.metroLabel3.Text = "Lista de Times Selecionados";
             // 
             // FrmOrganizaçaoCampeonato
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.cmdTabela);
             this.Controls.Add(this.listTimes);
             this.Controls.Add(this.cmdAdicionar);
@@ -132,5 +141,6 @@
         private MetroFramework.Controls.MetroButton cmdAdicionar;
         private System.Windows.Forms.ListBox listTimes;
         private MetroFramework.Controls.MetroButton cmdTabela;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
     }
 }

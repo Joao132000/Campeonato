@@ -32,6 +32,7 @@
             this.cmbCampeonato = new MetroFramework.Controls.MetroComboBox();
             this.cmdPesquisar = new MetroFramework.Controls.MetroButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cmdImprimir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,11 +71,22 @@
             this.dataGridView1.Size = new System.Drawing.Size(458, 267);
             this.dataGridView1.TabIndex = 3;
             // 
+            // cmdImprimir
+            // 
+            this.cmdImprimir.Location = new System.Drawing.Point(535, 173);
+            this.cmdImprimir.Name = "cmdImprimir";
+            this.cmdImprimir.Size = new System.Drawing.Size(75, 23);
+            this.cmdImprimir.TabIndex = 4;
+            this.cmdImprimir.Text = "Imprimir";
+            this.cmdImprimir.UseVisualStyleBackColor = true;
+            this.cmdImprimir.Click += new System.EventHandler(this.cmdImprimir_Click);
+            // 
             // FrmClassificacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(629, 457);
+            this.Controls.Add(this.cmdImprimir);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.cmdPesquisar);
             this.Controls.Add(this.cmbCampeonato);
@@ -94,5 +106,6 @@
         private MetroFramework.Controls.MetroComboBox cmbCampeonato;
         private MetroFramework.Controls.MetroButton cmdPesquisar;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button cmdImprimir;
     }
 }

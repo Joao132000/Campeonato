@@ -18,8 +18,6 @@ namespace Campeonato
 
         public int IdCampeonato { get => idCampeonato; set => idCampeonato = value; }
         public int IdEquipe { get => idEquipe; set => idEquipe = value; }
-        public string NomeCampeonato { get => nomeCampeonato; set => nomeCampeonato = value; }
-        public string NomeEquipe { get => nomeEquipe; set => nomeEquipe = value; }
         public int Pontos { get => pontos; set => pontos = value; }
 
         ConexaoDados obj = new ConexaoDados();
@@ -27,15 +25,16 @@ namespace Campeonato
         public void IncluirDados()
         {
             string sql = "";
-            sql += "Insert into Organizacao_Campeonato (idCampeonato, nomeCampeonato, idEquipe, nomeEquipe) " +
-                "values ('" + IdCampeonato + "','" + nomeCampeonato + "','" + IdEquipe + "','" +NomeEquipe +"')";
+            sql += "Insert into Organizacao_Campeonato (idCampeonato, idEquipe) " +
+                "values ('" + IdCampeonato + "','" + IdEquipe  +"')";
             obj.Executar(sql);
         }
 
         public DataSet ListarDadosParaConsulta()
         {
             string sql = "";
-            sql = "Select * from Organizacao_Campeonato where nomeCampeonato like'" + nomeCampeonato + "%'";
+            sql = "Select Equipe.nomeEquipe, pontos from Organizacao_Campeonato inner join Equipe on Organizacao_Campeonato.idEquipe = Equipe.idEquipe " +
+                "where idCampeonato =" + IdCampeonato + " Order by pontos desc";
             return obj.Listar(sql);
         }
     }
