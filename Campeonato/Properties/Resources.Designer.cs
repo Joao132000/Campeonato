@@ -83,6 +83,16 @@ namespace Campeonato.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BolaMenu {
+            get {
+                object obj = ResourceManager.GetObject("BolaMenu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap camisa {
             get {
                 object obj = ResourceManager.GetObject("camisa", resourceCulture);
@@ -133,9 +143,39 @@ namespace Campeonato.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CampoPreto {
+            get {
+                object obj = ResourceManager.GetObject("CampoPreto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CampoPreto1 {
+            get {
+                object obj = ResourceManager.GetObject("CampoPreto1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Captura_de_tela_2020_11_10_115448 {
             get {
                 object obj = ResourceManager.GetObject("Captura de tela 2020-11-10 115448", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CriaçaoJogo {
+            get {
+                object obj = ResourceManager.GetObject("CriaçaoJogo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -234,10 +274,30 @@ namespace Campeonato.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap OrgCampMenu {
+            get {
+                object obj = ResourceManager.GetObject("OrgCampMenu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap png_transparent_computer_icons_icon_design_trophy_psd_background_photography_silhouette_black_and_white {
             get {
                 object obj = ResourceManager.GetObject("png-transparent-computer-icons-icon-design-trophy-psd-background-photography-silh" +
                         "ouette-black-and-white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap StatsMenu {
+            get {
+                object obj = ResourceManager.GetObject("StatsMenu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -17,24 +17,7 @@ namespace Campeonato
             InitializeComponent();
         }
 
-        private void jogoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frm_SeleçãoJogo Jogo = new frm_SeleçãoJogo();
-            Jogo.ShowDialog();
-        }
-
-        private void sumulaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmSumula S = new FrmSumula();
-            S.ShowDialog();
-        }
-
-        private void metroButton2_Click(object sender, EventArgs e)
-        {
-            FrmOrganizaçaoCampeonato forg = new FrmOrganizaçaoCampeonato();
-            forg.ShowDialog();
-        }
-        //---------------------------------------------------------------
+       
         private void cmdTime_Click(object sender, EventArgs e)
         {
             FrmTime T = new FrmTime();
@@ -57,6 +40,29 @@ namespace Campeonato
         {
             FrmCampeonato Camp = new FrmCampeonato();
             Camp.ShowDialog();
+        }
+
+        private void cmdCriarCampeonato_Click(object sender, EventArgs e)
+        {
+            FrmOrganizaçaoCampeonato forg = new FrmOrganizaçaoCampeonato();
+            forg.ShowDialog();
+        }
+
+        private void cmdJogo_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cmdClassificaçao_Click(object sender, EventArgs e)
+        {
+            FrmClassificacao fc = new FrmClassificacao();
+            fc.ShowDialog();
+        }
+
+        private void cmdCriarJogo_Click(object sender, EventArgs e)
+        {
+            frm_SeleçãoJogo Jogo = new frm_SeleçãoJogo();
+            Jogo.ShowDialog();
         }
     }
 }

@@ -100,6 +100,7 @@ namespace Campeonato
             int c = 1;
 
             DataSet ds = dados.ListarDadosParaConsulta();
+            
 
             if (ds.Tables[0] != null)
             {
@@ -125,6 +126,52 @@ namespace Campeonato
 
                 }
 
+                contador+=2;
+
+                //Campeao:
+                linha = "Campeão:";
+                posicaoVertical = margemSup + contador * alturaFonte;
+                e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsq, posicaoVertical);
+                
+
+                dadosCampenato.IdCampeonato = dados.IdCampeonato;
+                dadosCampenato.ConsultarDados();
+                if (dadosCampenato.Campeao != null)
+                {
+                    linha = dadosCampenato.Campeao;
+                    posicaoVertical = margemSup + contador * alturaFonte;
+                    e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsq + 200, posicaoVertical);
+                }
+                else
+                {
+                    linha = "Indefinido";
+                    posicaoVertical = margemSup + contador * alturaFonte;
+                    e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsq + 200, posicaoVertical);
+                }
+
+                contador++;
+
+                //Vice Campeão:
+                linha = "Vice Campeão:";
+                posicaoVertical = margemSup + contador * alturaFonte;
+                e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsq, posicaoVertical);
+
+                
+                dadosCampenato.IdCampeonato = dados.IdCampeonato;
+                dadosCampenato.ConsultarDados();
+                if (dadosCampenato.ViceCampeao!=null) 
+                {
+                    linha = dadosCampenato.ViceCampeao;
+                    posicaoVertical = margemSup + contador * alturaFonte;
+                    e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsq + 200, posicaoVertical);
+                }
+                else
+                {
+                    linha = "Indefinido";
+                    posicaoVertical = margemSup + contador * alturaFonte;
+                    e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsq + 200, posicaoVertical);
+                }
+
             }
             else MessageBox.Show("Tabela Vazia");
 
@@ -138,6 +185,12 @@ namespace Campeonato
             }
 
 
+        }
+
+        private void cmdAddResult_Click(object sender, EventArgs e)
+        {
+            FrmCampeao_ViceCampeao cv = new FrmCampeao_ViceCampeao();
+            cv.ShowDialog();
         }
     }
 }

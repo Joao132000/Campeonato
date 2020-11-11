@@ -115,7 +115,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
+            this.ClientSize = new System.Drawing.Size(710, 457);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.cmdTabela);
             this.Controls.Add(this.listTimes);
@@ -125,7 +126,7 @@
             this.Controls.Add(this.cmbTimes);
             this.Controls.Add(this.cmbCampeonatos);
             this.Name = "FrmOrganizaçaoCampeonato";
-            this.Text = "Organizaçao Campeonato";
+            this.Text = "Criar Campeonato";
             this.Load += new System.EventHandler(this.OrganizaçaoCampeonato_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -60,8 +60,7 @@ namespace Campeonato
 
         private void cmdTabela_Click(object sender, EventArgs e)
         {
-            FrmClassificacao fc = new FrmClassificacao();
-            fc.ShowDialog();
+            Close();
         }
     }
 }

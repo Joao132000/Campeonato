@@ -31,7 +31,6 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.cmdAddResult = new MetroFramework.Controls.MetroButton();
             this.txtNome = new MetroFramework.Controls.MetroTextBox();
             this.cmbTipo = new MetroFramework.Controls.MetroComboBox();
             this.cmbAno = new MetroFramework.Controls.MetroComboBox();
@@ -69,15 +68,6 @@
             this.metroLabel3.Size = new System.Drawing.Size(136, 19);
             this.metroLabel3.TabIndex = 2;
             this.metroLabel3.Text = "Tipo do Campeonato";
-            // 
-            // cmdAddResult
-            // 
-            this.cmdAddResult.Location = new System.Drawing.Point(400, 304);
-            this.cmdAddResult.Name = "cmdAddResult";
-            this.cmdAddResult.Size = new System.Drawing.Size(204, 48);
-            this.cmdAddResult.TabIndex = 3;
-            this.cmdAddResult.Text = "Campeão/Vice-Campeão";
-            this.cmdAddResult.Click += new System.EventHandler(this.cmdAddResult_Click);
             // 
             // txtNome
             // 
@@ -156,11 +146,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Campeonato.Properties.Resources.Trofeu;
-            this.pictureBox1.Location = new System.Drawing.Point(400, 100);
+            this.pictureBox1.BackgroundImage = global::Campeonato.Properties.Resources.CampoPreto1;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(400, 117);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(204, 198);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.Size = new System.Drawing.Size(177, 222);
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
@@ -168,7 +158,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(741, 398);
+            this.ClientSize = new System.Drawing.Size(587, 413);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cmdNovo);
             this.Controls.Add(this.cmdExcluir);
@@ -177,7 +167,6 @@
             this.Controls.Add(this.cmbAno);
             this.Controls.Add(this.cmbTipo);
             this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.cmdAddResult);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
@@ -195,7 +184,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel3;
-        private MetroFramework.Controls.MetroButton cmdAddResult;
         private MetroFramework.Controls.MetroTextBox txtNome;
         private MetroFramework.Controls.MetroComboBox cmbTipo;
         private MetroFramework.Controls.MetroComboBox cmbAno;

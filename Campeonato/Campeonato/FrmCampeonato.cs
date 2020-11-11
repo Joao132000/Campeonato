@@ -103,10 +103,6 @@ namespace Campeonato
             cmdSalvar.Enabled = true;
         }
 
-        private void cmdAddResult_Click(object sender, EventArgs e)
-        {
-            FrmCampeao_ViceCampeao cv = new FrmCampeao_ViceCampeao();
-            cv.ShowDialog();
-        }
+       
     }
 }

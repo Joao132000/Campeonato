@@ -68,5 +68,11 @@ namespace Campeonato
         {
             timer1.Start();
         }
+
+        private void cmd_PreencherSumula_Click(object sender, EventArgs e)
+        {
+            FrmSumula S = new FrmSumula();
+            S.ShowDialog();
+        }
     }
 }

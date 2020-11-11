@@ -111,6 +111,7 @@
             this.cmd_PreencherSumula.Size = new System.Drawing.Size(116, 29);
             this.cmd_PreencherSumula.TabIndex = 8;
             this.cmd_PreencherSumula.Text = "Preencher Sumula";
+            this.cmd_PreencherSumula.Click += new System.EventHandler(this.cmd_PreencherSumula_Click);
             // 
             // timer1
             // 

@@ -67,6 +67,13 @@ namespace Campeonato
             return obj.Listar(sql);
         }
 
+        public DataSet ListarDadosCampeao_Vice()
+        {
+            string sql = "";
+            sql = "Select campeao from Campeonato where idCampeonato = "+ IdCampeonato;
+            return obj.Listar(sql);
+        }
+
         public DataSet ListarDadosParaConsulta()
         {
             string sql = "";

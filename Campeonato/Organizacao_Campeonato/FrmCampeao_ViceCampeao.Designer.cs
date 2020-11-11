@@ -31,12 +31,12 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.cmdAtualizar = new MetroFramework.Controls.MetroButton();
-            this.txtCamp = new MetroFramework.Controls.MetroTextBox();
-            this.txtVice = new MetroFramework.Controls.MetroTextBox();
             this.cmdPesquisar = new MetroFramework.Controls.MetroButton();
             this.txtNomeCamp = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cmbCampeao = new MetroFramework.Controls.MetroComboBox();
+            this.cmbViceCampeao = new MetroFramework.Controls.MetroComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,20 +66,6 @@
             this.cmdAtualizar.TabIndex = 3;
             this.cmdAtualizar.Text = "Atualizar";
             this.cmdAtualizar.Click += new System.EventHandler(this.cmdAdicionar_Click);
-            // 
-            // txtCamp
-            // 
-            this.txtCamp.Location = new System.Drawing.Point(203, 264);
-            this.txtCamp.Name = "txtCamp";
-            this.txtCamp.Size = new System.Drawing.Size(220, 23);
-            this.txtCamp.TabIndex = 4;
-            // 
-            // txtVice
-            // 
-            this.txtVice.Location = new System.Drawing.Point(203, 307);
-            this.txtVice.Name = "txtVice";
-            this.txtVice.Size = new System.Drawing.Size(220, 23);
-            this.txtVice.TabIndex = 5;
             // 
             // cmdPesquisar
             // 
@@ -115,17 +101,35 @@
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
+            // cmbCampeao
+            // 
+            this.cmbCampeao.FormattingEnabled = true;
+            this.cmbCampeao.ItemHeight = 23;
+            this.cmbCampeao.Location = new System.Drawing.Point(178, 264);
+            this.cmbCampeao.Name = "cmbCampeao";
+            this.cmbCampeao.Size = new System.Drawing.Size(159, 29);
+            this.cmbCampeao.TabIndex = 10;
+            // 
+            // cmbViceCampeao
+            // 
+            this.cmbViceCampeao.FormattingEnabled = true;
+            this.cmbViceCampeao.ItemHeight = 23;
+            this.cmbViceCampeao.Location = new System.Drawing.Point(178, 300);
+            this.cmbViceCampeao.Name = "cmbViceCampeao";
+            this.cmbViceCampeao.Size = new System.Drawing.Size(159, 29);
+            this.cmbViceCampeao.TabIndex = 11;
+            // 
             // FrmCampeao_ViceCampeao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(530, 432);
+            this.Controls.Add(this.cmbViceCampeao);
+            this.Controls.Add(this.cmbCampeao);
             this.Controls.Add(this.cmdPesquisar);
             this.Controls.Add(this.txtNomeCamp);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.txtVice);
-            this.Controls.Add(this.txtCamp);
             this.Controls.Add(this.cmdAtualizar);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
@@ -142,11 +146,11 @@
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroButton cmdAtualizar;
-        private MetroFramework.Controls.MetroTextBox txtCamp;
-        private MetroFramework.Controls.MetroTextBox txtVice;
         private MetroFramework.Controls.MetroButton cmdPesquisar;
         private MetroFramework.Controls.MetroTextBox txtNomeCamp;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private MetroFramework.Controls.MetroComboBox cmbCampeao;
+        private MetroFramework.Controls.MetroComboBox cmbViceCampeao;
     }
 }

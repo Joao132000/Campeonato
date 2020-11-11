@@ -35,5 +35,13 @@ namespace Campeonato
                 "where idCampeonato =" + IdCampeonato + " Order by pontos desc";
             return obj.Listar(sql);
         }
+
+        public DataSet ListarDadosParaComboBox()
+        {
+            string sql = "";
+            sql = "Select Equipe.nomeEquipe from Organizacao_Campeonato inner join Equipe on Organizacao_Campeonato.idEquipe = Equipe.idEquipe " +
+                "where idCampeonato =" + IdCampeonato;
+            return obj.Listar(sql);
+        }
     }
 }

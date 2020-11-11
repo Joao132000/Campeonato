@@ -127,6 +127,15 @@
   <data name="Campo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Campo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="CampeonatoMenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CampeonatoMenu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OrgCampMenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OrgCampMenu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CampoPreto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CampoPreto.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Campo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Campo1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -135,6 +144,9 @@
   </data>
   <data name="Trofeu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Trofeu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="StatsMenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\StatsMenu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1388222" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1388222.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,17 +160,14 @@
   <data name="Sumula" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sumula.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="png-transparent-computer-icons-icon-design-trophy-psd-background-photography-silhouette-black-and-white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\png-transparent-computer-icons-icon-design-trophy-psd-background-photography-silhouette-black-and-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Estadio" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Estadio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="grupo-de-team-players-athlete-sports-icon-do-futebol-fósforo-de-futebol-d-isométrico-team-players-campeonato-ostentando-da-73533185" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\grupo-de-team-players-athlete-sports-icon-do-futebol-fósforo-de-futebol-d-isométrico-team-players-campeonato-ostentando-da-73533185.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="EstadioMenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\EstadioMenu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CriaçaoJogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CriaçaoJogo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Captura de tela 2020-11-10 115448" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Captura de tela 2020-11-10 115448.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,16 +175,25 @@
   <data name="36601" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\366011.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MINEIRÃO_VAZIO" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MINEIRÃO_VAZIO.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="EstadioMenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EstadioMenu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FC" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FC.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="png-transparent-computer-icons-icon-design-trophy-psd-background-photography-silhouette-black-and-white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\png-transparent-computer-icons-icon-design-trophy-psd-background-photography-silhouette-black-and-white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MINEIRÃO_VAZIO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MINEIRÃO_VAZIO.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BolaMenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BolaMenu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="JogadorMenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\JogadorMenu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CampeonatoMenu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CampeonatoMenu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CampoPreto1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CampoPreto1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
