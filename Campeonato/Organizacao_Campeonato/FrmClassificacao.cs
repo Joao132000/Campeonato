@@ -30,7 +30,7 @@ namespace Campeonato
             dadosCampenato.IdCampeonato = dados.IdCampeonato;
             dadosCampenato.ConsultarDados();
 
-            if((dadosCampenato.Campeao!=null) && (dadosCampenato.ViceCampeao != null))
+            if((dadosCampenato.Campeao!="") && (dadosCampenato.ViceCampeao != ""))
             {
                 metroLabel2.Visible = true;
                 metroLabel4.Visible = true;
@@ -38,6 +38,13 @@ namespace Campeonato
                 lblCamp.Visible = true;
                 lblCamp.Text = dadosCampenato.Campeao;
                 lblVice.Text = dadosCampenato.ViceCampeao;
+            }
+            else
+            {
+                metroLabel2.Visible = false;
+                metroLabel4.Visible = false;
+                lblVice.Visible = false;
+                lblCamp.Visible = false;
             }
 
             dataGridView1.ReadOnly = true;
@@ -153,7 +160,7 @@ namespace Campeonato
 
                 dadosCampenato.IdCampeonato = dados.IdCampeonato;
                 dadosCampenato.ConsultarDados();
-                if (dadosCampenato.Campeao != null)
+                if (dadosCampenato.Campeao != "")
                 {
                     linha = dadosCampenato.Campeao;
                     posicaoVertical = margemSup + contador * alturaFonte;
@@ -175,7 +182,7 @@ namespace Campeonato
 
                 
                
-                if (dadosCampenato.ViceCampeao!=null) 
+                if (dadosCampenato.ViceCampeao!="") 
                 {
                     linha = dadosCampenato.ViceCampeao;
                     posicaoVertical = margemSup + contador * alturaFonte;

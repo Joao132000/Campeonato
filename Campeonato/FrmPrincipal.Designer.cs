@@ -65,7 +65,7 @@
             this.cmdTime.BackColor = System.Drawing.Color.Transparent;
             this.cmdTime.BackgroundImage = global::Campeonato.Properties.Resources.camisa;
             this.cmdTime.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmdTime.Location = new System.Drawing.Point(23, 109);
+            this.cmdTime.Location = new System.Drawing.Point(23, 113);
             this.cmdTime.Name = "cmdTime";
             this.cmdTime.Size = new System.Drawing.Size(106, 94);
             this.cmdTime.TabIndex = 3;
@@ -77,7 +77,7 @@
             // 
             this.cmdJogador.BackgroundImage = global::Campeonato.Properties.Resources.JogadorMenu;
             this.cmdJogador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmdJogador.Location = new System.Drawing.Point(24, 251);
+            this.cmdJogador.Location = new System.Drawing.Point(24, 252);
             this.cmdJogador.Name = "cmdJogador";
             this.cmdJogador.Size = new System.Drawing.Size(105, 94);
             this.cmdJogador.TabIndex = 4;
@@ -90,7 +90,7 @@
             this.cmdEstadio.BackColor = System.Drawing.Color.Transparent;
             this.cmdEstadio.BackgroundImage = global::Campeonato.Properties.Resources.EstadioMenu;
             this.cmdEstadio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmdEstadio.Location = new System.Drawing.Point(24, 388);
+            this.cmdEstadio.Location = new System.Drawing.Point(24, 392);
             this.cmdEstadio.Name = "cmdEstadio";
             this.cmdEstadio.Size = new System.Drawing.Size(105, 94);
             this.cmdEstadio.TabIndex = 5;
@@ -102,7 +102,7 @@
             // 
             this.cmdCampeonato.BackgroundImage = global::Campeonato.Properties.Resources.CampeonatoMenu;
             this.cmdCampeonato.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.cmdCampeonato.Location = new System.Drawing.Point(24, 533);
+            this.cmdCampeonato.Location = new System.Drawing.Point(23, 537);
             this.cmdCampeonato.Name = "cmdCampeonato";
             this.cmdCampeonato.Size = new System.Drawing.Size(105, 94);
             this.cmdCampeonato.TabIndex = 6;
@@ -185,7 +185,7 @@
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(53, 366);
+            this.metroLabel6.Location = new System.Drawing.Point(53, 362);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(38, 19);
             this.metroLabel6.TabIndex = 15;
@@ -194,7 +194,7 @@
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(20, 87);
+            this.metroLabel7.Location = new System.Drawing.Point(21, 83);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(119, 19);
             this.metroLabel7.TabIndex = 16;
@@ -287,7 +287,7 @@
             // metroLabel9
             // 
             this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(39, 503);
+            this.metroLabel9.Location = new System.Drawing.Point(39, 507);
             this.metroLabel9.Name = "metroLabel9";
             this.metroLabel9.Size = new System.Drawing.Size(82, 19);
             this.metroLabel9.TabIndex = 9;
@@ -296,7 +296,7 @@
             // metroLabel10
             // 
             this.metroLabel10.AutoSize = true;
-            this.metroLabel10.Location = new System.Drawing.Point(43, 229);
+            this.metroLabel10.Location = new System.Drawing.Point(39, 225);
             this.metroLabel10.Name = "metroLabel10";
             this.metroLabel10.Size = new System.Drawing.Size(71, 19);
             this.metroLabel10.TabIndex = 10;
