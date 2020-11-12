@@ -27,6 +27,19 @@ namespace Campeonato
             dados.IdCampeonato = int.Parse(cmbCampeonato.SelectedValue.ToString());
             dataGridView1.DataSource = dados.ListarDadosParaConsulta().Tables[0];
 
+            dadosCampenato.IdCampeonato = dados.IdCampeonato;
+            dadosCampenato.ConsultarDados();
+
+            if((dadosCampenato.Campeao!=null) && (dadosCampenato.ViceCampeao != null))
+            {
+                metroLabel2.Visible = true;
+                metroLabel4.Visible = true;
+                lblVice.Visible = true;
+                lblCamp.Visible = true;
+                lblCamp.Text = dadosCampenato.Campeao;
+                lblVice.Text = dadosCampenato.ViceCampeao;
+            }
+
             dataGridView1.ReadOnly = true;
             dataGridView1.MultiSelect = false;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -35,6 +48,10 @@ namespace Campeonato
 
         private void FrmClassificacao_Load(object sender, EventArgs e)
         {
+            metroLabel2.Visible = false;
+            metroLabel4.Visible = false;
+            lblVice.Visible = false;
+            lblCamp.Visible = false;
             cmbCampeonato.ValueMember = "idCampeonato";
             cmbCampeonato.DisplayMember = "nomeCampeonato";
             cmbCampeonato.DataSource = dadosCampenato.ListarDados().Tables[0];
@@ -157,8 +174,7 @@ namespace Campeonato
                 e.Graphics.DrawString(linha, fonte, Brushes.Black, margemEsq, posicaoVertical);
 
                 
-                dadosCampenato.IdCampeonato = dados.IdCampeonato;
-                dadosCampenato.ConsultarDados();
+               
                 if (dadosCampenato.ViceCampeao!=null) 
                 {
                     linha = dadosCampenato.ViceCampeao;
