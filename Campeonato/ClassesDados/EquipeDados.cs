@@ -51,6 +51,13 @@ namespace Campeonato
             return obj.Listar(sql);
         }
 
+        public DataSet ListarDadosCampeonato()
+        {
+            string sql = "";
+            sql = "Select * from Equipe";
+            return obj.Listar(sql);
+        }
+
         public DataSet ListarDadosParaConsulta()
         {
             string sql = "";

@@ -82,14 +82,7 @@ namespace Campeonato
             cmb_Estadio.DisplayMember = "nomeEstadio";
             cmb_Estadio.DataSource = Estadio.ListarDados().Tables[0];
             
-            cmb_TimeCasa.ValueMember = "idEquipe";
-            cmb_TimeCasa.DisplayMember = "nomeEquipe";
-            cmb_TimeCasa.DataSource = EquipeCasa.ListarDados().Tables[0];
-
-            cmb_Time2.ValueMember = "idEquipe";
-            cmb_Time2.DisplayMember = "nomeEquipe";
-            cmb_Time2.DataSource = EquipeFora.ListarDados().Tables[0];
-        }
+            }
 
         private void cmd_Localizar_Click(object sender, EventArgs e)
         {
@@ -177,6 +170,17 @@ namespace Campeonato
                     cmd_Ok.Enabled = true;
                 }
             }
+        }
+
+        private void cmb_Campeonato_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmb_TimeCasa.ValueMember = "idEquipe";
+            cmb_TimeCasa.DisplayMember = "nomeEquipe";
+            cmb_TimeCasa.DataSource = EquipeCasa.ListarDados().Tables[0];
+
+            cmb_Time2.ValueMember = "idEquipe";
+            cmb_Time2.DisplayMember = "nomeEquipe";
+            cmb_Time2.DataSource = EquipeFora.ListarDados().Tables[0];
         }
     }
 }

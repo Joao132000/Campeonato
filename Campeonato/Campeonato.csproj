@@ -60,6 +60,12 @@
     <Compile Include="ClassesDados\ConexaoDados.cs" />
     <Compile Include="ClassesDados\EquipeDados.cs" />
     <Compile Include="ClassesDados\EstadioDados.cs" />
+    <Compile Include="Jogo\frm_EscolhaJogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jogo\frm_EscolhaJogo.Designer.cs">
+      <DependentUpon>frm_EscolhaJogo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Organizacao_Campeonato\FrmCampeao_ViceCampeao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ClassesDados\SumulaDados.cs" />
+    <EmbeddedResource Include="Jogo\frm_EscolhaJogo.resx">
+      <DependentUpon>frm_EscolhaJogo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Organizacao_Campeonato\FrmCampeao_ViceCampeao.resx">
       <DependentUpon>FrmCampeao_ViceCampeao.cs</DependentUpon>
     </EmbeddedResource>

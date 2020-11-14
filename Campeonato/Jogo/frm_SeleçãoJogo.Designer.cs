@@ -60,16 +60,17 @@
             // 
             this.cmb_Campeonato.FormattingEnabled = true;
             this.cmb_Campeonato.ItemHeight = 23;
-            this.cmb_Campeonato.Location = new System.Drawing.Point(150, 171);
+            this.cmb_Campeonato.Location = new System.Drawing.Point(150, 84);
             this.cmb_Campeonato.Name = "cmb_Campeonato";
             this.cmb_Campeonato.Size = new System.Drawing.Size(121, 29);
             this.cmb_Campeonato.TabIndex = 1;
+            this.cmb_Campeonato.SelectedIndexChanged += new System.EventHandler(this.cmb_Campeonato_SelectedIndexChanged);
             // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel1.Location = new System.Drawing.Point(38, 88);
+            this.metroLabel1.Location = new System.Drawing.Point(38, 119);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(74, 19);
             this.metroLabel1.TabIndex = 2;
@@ -79,7 +80,7 @@
             // 
             this.metroLabel4.AutoSize = true;
             this.metroLabel4.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel4.Location = new System.Drawing.Point(38, 127);
+            this.metroLabel4.Location = new System.Drawing.Point(38, 158);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(108, 19);
             this.metroLabel4.TabIndex = 5;
@@ -89,7 +90,7 @@
             // 
             this.metroLabel5.AutoSize = true;
             this.metroLabel5.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel5.Location = new System.Drawing.Point(38, 171);
+            this.metroLabel5.Location = new System.Drawing.Point(38, 84);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(91, 19);
             this.metroLabel5.TabIndex = 6;
@@ -99,7 +100,7 @@
             // 
             this.cmb_TimeCasa.FormattingEnabled = true;
             this.cmb_TimeCasa.ItemHeight = 23;
-            this.cmb_TimeCasa.Location = new System.Drawing.Point(150, 88);
+            this.cmb_TimeCasa.Location = new System.Drawing.Point(150, 119);
             this.cmb_TimeCasa.Name = "cmb_TimeCasa";
             this.cmb_TimeCasa.Size = new System.Drawing.Size(121, 29);
             this.cmb_TimeCasa.TabIndex = 7;
@@ -108,7 +109,7 @@
             // 
             this.cmb_Time2.FormattingEnabled = true;
             this.cmb_Time2.ItemHeight = 23;
-            this.cmb_Time2.Location = new System.Drawing.Point(150, 127);
+            this.cmb_Time2.Location = new System.Drawing.Point(150, 158);
             this.cmb_Time2.Name = "cmb_Time2";
             this.cmb_Time2.Size = new System.Drawing.Size(121, 29);
             this.cmb_Time2.TabIndex = 8;
@@ -127,7 +128,7 @@
             // 
             this.metroLabel3.AutoSize = true;
             this.metroLabel3.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel3.Location = new System.Drawing.Point(38, 226);
+            this.metroLabel3.Location = new System.Drawing.Point(38, 211);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(56, 19);
             this.metroLabel3.TabIndex = 11;
@@ -137,7 +138,7 @@
             // 
             this.cmb_Estadio.FormattingEnabled = true;
             this.cmb_Estadio.ItemHeight = 23;
-            this.cmb_Estadio.Location = new System.Drawing.Point(150, 216);
+            this.cmb_Estadio.Location = new System.Drawing.Point(150, 201);
             this.cmb_Estadio.Name = "cmb_Estadio";
             this.cmb_Estadio.Size = new System.Drawing.Size(121, 29);
             this.cmb_Estadio.TabIndex = 12;

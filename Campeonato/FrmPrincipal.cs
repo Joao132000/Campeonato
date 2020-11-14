@@ -50,7 +50,8 @@ namespace Campeonato
 
         private void cmdJogo_Click(object sender, EventArgs e)
         {
-            
+            frm_EscolhaJogo Escolha = new frm_EscolhaJogo();
+            Escolha.ShowDialog();
         }
 
         private void cmdClassificaçao_Click(object sender, EventArgs e)
