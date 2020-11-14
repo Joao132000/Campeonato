@@ -33,6 +33,10 @@ namespace Campeonato
                 Jogador.IdEquipe = int.Parse(cmb_Time.SelectedValue.ToString());
                 Jogador.InlcuirDados();
                 MessageBox.Show("Registro incluído com sucesso");
+                txt_Nome.Text = "";
+                txt_Numero.Text = "";
+                Mtxt_Data.Text = "";
+
             }
             else if (cmd_Processar.Text == "Alterar")
             {

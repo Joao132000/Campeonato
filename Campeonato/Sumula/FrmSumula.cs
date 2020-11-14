@@ -57,6 +57,7 @@ namespace Campeonato
         {
             cmdSalvar.Enabled = true;
             cmdNovo.Enabled = false;
+            cmbJogador.Enabled = true;
             cmbTime.Enabled = true;
             cmbGols.Enabled = true;
             cmbCartao.Enabled = true;
