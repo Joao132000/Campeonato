@@ -49,7 +49,7 @@ namespace Campeonato
             sql += "Update Jogo set idEquipe1 = " + IdEquipe1.ToString() + ", idEquipe2=" +
                 IdEquipe2.ToString() + ", resultadoEquipe1=" + ResultadoEquipe1.ToString() + ", " +
                 "resultadoEquipe2= " + resultadoEquipe2.ToString() + ", idCampeonato=" + IdCampeonato.ToString()
-                + ", idEstadio=" + IdEstadio.ToString() + ", dataJogo='" + DataJogo 
+                + ", idEstadio=" + IdEstadio.ToString() + ", dataJogo='" + DataJogo
                 + "' where idJogo = " + IdJogo.ToString();
             obj.Executar(sql);
         }
@@ -70,7 +70,7 @@ namespace Campeonato
         public DataSet PesquisarPorCampeonato()
         {
             string sql = "";
-            sql = "Select * from JogosConsulta where Campeonato like '%"+Pesquisa+"%'";
+            sql = "Select * from JogosConsulta where Campeonato like '%" + Pesquisa + "%'";
             return obj.Listar(sql);
         }
         public DataSet ListarDadosEdicao()
@@ -112,6 +112,6 @@ namespace Campeonato
             obj.Consultar(sql);
             string[] aux = obj.Campos.Split(';');
             AuxJogo = aux[1];
-            }
+        }
     }
 }

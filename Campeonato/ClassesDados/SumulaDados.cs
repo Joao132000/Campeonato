@@ -67,6 +67,14 @@ namespace Campeonato
             sql = "Select * from SumulaDados ";
             return obj.Listar(sql);
         }
+        public void ConsultarDadosJogo()
+        {
+            string sql = "";
+            sql = "Select * from TimeSumula where idJogo = " + IdJogo.ToString();
+            obj.Consultar(sql);
+            string[] aux = obj.Campos.Split(';');
+            pesquisa = aux[1];
+        }
 
         public void ConsultarDados()
         {

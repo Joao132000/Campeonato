@@ -33,7 +33,6 @@
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.cmbJogo = new MetroFramework.Controls.MetroComboBox();
             this.cmdEditar = new MetroFramework.Controls.MetroButton();
             this.cmdNovo = new MetroFramework.Controls.MetroButton();
             this.cmdSalvar = new MetroFramework.Controls.MetroButton();
@@ -41,6 +40,7 @@
             this.cmbJogador = new MetroFramework.Controls.MetroComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cmbGols = new MetroFramework.Controls.MetroComboBox();
+            this.txtJogo = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,22 +90,11 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(221, 60);
+            this.metroLabel2.Location = new System.Drawing.Point(242, 60);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(38, 19);
             this.metroLabel2.TabIndex = 42;
             this.metroLabel2.Text = "Jogo";
-            // 
-            // cmbJogo
-            // 
-            this.cmbJogo.Enabled = false;
-            this.cmbJogo.FormattingEnabled = true;
-            this.cmbJogo.ItemHeight = 23;
-            this.cmbJogo.Location = new System.Drawing.Point(136, 82);
-            this.cmbJogo.Name = "cmbJogo";
-            this.cmbJogo.Size = new System.Drawing.Size(244, 29);
-            this.cmbJogo.TabIndex = 41;
-            this.cmbJogo.SelectedIndexChanged += new System.EventHandler(this.cmbJogo_SelectedIndexChanged);
             // 
             // cmdEditar
             // 
@@ -186,11 +175,23 @@
             this.cmbGols.Size = new System.Drawing.Size(60, 29);
             this.cmbGols.TabIndex = 49;
             // 
+            // txtJogo
+            // 
+            this.txtJogo.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.txtJogo.Enabled = false;
+            this.txtJogo.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.txtJogo.Location = new System.Drawing.Point(147, 82);
+            this.txtJogo.Name = "txtJogo";
+            this.txtJogo.Size = new System.Drawing.Size(244, 29);
+            this.txtJogo.TabIndex = 50;
+            this.txtJogo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // FrmSumula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(603, 294);
+            this.Controls.Add(this.txtJogo);
             this.Controls.Add(this.cmbGols);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cmdExcluir);
@@ -198,7 +199,6 @@
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
-            this.Controls.Add(this.cmbJogo);
             this.Controls.Add(this.cmdEditar);
             this.Controls.Add(this.cmdNovo);
             this.Controls.Add(this.cmdSalvar);
@@ -220,7 +220,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroComboBox cmbJogo;
         private MetroFramework.Controls.MetroButton cmdEditar;
         private MetroFramework.Controls.MetroButton cmdNovo;
         private MetroFramework.Controls.MetroButton cmdSalvar;
@@ -228,5 +227,6 @@
         private MetroFramework.Controls.MetroComboBox cmbJogador;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroComboBox cmbGols;
+        private MetroFramework.Controls.MetroTextBox txtJogo;
     }
 }

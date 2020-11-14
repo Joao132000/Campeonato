@@ -12,9 +12,10 @@ namespace Campeonato
 {
     public partial class FrmSumula : MetroFramework.Forms.MetroForm
     {
-        public FrmSumula()
+        public FrmSumula(int id)
         {
             InitializeComponent();
+            idJogo = id;
         }
 
         SumulaDados dados = new SumulaDados();
@@ -31,9 +32,9 @@ namespace Campeonato
             cmbJogador.ValueMember = "idJogador";
             cmbJogador.DataSource = dadosjogador.ListarDados().Tables[0];
 
-            cmbJogo.DisplayMember = "Jogo";
-            cmbJogo.ValueMember = "idJogo";
-            cmbJogo.DataSource = dadosjogo.ListarDadosJogo().Tables[0];
+            dados.IdJogo = idJogo;
+            dados.ConsultarDadosJogo();
+            txtJogo.Text = dados.Pesquisa;
         }
 
         private void cmbJogador_SelectedIndexChanged(object sender, EventArgs e)
@@ -42,18 +43,11 @@ namespace Campeonato
             dados.IdJogador = idJogador;
         }
 
-        private void cmbJogo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            idJogo = int.Parse(cmbJogo.SelectedValue.ToString());
-            dados.IdJogo = idJogo;
-        }
-
         private void cmdNovo_Click(object sender, EventArgs e)
         {
             cmdSalvar.Enabled = true;
             cmdNovo.Enabled = false;
             cmbJogador.Enabled = true;
-            cmbJogo.Enabled = true;
             cmbGols.Enabled = true;
             cmbCartao.Enabled = true;
         }
@@ -87,14 +81,12 @@ namespace Campeonato
             }
 
         }
-
         private void cmdEditar_Click(object sender, EventArgs e)
         {
             cmdSalvar.Enabled = true;
             cmdNovo.Enabled = false;
             cmdExcluir.Enabled = true;
             cmbJogador.Enabled = true;
-            cmbJogo.Enabled = true;
             cmbGols.Enabled = true;
             cmbCartao.Enabled = true;
 
@@ -116,7 +108,6 @@ namespace Campeonato
             dadosjogo.IdJogo = dados.IdJogo;
             dadosjogo.ConsultarDados();
             dadosjogo.ConsultarDadosJogo();
-            cmbJogo.Text = dadosjogo.AuxJogo;
 
             status = "Editando";
         }
