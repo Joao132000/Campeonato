@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Campeonato
 {
-    public partial class FrmPrincipal : MetroFramework.Forms.MetroForm
+    public partial class FrmPrincipal : Form
     {
         public FrmPrincipal()
         {
@@ -18,40 +18,52 @@ namespace Campeonato
         }
 
        
-
-        private void jogadorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Frm_Jogador J = new Frm_Jogador();
-            J.ShowDialog();
-        }
-
-        private void estadioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmEstadio E = new FrmEstadio();
-            E.ShowDialog();
-        }
-        private void equipeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void cmdTime_Click(object sender, EventArgs e)
         {
             FrmTime T = new FrmTime();
             T.ShowDialog();
         }
 
-        private void jogoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void cmdJogador_Click(object sender, EventArgs e)
         {
-            frm_SeleçãoJogo Jogo = new frm_SeleçãoJogo();
-            Jogo.ShowDialog();
+            Frm_Jogador J = new Frm_Jogador();
+            J.ShowDialog();
         }
 
-        private void campeonatoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void cmdEstadio_Click(object sender, EventArgs e)
+        {
+            FrmEstadio E = new FrmEstadio();
+            E.ShowDialog();
+        }
+
+        private void cmdCampeonato_Click(object sender, EventArgs e)
         {
             FrmCampeonato Camp = new FrmCampeonato();
             Camp.ShowDialog();
         }
 
-        private void sumulaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void cmdCriarCampeonato_Click(object sender, EventArgs e)
         {
-            FrmSumula S = new FrmSumula();
-            S.ShowDialog();
+            FrmOrganizaçaoCampeonato forg = new FrmOrganizaçaoCampeonato();
+            forg.ShowDialog();
+        }
+
+        private void cmdJogo_Click(object sender, EventArgs e)
+        {
+            frm_EscolhaJogo Escolha = new frm_EscolhaJogo();
+            Escolha.ShowDialog();
+        }
+
+        private void cmdClassificaçao_Click(object sender, EventArgs e)
+        {
+            FrmClassificacao fc = new FrmClassificacao();
+            fc.ShowDialog();
+        }
+
+        private void cmdCriarJogo_Click(object sender, EventArgs e)
+        {
+            frm_SeleçãoJogo Jogo = new frm_SeleçãoJogo();
+            Jogo.ShowDialog();
         }
     }
 }
