@@ -36,6 +36,7 @@ namespace Campeonato
                 + "','" + Gol + "','" + Cartao + "')";
             obj.Executar(sql);
         }
+
         public void AlterarDados()
         {
             string sql = "";
@@ -46,12 +47,14 @@ namespace Campeonato
                 + "' where idSumula = " + IdSumula.ToString();
             obj.Executar(sql);
         }
+
         public void DeletarDados()
         {
             string sql = "";
             sql += "delete from Sumula where idSumula=" + IdSumula.ToString();
             obj.Executar(sql);
         }
+
         public DataSet ListarDados()
         {
             string sql = "";
@@ -64,6 +67,7 @@ namespace Campeonato
             sql = "Select * from SumulaDados ";
             return obj.Listar(sql);
         }
+
         public void ConsultarDados()
         {
             string sql = "";
@@ -75,13 +79,6 @@ namespace Campeonato
             Gol = int.Parse(aux[3]);
             Cartao = aux[4];
         }
-        public void ConsultarDadosJogo()
-        {
-            string sql = "";
-            sql = "Select * from TimeSumula where idJogo = " + IdJogo.ToString();
-            obj.Consultar(sql);
-            string[] aux = obj.Campos.Split(';');
-            pesquisa = aux[1];
-        }
+
     }
 }

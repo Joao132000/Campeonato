@@ -31,19 +31,15 @@
             this.cmdExcluir = new MetroFramework.Controls.MetroButton();
             this.cmbCartao = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.cmbGols = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.cmbJogo = new MetroFramework.Controls.MetroComboBox();
             this.cmdEditar = new MetroFramework.Controls.MetroButton();
             this.cmdNovo = new MetroFramework.Controls.MetroButton();
             this.cmdSalvar = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.cmbTime = new MetroFramework.Controls.MetroComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cmbGols = new MetroFramework.Controls.MetroComboBox();
-            this.txtJogo = new MetroFramework.Controls.MetroTextBox();
             this.cmbJogador = new MetroFramework.Controls.MetroComboBox();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // cmdExcluir
@@ -66,7 +62,7 @@
             "Sem Cartão",
             "Amarelo",
             "Vermelho"});
-            this.cmbCartao.Location = new System.Drawing.Point(682, 82);
+            this.cmbCartao.Location = new System.Drawing.Point(498, 82);
             this.cmbCartao.Name = "cmbCartao";
             this.cmbCartao.Size = new System.Drawing.Size(100, 29);
             this.cmbCartao.TabIndex = 46;
@@ -74,29 +70,63 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(708, 60);
+            this.metroLabel4.Location = new System.Drawing.Point(520, 60);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(50, 19);
             this.metroLabel4.TabIndex = 45;
             this.metroLabel4.Text = "Cartão";
             // 
+            // cmbGols
+            // 
+            this.cmbGols.Enabled = false;
+            this.cmbGols.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cmbGols.FormattingEnabled = true;
+            this.cmbGols.ItemHeight = 23;
+            this.cmbGols.Items.AddRange(new object[] {
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10"});
+            this.cmbGols.Location = new System.Drawing.Point(432, 82);
+            this.cmbGols.Name = "cmbGols";
+            this.cmbGols.Size = new System.Drawing.Size(60, 29);
+            this.cmbGols.TabIndex = 44;
+            // 
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(625, 60);
+            this.metroLabel3.Location = new System.Drawing.Point(447, 60);
             this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(42, 19);
+            this.metroLabel3.Size = new System.Drawing.Size(29, 19);
             this.metroLabel3.TabIndex = 43;
-            this.metroLabel3.Text = "Gol(s)";
+            this.metroLabel3.Text = "Gol";
             // 
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(423, 60);
+            this.metroLabel2.Location = new System.Drawing.Point(221, 60);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(38, 19);
             this.metroLabel2.TabIndex = 42;
             this.metroLabel2.Text = "Jogo";
+            // 
+            // cmbJogo
+            // 
+            this.cmbJogo.Enabled = false;
+            this.cmbJogo.FormattingEnabled = true;
+            this.cmbJogo.ItemHeight = 23;
+            this.cmbJogo.Location = new System.Drawing.Point(136, 82);
+            this.cmbJogo.Name = "cmbJogo";
+            this.cmbJogo.Size = new System.Drawing.Size(244, 29);
+            this.cmbJogo.TabIndex = 41;
+            this.cmbJogo.SelectedIndexChanged += new System.EventHandler(this.cmbJogo_SelectedIndexChanged);
             // 
             // cmdEditar
             // 
@@ -129,109 +159,43 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(39, 60);
+            this.metroLabel1.Location = new System.Drawing.Point(23, 60);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(42, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(58, 19);
             this.metroLabel1.TabIndex = 37;
-            this.metroLabel1.Text = "Time ";
-            // 
-            // cmbTime
-            // 
-            this.cmbTime.Enabled = false;
-            this.cmbTime.FormattingEnabled = true;
-            this.cmbTime.ItemHeight = 23;
-            this.cmbTime.Location = new System.Drawing.Point(9, 82);
-            this.cmbTime.Name = "cmbTime";
-            this.cmbTime.Size = new System.Drawing.Size(121, 29);
-            this.cmbTime.TabIndex = 36;
-            this.cmbTime.SelectedIndexChanged += new System.EventHandler(this.cmbTime_SelectedIndexChanged);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Campeonato.Properties.Resources.Sumula;
-            this.pictureBox1.Location = new System.Drawing.Point(616, 136);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(166, 135);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 48;
-            this.pictureBox1.TabStop = false;
-            // 
-            // cmbGols
-            // 
-            this.cmbGols.FormattingEnabled = true;
-            this.cmbGols.ItemHeight = 23;
-            this.cmbGols.Items.AddRange(new object[] {
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10"});
-            this.cmbGols.Location = new System.Drawing.Point(616, 82);
-            this.cmbGols.Name = "cmbGols";
-            this.cmbGols.Size = new System.Drawing.Size(60, 29);
-            this.cmbGols.TabIndex = 49;
-            // 
-            // txtJogo
-            // 
-            this.txtJogo.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.txtJogo.Enabled = false;
-            this.txtJogo.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.txtJogo.Location = new System.Drawing.Point(321, 82);
-            this.txtJogo.Name = "txtJogo";
-            this.txtJogo.Size = new System.Drawing.Size(244, 29);
-            this.txtJogo.TabIndex = 51;
-            this.txtJogo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.metroLabel1.Text = "Jogador";
             // 
             // cmbJogador
             // 
             this.cmbJogador.Enabled = false;
             this.cmbJogador.FormattingEnabled = true;
             this.cmbJogador.ItemHeight = 23;
-            this.cmbJogador.Location = new System.Drawing.Point(138, 82);
+            this.cmbJogador.Location = new System.Drawing.Point(9, 82);
             this.cmbJogador.Name = "cmbJogador";
             this.cmbJogador.Size = new System.Drawing.Size(121, 29);
-            this.cmbJogador.TabIndex = 52;
+            this.cmbJogador.TabIndex = 36;
             this.cmbJogador.SelectedIndexChanged += new System.EventHandler(this.cmbJogador_SelectedIndexChanged);
-            // 
-            // metroLabel5
-            // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(159, 60);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(70, 19);
-            this.metroLabel5.TabIndex = 53;
-            this.metroLabel5.Text = "Jogadores";
             // 
             // FrmSumula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(791, 294);
-            this.Controls.Add(this.metroLabel5);
-            this.Controls.Add(this.cmbJogador);
-            this.Controls.Add(this.txtJogo);
-            this.Controls.Add(this.cmbGols);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(603, 294);
             this.Controls.Add(this.cmdExcluir);
             this.Controls.Add(this.cmbCartao);
             this.Controls.Add(this.metroLabel4);
+            this.Controls.Add(this.cmbGols);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
+            this.Controls.Add(this.cmbJogo);
             this.Controls.Add(this.cmdEditar);
             this.Controls.Add(this.cmdNovo);
             this.Controls.Add(this.cmdSalvar);
             this.Controls.Add(this.metroLabel1);
-            this.Controls.Add(this.cmbTime);
+            this.Controls.Add(this.cmbJogador);
             this.Name = "FrmSumula";
             this.Text = "Súmula";
             this.Load += new System.EventHandler(this.FrmSumula_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,17 +206,14 @@
         private MetroFramework.Controls.MetroButton cmdExcluir;
         private MetroFramework.Controls.MetroComboBox cmbCartao;
         private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroComboBox cmbGols;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroComboBox cmbJogo;
         private MetroFramework.Controls.MetroButton cmdEditar;
         private MetroFramework.Controls.MetroButton cmdNovo;
         private MetroFramework.Controls.MetroButton cmdSalvar;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroComboBox cmbTime;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private MetroFramework.Controls.MetroComboBox cmbGols;
-        private MetroFramework.Controls.MetroTextBox txtJogo;
         private MetroFramework.Controls.MetroComboBox cmbJogador;
-        private MetroFramework.Controls.MetroLabel metroLabel5;
     }
 }

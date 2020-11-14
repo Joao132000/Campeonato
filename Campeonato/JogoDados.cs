@@ -79,19 +79,7 @@ namespace Campeonato
             sql = "Select * from JogosConsulta";
             return obj.Listar(sql);
         }
-        public DataSet ListarDadosEquipeJogo()
-        {
-            string sql = "";
-            sql = "Select * from ListarTimeJogo where idJogo = " + IdJogo.ToString();
-            return obj.Listar(sql);
-        }
 
-        public DataSet ListarDadosNomeJogo()
-        {
-            string sql = "";
-            sql = "Select * from TimeSumula";
-            return obj.Listar(sql);
-        }
         public void ConsultarDados()
         {
             string sql = "";
