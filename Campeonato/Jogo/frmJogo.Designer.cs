@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.txt_Time1 = new MetroFramework.Controls.MetroTextBox();
             this.txt_Time2 = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.lbl_tempos = new MetroFramework.Controls.MetroLabel();
             this.lbl_Tempo = new MetroFramework.Controls.MetroLabel();
             this.lbl_Campeonato = new MetroFramework.Controls.MetroLabel();
             this.cmd_Iniciar = new MetroFramework.Controls.MetroButton();
@@ -65,25 +65,25 @@
             this.txt_Time2.Size = new System.Drawing.Size(91, 23);
             this.txt_Time2.TabIndex = 1;
             // 
-            // metroLabel1
+            // lbl_tempos
             // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.metroLabel1.Location = new System.Drawing.Point(137, 157);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(71, 19);
-            this.metroLabel1.TabIndex = 4;
-            this.metroLabel1.Text = "Tempo: 1";
+            this.lbl_tempos.AutoSize = true;
+            this.lbl_tempos.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.lbl_tempos.Location = new System.Drawing.Point(127, 155);
+            this.lbl_tempos.Name = "lbl_tempos";
+            this.lbl_tempos.Size = new System.Drawing.Size(73, 19);
+            this.lbl_tempos.TabIndex = 4;
+            this.lbl_tempos.Text = "1º Tempo";
             // 
             // lbl_Tempo
             // 
             this.lbl_Tempo.AutoSize = true;
             this.lbl_Tempo.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lbl_Tempo.Location = new System.Drawing.Point(137, 121);
+            this.lbl_Tempo.Location = new System.Drawing.Point(140, 119);
             this.lbl_Tempo.Name = "lbl_Tempo";
-            this.lbl_Tempo.Size = new System.Drawing.Size(65, 19);
+            this.lbl_Tempo.Size = new System.Drawing.Size(45, 19);
             this.lbl_Tempo.TabIndex = 5;
-            this.lbl_Tempo.Text = "00:00:00";
+            this.lbl_Tempo.Text = "00:00";
             // 
             // lbl_Campeonato
             // 
@@ -115,7 +115,7 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 1000;
+            this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // pictureBox1
@@ -141,7 +141,7 @@
             // pb_Time1
             // 
             this.pb_Time1.Enabled = false;
-            this.pb_Time1.Location = new System.Drawing.Point(30, 106);
+            this.pb_Time1.Location = new System.Drawing.Point(23, 106);
             this.pb_Time1.Name = "pb_Time1";
             this.pb_Time1.Size = new System.Drawing.Size(91, 81);
             this.pb_Time1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -158,7 +158,7 @@
             this.Controls.Add(this.cmd_Iniciar);
             this.Controls.Add(this.lbl_Campeonato);
             this.Controls.Add(this.lbl_Tempo);
-            this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.lbl_tempos);
             this.Controls.Add(this.pb_Imagem2);
             this.Controls.Add(this.pb_Time1);
             this.Controls.Add(this.txt_Time2);
@@ -180,7 +180,7 @@
         private MetroFramework.Controls.MetroTextBox txt_Time2;
         private System.Windows.Forms.PictureBox pb_Time1;
         private System.Windows.Forms.PictureBox pb_Imagem2;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel lbl_tempos;
         private MetroFramework.Controls.MetroLabel lbl_Tempo;
         private MetroFramework.Controls.MetroLabel lbl_Campeonato;
         private MetroFramework.Controls.MetroButton cmd_Iniciar;

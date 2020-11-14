@@ -16,12 +16,16 @@ namespace Campeonato
         private JogoDados Jogo = new JogoDados();
         private EquipeDados Equipe1 = new EquipeDados();
         private EquipeDados Equipe2 = new EquipeDados();
-        private int tempo = 4500;
-        private int id;
-        public frmJogo(int id)
+        private int[] Tempo;
+        private int id, aux = 0, R = 0;
+        public frmJogo(int id,int D)
         {
             InitializeComponent();
             Id = id;
+            Tempo = new int[2];
+            R = D-1;
+            Tempo[0] =D-1;
+            Tempo[1] =59;
         }
 
         public int Id { get => id; set => id = value; }
@@ -52,21 +56,84 @@ namespace Campeonato
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            tempo--;
-            if (tempo == 0)
+            Tempo[1]--;
+            if ((Tempo[0] == 0) && (Tempo[1] == 0))
             {
-                MessageBox.Show("Partida Encerrada");
+                timer1.Stop();
+                lbl_Tempo.Text = "00:00";
+                if (aux == 2)
+                {
+                    MessageBox.Show("Partida Encerrada");
+                    cmd_Iniciar.Text = "Sair";
+                }else if (aux == 1)
+                {
+                    cmd_Iniciar.Text = "Iniciar 2º Tempo";
+                }
+            }
+            else if (Tempo[1] == 0)
+            {
+                Tempo[0]--;
+                Tempo[1] = 59;
+                if (Tempo[0] < 10)
+                {
+                    lbl_Tempo.Text = "0" + Tempo[0].ToString() + ":" + Tempo[1].ToString();
+                }
+                else
+                {
+                    lbl_Tempo.Text = Tempo[0].ToString() + ":" + Tempo[1].ToString();
+                }
             }
             else
             {
-                lbl_Tempo.Text = tempo.ToString();
+                if ((Tempo[0] < 10) && (Tempo[1] < 10))
+                {
+                    lbl_Tempo.Text = "0" + Tempo[0].ToString() + ":" + "0" + Tempo[1].ToString();
+                }
+                else if ((Tempo[0] < 10) && (Tempo[1] >= 10))
+                {
+                    lbl_Tempo.Text = "0" + Tempo[0].ToString() + ":" + Tempo[1].ToString();
+                }
+                else if ((Tempo[0] >= 10) && (Tempo[1] < 10))
+                {
+                    lbl_Tempo.Text = Tempo[0].ToString() + ":" + "0" + Tempo[1].ToString();
+                }
+                else
+                {
+                    lbl_Tempo.Text = Tempo[0].ToString() + ":" + Tempo[1].ToString();
+                }
             }
-           
         }
 
         private void cmd_Iniciar_Click(object sender, EventArgs e)
         {
-            timer1.Start();
+            if (cmd_Iniciar.Text == "Iniciar 2º Tempo")
+            {
+                Tempo[0] = R;
+                Tempo[1] = 59;
+            }
+            if (cmd_Iniciar.Text == "Pausar")
+            {
+                timer1.Stop();
+                cmd_Iniciar.Text = "Continuar";
+            }
+            if (cmd_Iniciar.Text == "Sair")
+            {
+                Close();
+            }
+            if (aux == 0)
+            {
+                aux++;
+                lbl_tempos.Text = aux+"º Tempo";
+                timer1.Start();
+                cmd_Iniciar.Text = "Pausar";
+            }
+            else
+            {
+                aux++;
+                lbl_tempos.Text = aux + "º Tempo";
+                cmd_Iniciar.Text = "Pausar";
+                timer1.Start();
+            }
         }
 
         private void cmd_PreencherSumula_Click(object sender, EventArgs e)
