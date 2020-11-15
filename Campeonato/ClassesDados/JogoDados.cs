@@ -89,7 +89,7 @@ namespace Campeonato
         public DataSet ListarDadosNomeJogo()
         {
             string sql = "";
-            sql = "Select * from TimeSumula";
+            sql = "Select * from TimeSumula where idCampeonato = " + IdCampeonato.ToString();
             return obj.Listar(sql);
         }
         public void ConsultarDados()
