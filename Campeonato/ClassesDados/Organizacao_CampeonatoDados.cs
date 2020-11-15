@@ -28,6 +28,23 @@ namespace Campeonato
             obj.Executar(sql);
         }
 
+        public void ConsultarDados()
+        {
+            string sql = "";
+            sql = "Select * from Organizacao_Campeonato where idCampeonato = " + IdCampeonato.ToString();
+            obj.Consultar(sql);
+            string[] aux = obj.Campos.Split(';');
+            IdCampeonato = int.Parse(aux[0]);
+            IdEquipe = int.Parse(aux[1]);
+            Pontos = int.Parse(aux[2].ToString());
+        }
+        public void AlterarDados()
+        {
+            string sql = "";
+            sql += "Update Organizacao_Campeonato set pontos = '" + Pontos + "' where idEquipe= " + IdEquipe.ToString();
+            obj.Executar(sql);
+        }
+
         public DataSet ListarDadosParaConsulta()
         {
             string sql = "";
@@ -39,7 +56,7 @@ namespace Campeonato
         public DataSet ListarDadosParaComboBox()
         {
             string sql = "";
-            sql = "Select Equipe.nomeEquipe from Organizacao_Campeonato inner join Equipe on Organizacao_Campeonato.idEquipe = Equipe.idEquipe " +
+            sql = "Select Equipe.idEquipe, Equipe.nomeEquipe from Organizacao_Campeonato inner join Equipe on Organizacao_Campeonato.idEquipe = Equipe.idEquipe " +
                 "where idCampeonato =" + IdCampeonato;
             return obj.Listar(sql);
         }

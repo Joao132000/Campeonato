@@ -124,7 +124,7 @@ namespace Campeonato
             if (cmd_Iniciar.Text == "Iniciar 2º Tempo")
             {
                 Tempo[0] = R;
-                Tempo[1] = 59;
+                Tempo[1] = 2;
             }
             if (cmd_Iniciar.Text == "Pausar")
             {
@@ -133,31 +133,34 @@ namespace Campeonato
             }
             if (cmd_Iniciar.Text == "Sair")
             {
+                Jogo.IdJogo = Id;
+                Jogo.ConsultarDados();
                 Org.IdCampeonato = Jogo.IdCampeonato;
-                if ((int.Parse(txt_gols1.Text)) > (int.Parse(txt_gols1.Text)))
+                Org.ConsultarDados();
+                if ((int.Parse(txt_gols1.Text)) > (int.Parse(txt_gols2.Text)))
                 {
                     PontosDentro = 3;
                     Org.IdEquipe = Equipe1.IdEquipe;
-                    Org.Pontos = PontosDentro;
-                    Org.IncluirDados();
+                    Org.Pontos += PontosDentro;
+                    Org.AlterarDados();
                 }
-                else if((int.Parse(txt_gols1.Text)) < (int.Parse(txt_gols1.Text)))
+                if((int.Parse(txt_gols2.Text)) > (int.Parse(txt_gols1.Text)))
                 {
                     PontosFora = 3;
                     Org.IdEquipe = Equipe2.IdEquipe;
-                    Org.Pontos = PontosFora;
-                    Org.IncluirDados();
+                    Org.Pontos += PontosFora;
+                    Org.AlterarDados();
                 }
-                else
+                if ((int.Parse(txt_gols2.Text)) == (int.Parse(txt_gols1.Text)))
                 {
                     PontosDentro = 1;
                     Org.IdEquipe = Equipe1.IdEquipe;
-                    Org.Pontos = PontosDentro;
-                    Org.IncluirDados();
+                    Org.Pontos += PontosDentro;
+                    Org.AlterarDados();
                     PontosFora = 1;
                     Org.IdEquipe = Equipe2.IdEquipe;
-                    Org.Pontos = PontosFora;
-                    Org.IncluirDados();
+                    Org.Pontos += PontosFora;
+                    Org.AlterarDados();
                 }
                 Close();
             }

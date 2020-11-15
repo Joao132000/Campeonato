@@ -12,11 +12,14 @@ namespace Campeonato
 {
     public partial class FrmEditarSumula : MetroFramework.Forms.MetroForm
     {
-        public FrmEditarSumula()
+        public FrmEditarSumula(int a)
         {
             InitializeComponent();
+            this.a = a;
         }
 
+        private int a;
+        
         SumulaDados dados = new SumulaDados();
         private int id;
 
@@ -24,7 +27,8 @@ namespace Campeonato
 
         private void FrmEditarSumula_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = dados.ListarDadosJogador().Tables[0];
+            dados.IdJogo = a;
+            dataGridView1.DataSource = dados.ListarDadosJogadorParaEditar().Tables[0];
             dataGridView1.Columns[0].Visible = false;
             dataGridView1.ReadOnly = true;
             dataGridView1.MultiSelect = false;
@@ -35,19 +39,20 @@ namespace Campeonato
         private void cmdPesquisar_Click(object sender, EventArgs e)
         {
             dados.AuxNomeJogador = txtNome.Text;
-            dataGridView1.DataSource = dados.ListarDados().Tables[0];
+            dataGridView1.DataSource = dados.ListarDadosJogador().Tables[0];
         }
 
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
             MessageBox.Show("Dados selecionados!");
             Close();
         }
 
         private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
-            id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+           
         }
     }
 }

@@ -64,6 +64,13 @@ namespace Campeonato
             sql = "Select * from SumulaDados ";
             return obj.Listar(sql);
         }
+
+        public DataSet ListarDadosJogadorParaEditar()
+        {
+            string sql = "";
+            sql = "Select * from SumulaDados where [Identificação do Jogo] = " + IdJogo.ToString();
+            return obj.Listar(sql);
+        }
         public void ConsultarDados()
         {
             string sql = "";

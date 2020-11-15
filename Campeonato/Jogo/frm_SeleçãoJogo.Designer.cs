@@ -41,10 +41,6 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.cmd_Localizar = new MetroFramework.Controls.MetroButton();
             this.cmd_Excluir = new MetroFramework.Controls.MetroButton();
-            this.txt_Pontos1 = new MetroFramework.Controls.MetroTextBox();
-            this.txt_Pontos2 = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
             // cmd_Ok
@@ -170,53 +166,11 @@
             this.cmd_Excluir.Visible = false;
             this.cmd_Excluir.Click += new System.EventHandler(this.cmd_Excluir_Click);
             // 
-            // txt_Pontos1
-            // 
-            this.txt_Pontos1.BackColor = System.Drawing.Color.White;
-            this.txt_Pontos1.CustomBackground = true;
-            this.txt_Pontos1.Location = new System.Drawing.Point(536, 142);
-            this.txt_Pontos1.Name = "txt_Pontos1";
-            this.txt_Pontos1.Size = new System.Drawing.Size(41, 23);
-            this.txt_Pontos1.TabIndex = 16;
-            // 
-            // txt_Pontos2
-            // 
-            this.txt_Pontos2.BackColor = System.Drawing.Color.White;
-            this.txt_Pontos2.CustomBackground = true;
-            this.txt_Pontos2.Location = new System.Drawing.Point(536, 186);
-            this.txt_Pontos2.Name = "txt_Pontos2";
-            this.txt_Pontos2.Size = new System.Drawing.Size(41, 23);
-            this.txt_Pontos2.TabIndex = 17;
-            // 
-            // metroLabel6
-            // 
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel6.Location = new System.Drawing.Point(375, 146);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(142, 19);
-            this.metroLabel6.TabIndex = 18;
-            this.metroLabel6.Text = "Pontuação Time Casa:";
-            // 
-            // metroLabel7
-            // 
-            this.metroLabel7.AutoSize = true;
-            this.metroLabel7.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel7.Location = new System.Drawing.Point(375, 190);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(140, 19);
-            this.metroLabel7.TabIndex = 19;
-            this.metroLabel7.Text = "Pontuação Time Fora:";
-            // 
             // frm_SeleçãoJogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(676, 358);
-            this.Controls.Add(this.metroLabel7);
-            this.Controls.Add(this.metroLabel6);
-            this.Controls.Add(this.txt_Pontos2);
-            this.Controls.Add(this.txt_Pontos1);
             this.Controls.Add(this.cmd_Excluir);
             this.Controls.Add(this.cmd_Localizar);
             this.Controls.Add(this.dateTimePicker1);
@@ -253,9 +207,5 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private MetroFramework.Controls.MetroButton cmd_Localizar;
         private MetroFramework.Controls.MetroButton cmd_Excluir;
-        private MetroFramework.Controls.MetroTextBox txt_Pontos1;
-        private MetroFramework.Controls.MetroTextBox txt_Pontos2;
-        private MetroFramework.Controls.MetroLabel metroLabel6;
-        private MetroFramework.Controls.MetroLabel metroLabel7;
     }
 }

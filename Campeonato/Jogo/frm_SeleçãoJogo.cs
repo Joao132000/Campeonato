@@ -12,6 +12,7 @@ namespace Campeonato
 {
     public partial class frm_SeleçãoJogo : MetroFramework.Forms.MetroForm
     {
+        Organizacao_CampeonatoDados dadosOrganizaçao = new Organizacao_CampeonatoDados();
         private CampeonatoDados Campeonato;
         private EquipeDados EquipeCasa;
         private EquipeDados EquipeFora;
@@ -34,7 +35,9 @@ namespace Campeonato
         private void metroButton1_Click(object sender, EventArgs e)
         {
             if (cmd_Ok.Text == "Adicionar")
+
             {
+                string x = cmb_Time2.SelectedValue.ToString();
                 if (cmb_Time2.SelectedValue.ToString() == cmb_TimeCasa.SelectedValue.ToString())
                 {
                     MessageBox.Show("Não é possível confirmar a seleção!\n\tTimes iguais!!");
@@ -58,16 +61,12 @@ namespace Campeonato
                 Jogo.IdEstadio = int.Parse(cmb_Estadio.SelectedValue.ToString());
                 Jogo.IdCampeonato = int.Parse(cmb_Campeonato.SelectedValue.ToString());
                 Jogo.DataJogo = dateTimePicker1.Value.ToString();
-                Jogo.ResultadoEquipe1 = int.Parse(txt_Pontos1.Text);
-                Jogo.ResultadoEquipe2 = int.Parse(txt_Pontos2.Text);
+               
                 Jogo.AlterarDados();
                 cmd_Ok.Text = "Adicionar";
                 cmd_Localizar.Text = "Editar";
                 cmd_Excluir.Visible = false;
-                txt_Pontos1.Enabled = false;
-                txt_Pontos2.Enabled = false;
-                txt_Pontos1.Text = "";
-                txt_Pontos2.Text = "";
+                
                 MessageBox.Show("Alterações salvas com sucesso");
             }
         }
@@ -77,6 +76,7 @@ namespace Campeonato
             cmb_Campeonato.ValueMember = "idCampeonato";
             cmb_Campeonato.DisplayMember = "nomeCampeonato";
             cmb_Campeonato.DataSource = Campeonato.ListarDados().Tables[0];
+
 
             cmb_Estadio.ValueMember = "idEstadio";
             cmb_Estadio.DisplayMember = "nomeEstadio";
@@ -94,10 +94,7 @@ namespace Campeonato
                 Jogo.ConsultarDados();
                 cmd_Localizar.Text = "Cancelar";
                 dateTimePicker1.Text = Jogo.DataJogo;
-                txt_Pontos1.Text = Jogo.ResultadoEquipe1.ToString();
-                txt_Pontos2.Text = Jogo.ResultadoEquipe2.ToString();
-                txt_Pontos1.Enabled = true;
-                txt_Pontos2.Enabled = true;
+               
                 cmd_Ok.Text = "Salvar";
                 cmd_Excluir.Visible = true;
 
@@ -123,10 +120,7 @@ namespace Campeonato
                 cmd_Ok.Text = "Adicionar";
                 cmd_Localizar.Text = "Editar";
                 cmd_Excluir.Visible = false;
-                txt_Pontos1.Enabled = false;
-                txt_Pontos2.Enabled = false;
-                txt_Pontos1.Text = "";
-                txt_Pontos2.Text = "";
+               
             }
         }
 
@@ -174,13 +168,19 @@ namespace Campeonato
 
         private void cmb_Campeonato_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Id = int.Parse(cmb_Campeonato.SelectedValue.ToString());
+            Campeonato.IdCampeonato = Id;
+            Campeonato.ConsultarDados();
+
+            dadosOrganizaçao.IdCampeonato = Id;
+
             cmb_TimeCasa.ValueMember = "idEquipe";
             cmb_TimeCasa.DisplayMember = "nomeEquipe";
-            cmb_TimeCasa.DataSource = EquipeCasa.ListarDados().Tables[0];
+            cmb_TimeCasa.DataSource = dadosOrganizaçao.ListarDadosParaComboBox().Tables[0];
 
             cmb_Time2.ValueMember = "idEquipe";
             cmb_Time2.DisplayMember = "nomeEquipe";
-            cmb_Time2.DataSource = EquipeFora.ListarDados().Tables[0];
+            cmb_Time2.DataSource = dadosOrganizaçao.ListarDadosParaComboBox().Tables[0];
         }
     }
 }

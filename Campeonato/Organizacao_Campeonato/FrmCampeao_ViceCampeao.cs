@@ -69,7 +69,7 @@ namespace Campeonato
             dadosCampeonato.IdCampeonato = Id;
             dadosCampeonato.ConsultarDados();
 
-            dadosOrganizaçao.IdCampeonato = id;
+            dadosOrganizaçao.IdCampeonato = Id;
             
             cmbCampeao.DisplayMember = "nomeEquipe";
             cmbCampeao.ValueMember = "idEquipe";

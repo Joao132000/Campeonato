@@ -131,19 +131,27 @@ namespace Campeonato
             cmbGols.Enabled = true;
             cmbCartao.Enabled = true;
 
-            FrmEditarSumula ES = new FrmEditarSumula();
+            FrmEditarSumula ES = new FrmEditarSumula(dados.IdJogo);
             ES.ShowDialog();
             dados.IdSumula = ES.Id;
 
             dados.ConsultarDados();
-            
-            cmbCartao.Text = dados.Cartao;
-            cmbGols.Text = dados.Gol.ToString();
+
+            dadosequipe.IdEquipe = dadosjogador.IdEquipe;
+            dadosequipe.ConsultarDados();
+            cmbTime.Text = dadosequipe.NomeEquipe;
+
+            dados.ConsultarDados();
 
             dadosjogador.IdJogador = dados.IdJogador;
             dadosjogador.ConsultarDados();
-            cmbTime.Text = dadosjogador.NomeJogador;
+            cmbJogador.Text = dadosjogador.NomeJogador;
+
+            dados.IdSumula = ES.Id;
+            dados.ConsultarDados();
             
+            cmbCartao.Text = dados.Cartao;
+            cmbGols.Text = dados.Gol.ToString();
 
             dados.ConsultarDados();
             dadosjogo.IdJogo = dados.IdJogo;
