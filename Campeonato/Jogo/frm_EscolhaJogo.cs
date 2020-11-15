@@ -57,6 +57,7 @@ namespace Campeonato
             {
                 frmJogo J1 = new frmJogo(int.Parse(cmb_jogo.SelectedValue.ToString()),int.Parse(nud_tempo.Value.ToString()));
                 J1.ShowDialog();
+
             }
         }
 

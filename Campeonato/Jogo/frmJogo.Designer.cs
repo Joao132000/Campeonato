@@ -40,6 +40,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pb_Imagem2 = new System.Windows.Forms.PictureBox();
             this.pb_Time1 = new System.Windows.Forms.PictureBox();
+            this.txt_gols1 = new MetroFramework.Controls.MetroTextBox();
+            this.txt_gols2 = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Imagem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Time1)).BeginInit();
@@ -148,11 +151,48 @@
             this.pb_Time1.TabIndex = 2;
             this.pb_Time1.TabStop = false;
             // 
+            // txt_gols1
+            // 
+            this.txt_gols1.BackColor = System.Drawing.Color.White;
+            this.txt_gols1.CustomBackground = true;
+            this.txt_gols1.Location = new System.Drawing.Point(127, 208);
+            this.txt_gols1.Name = "txt_gols1";
+            this.txt_gols1.Size = new System.Drawing.Size(26, 23);
+            this.txt_gols1.TabIndex = 10;
+            this.txt_gols1.Text = "0";
+            this.txt_gols1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_gols2
+            // 
+            this.txt_gols2.BackColor = System.Drawing.Color.White;
+            this.txt_gols2.CustomBackground = true;
+            this.txt_gols2.Location = new System.Drawing.Point(184, 208);
+            this.txt_gols2.Name = "txt_gols2";
+            this.txt_gols2.Size = new System.Drawing.Size(26, 23);
+            this.txt_gols2.TabIndex = 11;
+            this.txt_gols2.Text = "0";
+            this.txt_gols2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.BackColor = System.Drawing.Color.White;
+            this.metroLabel1.CustomBackground = true;
+            this.metroLabel1.FontWeight = MetroFramework.MetroLabelWeight.Bold;
+            this.metroLabel1.Location = new System.Drawing.Point(161, 208);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(18, 19);
+            this.metroLabel1.TabIndex = 12;
+            this.metroLabel1.Text = "X";
+            // 
             // frmJogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(542, 338);
+            this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.txt_gols2);
+            this.Controls.Add(this.txt_gols1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cmd_PreencherSumula);
             this.Controls.Add(this.cmd_Iniciar);
@@ -187,5 +227,8 @@
         private MetroFramework.Controls.MetroButton cmd_PreencherSumula;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private MetroFramework.Controls.MetroTextBox txt_gols1;
+        private MetroFramework.Controls.MetroTextBox txt_gols2;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
     }
 }
