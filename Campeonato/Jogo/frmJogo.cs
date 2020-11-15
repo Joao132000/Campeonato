@@ -16,6 +16,8 @@ namespace Campeonato
         private JogoDados Jogo = new JogoDados();
         private EquipeDados Equipe1 = new EquipeDados();
         private EquipeDados Equipe2 = new EquipeDados();
+        private Organizacao_CampeonatoDados Org = new Organizacao_CampeonatoDados();
+        private CampeonatoDados C = new CampeonatoDados();
         private int[] Tempo;
         private int id, aux = 0, R = 0;
 
@@ -44,6 +46,9 @@ namespace Campeonato
         {
             Jogo.IdJogo=Id;
             Jogo.ConsultarDados();
+            C.IdCampeonato = Jogo.IdCampeonato;
+            C.ConsultarDados();
+            lbl_Campeonato.Text = C.NomeCampeonato;
             Equipe1.IdEquipe = Jogo.IdEquipe1;
             Equipe2.IdEquipe = Jogo.IdEquipe2;
             Equipe1.ConsultarFoto();
@@ -128,21 +133,31 @@ namespace Campeonato
             }
             if (cmd_Iniciar.Text == "Sair")
             {
-                EquipeDentro = Equipe1.IdEquipe;
-                EquipeFora = Equipe2.IdEquipe;
+                Org.IdCampeonato = Jogo.IdCampeonato;
                 if ((int.Parse(txt_gols1.Text)) > (int.Parse(txt_gols1.Text)))
                 {
                     PontosDentro = 3;
-                    PontosFora = 0;
-                }else if((int.Parse(txt_gols1.Text)) < (int.Parse(txt_gols1.Text)))
+                    Org.IdEquipe = Equipe1.IdEquipe;
+                    Org.Pontos = PontosDentro;
+                    Org.IncluirDados();
+                }
+                else if((int.Parse(txt_gols1.Text)) < (int.Parse(txt_gols1.Text)))
                 {
-                    PontosDentro = 0;
                     PontosFora = 3;
+                    Org.IdEquipe = Equipe2.IdEquipe;
+                    Org.Pontos = PontosFora;
+                    Org.IncluirDados();
                 }
                 else
                 {
                     PontosDentro = 1;
+                    Org.IdEquipe = Equipe1.IdEquipe;
+                    Org.Pontos = PontosDentro;
+                    Org.IncluirDados();
                     PontosFora = 1;
+                    Org.IdEquipe = Equipe2.IdEquipe;
+                    Org.Pontos = PontosFora;
+                    Org.IncluirDados();
                 }
                 Close();
             }

@@ -29,10 +29,10 @@ namespace Campeonato
 
         private void cmb_Campeonato_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Jogo.IdJogo = int.Parse(cmb_Campeonato.SelectedValue.ToString());
+            Jogo.IdCampeonato = int.Parse(cmb_Campeonato.SelectedValue.ToString());
             cmb_jogo.ValueMember = "idJogo";
             cmb_jogo.DisplayMember = "Jogo";
-            cmb_jogo.DataSource = Jogo.ListarDadosNomeJogo().Tables[0];
+            cmb_jogo.DataSource = Jogo.ListarDadosJogoCampeonato().Tables[0];
             cmb_jogo.Enabled = true;
         }
 
