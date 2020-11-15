@@ -32,7 +32,7 @@ namespace Campeonato
             Jogo.IdCampeonato = int.Parse(cmb_Campeonato.SelectedValue.ToString());
             cmb_jogo.ValueMember = "idJogo";
             cmb_jogo.DisplayMember = "Jogo";
-            cmb_jogo.DataSource = Jogo.ListarDadosNomeJogo().Tables[0];
+            cmb_jogo.DataSource = Jogo.ListarDadosJogoCampeonato().Tables[0];
             cmb_jogo.Enabled = true;
         }
 
@@ -57,6 +57,7 @@ namespace Campeonato
             {
                 frmJogo J1 = new frmJogo(int.Parse(cmb_jogo.SelectedValue.ToString()),int.Parse(nud_tempo.Value.ToString()));
                 J1.ShowDialog();
+
             }
         }
 

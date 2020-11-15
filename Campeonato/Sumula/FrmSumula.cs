@@ -25,8 +25,17 @@ namespace Campeonato
 
         private int idJogo;
         private int idjogador;
+        
+        private int gols;
+        private int auxEquipe;
+        private int identificador;
 
         private string status = "Inserindo";
+        //
+        public int Gols { get => gols; set => gols = value; }
+        public int AuxEquipe { get => auxEquipe; set => auxEquipe = value; }
+        public int Identificador { get => identificador; set => identificador = value; }
+        //
         private void FrmSumula_Load(object sender, EventArgs e)
         {
             dados.IdJogo = idJogo;
@@ -47,6 +56,7 @@ namespace Campeonato
             cmbJogador.ValueMember = "idJogador";
             dadosjogador.IdEquipe = int.Parse(cmbTime.SelectedValue.ToString());
             cmbJogador.DataSource = dadosjogador.ListarDadosJogadorporEquipe().Tables[0];
+            AuxEquipe = int.Parse(cmbTime.SelectedValue.ToString());
         }
         private void cmbJogador_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -75,6 +85,9 @@ namespace Campeonato
                     dados.Cartao = cmbCartao.SelectedItem.ToString();
                     dados.Gol = int.Parse(cmbGols.SelectedIndex.ToString());
 
+                    Gols += int.Parse(cmbGols.SelectedIndex.ToString());
+                    Identificador = 1;
+                    
                     dados.InlcuirDados();
                     MessageBox.Show("Registro incluído com sucesso!!!!");
                 }
@@ -84,8 +97,25 @@ namespace Campeonato
                 if (DialogResult.OK == MessageBox.Show("Deseja realmente salvar?", "Alerta", MessageBoxButtons.OKCancel))
                 {
                     dados.Cartao = cmbCartao.SelectedItem.ToString();
+                    
+                    Gols=dados.Gol;//
+                    
                     dados.Gol = int.Parse(cmbGols.SelectedIndex.ToString());
-
+                    //
+                    if (Gols != dados.Gol)
+                    {
+                        if (Gols < dados.Gol)
+                        {
+                            Gols += dados.Gol;
+                            identificador = 1;
+                        }
+                        else
+                        {
+                            Gols -= dados.Gol;
+                            identificador = 0;
+                        }
+                    }
+                    //
                     dados.AlterarDados();
                     MessageBox.Show("Registro alterado com sucesso!!!!");
                 }

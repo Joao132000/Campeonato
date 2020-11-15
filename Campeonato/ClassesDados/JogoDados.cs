@@ -92,6 +92,21 @@ namespace Campeonato
             sql = "Select * from TimeSumula where idCampeonato = " + IdCampeonato.ToString();
             return obj.Listar(sql);
         }
+        public void ConsultarDadosCampeonato()
+        {
+            string sql = "";
+            sql = "Select * from Jogo where idCampeonato = " + IdCampeonato.ToString();
+            obj.Consultar(sql);
+            string[] aux = obj.Campos.Split(';');
+            IdEquipe1 = int.Parse(aux[1]);
+            IdEquipe2 = int.Parse(aux[2]);
+            ResultadoEquipe1 = int.Parse(aux[3]);
+            ResultadoEquipe2 = int.Parse(aux[4]);
+            IdCampeonato = int.Parse(aux[5]);
+            IdEstadio = int.Parse(aux[6]);
+            DataJogo = aux[7];
+        }
+
         public void ConsultarDados()
         {
             string sql = "";
@@ -110,6 +125,12 @@ namespace Campeonato
         {
             string sql = "";
             sql = "Select * from TimeSumula";
+            return obj.Listar(sql);
+        }
+        public DataSet ListarDadosJogoCampeonato()
+        {
+            string sql = "";
+            sql = "Select * from TimeSumulaCampeonato where idCampeonato = "+idCampeonato.ToString();
             return obj.Listar(sql);
         }
         public void ConsultarDadosJogo()

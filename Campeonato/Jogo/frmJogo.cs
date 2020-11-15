@@ -16,8 +16,16 @@ namespace Campeonato
         private JogoDados Jogo = new JogoDados();
         private EquipeDados Equipe1 = new EquipeDados();
         private EquipeDados Equipe2 = new EquipeDados();
+        private Organizacao_CampeonatoDados Org = new Organizacao_CampeonatoDados();
+        private CampeonatoDados C = new CampeonatoDados();
         private int[] Tempo;
         private int id, aux = 0, R = 0;
+
+        private int pontosDentro;
+        private int equipeDentro;
+        private int equipeFora;
+        private int pontosFora;
+        
         public frmJogo(int id,int D)
         {
             InitializeComponent();
@@ -29,11 +37,18 @@ namespace Campeonato
         }
 
         public int Id { get => id; set => id = value; }
+        public int PontosDentro { get => pontosDentro; set => pontosDentro = value; }
+        public int EquipeDentro { get => equipeDentro; set => equipeDentro = value; }
+        public int EquipeFora { get => equipeFora; set => equipeFora = value; }
+        public int PontosFora { get => pontosFora; set => pontosFora = value; }
 
         private void frmJogo_Load(object sender, EventArgs e)
         {
             Jogo.IdJogo=Id;
             Jogo.ConsultarDados();
+            C.IdCampeonato = Jogo.IdCampeonato;
+            C.ConsultarDados();
+            lbl_Campeonato.Text = C.NomeCampeonato;
             Equipe1.IdEquipe = Jogo.IdEquipe1;
             Equipe2.IdEquipe = Jogo.IdEquipe2;
             Equipe1.ConsultarFoto();
@@ -118,6 +133,32 @@ namespace Campeonato
             }
             if (cmd_Iniciar.Text == "Sair")
             {
+                Org.IdCampeonato = Jogo.IdCampeonato;
+                if ((int.Parse(txt_gols1.Text)) > (int.Parse(txt_gols1.Text)))
+                {
+                    PontosDentro = 3;
+                    Org.IdEquipe = Equipe1.IdEquipe;
+                    Org.Pontos = PontosDentro;
+                    Org.IncluirDados();
+                }
+                else if((int.Parse(txt_gols1.Text)) < (int.Parse(txt_gols1.Text)))
+                {
+                    PontosFora = 3;
+                    Org.IdEquipe = Equipe2.IdEquipe;
+                    Org.Pontos = PontosFora;
+                    Org.IncluirDados();
+                }
+                else
+                {
+                    PontosDentro = 1;
+                    Org.IdEquipe = Equipe1.IdEquipe;
+                    Org.Pontos = PontosDentro;
+                    Org.IncluirDados();
+                    PontosFora = 1;
+                    Org.IdEquipe = Equipe2.IdEquipe;
+                    Org.Pontos = PontosFora;
+                    Org.IncluirDados();
+                }
                 Close();
             }
             if (aux == 0)
@@ -140,6 +181,22 @@ namespace Campeonato
         {
             FrmSumula S = new FrmSumula(id);
             S.ShowDialog();
+            int aux1 = S.AuxEquipe;
+            int gol = S.Gols;
+            if (Equipe1.IdEquipe == aux1)
+            {
+                if(S.Identificador==1)
+                    txt_gols1.Text = (int.Parse(txt_gols1.Text) + gol).ToString();
+                else
+                    txt_gols1.Text = (int.Parse(txt_gols1.Text) - gol).ToString();
+            }
+            else
+            {
+                if (S.Identificador == 1)
+                    txt_gols2.Text = (int.Parse(txt_gols2.Text) + gol).ToString();
+                else
+                    txt_gols2.Text = (int.Parse(txt_gols2.Text) - gol).ToString();
+            }
         }
     }
 }
