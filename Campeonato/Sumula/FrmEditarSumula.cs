@@ -22,8 +22,10 @@ namespace Campeonato
         
         SumulaDados dados = new SumulaDados();
         private int id;
+     
 
         public int Id { get => id; set => id = value; }
+     
 
         private void FrmEditarSumula_Load(object sender, EventArgs e)
         {
@@ -52,6 +54,7 @@ namespace Campeonato
         private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+       
 
         }
     }

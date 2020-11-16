@@ -30,6 +30,8 @@ namespace Campeonato
         private int auxEquipe;
         private int identificador;
 
+       
+
         private string status = "Inserindo";
         //
         public int Gols { get => gols; set => gols = value; }
@@ -52,10 +54,11 @@ namespace Campeonato
         }
         private void cmbTime_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cmbJogador.DisplayMember = "nomeJogador";
-            cmbJogador.ValueMember = "idJogador";
-            dadosjogador.IdEquipe = int.Parse(cmbTime.SelectedValue.ToString());
-            cmbJogador.DataSource = dadosjogador.ListarDadosJogadorporEquipe().Tables[0];
+                cmbJogador.DisplayMember = "nomeJogador";
+                cmbJogador.ValueMember = "idJogador";
+                dadosjogador.IdEquipe = int.Parse(cmbTime.SelectedValue.ToString());
+                cmbJogador.DataSource = dadosjogador.ListarDadosJogadorporEquipe().Tables[0];
+            
             AuxEquipe = int.Parse(cmbTime.SelectedValue.ToString());
         }
         private void cmbJogador_SelectedIndexChanged(object sender, EventArgs e)
@@ -135,25 +138,28 @@ namespace Campeonato
             ES.ShowDialog();
             dados.IdSumula = ES.Id;
 
-            dados.ConsultarDados();
-
-            dadosequipe.IdEquipe = dadosjogador.IdEquipe;
-            dadosequipe.ConsultarDados();
-            cmbTime.Text = dadosequipe.NomeEquipe;
-
+           
             dados.ConsultarDados();
 
             dadosjogador.IdJogador = dados.IdJogador;
             dadosjogador.ConsultarDados();
+            
+
+            dadosequipe.IdEquipe = dadosjogador.IdEquipe;
+            dadosequipe.ConsultarDados();
+            cmbTime.Text = dadosequipe.NomeEquipe;
             cmbJogador.Text = dadosjogador.NomeJogador;
 
-            dados.IdSumula = ES.Id;
-            dados.ConsultarDados();
-            
+
+
+            //dados.IdSumula = ES.Id;
+            // dados.ConsultarDados();
+
             cmbCartao.Text = dados.Cartao;
             cmbGols.Text = dados.Gol.ToString();
+           
 
-            dados.ConsultarDados();
+            // dados.ConsultarDados();
             dadosjogo.IdJogo = dados.IdJogo;
             dadosjogo.ConsultarDados();
             dadosjogo.ConsultarDadosJogo();
