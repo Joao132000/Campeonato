@@ -62,6 +62,12 @@ namespace Campeonato
             sql = "Select * from Jogador where nomeJogador Like '"+nomeJogador+"%'";
             return obj.Listar(sql);
         }
+        public DataSet ListarDadosJogador()
+        {
+            string sql = "";
+            sql = "Select * from Jogador order by idEquipe";
+            return obj.Listar(sql);
+        }
         public DataSet ListarDadosJogadorporEquipe()
         {
             string sql = "";

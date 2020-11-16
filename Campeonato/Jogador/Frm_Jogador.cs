@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Printing;
 
 namespace Campeonato
 {
@@ -14,6 +15,7 @@ namespace Campeonato
     {
         private JogadorDados Jogador;
         private EquipeDados Times;
+        int i = 0;
         public Frm_Jogador()
         {
             InitializeComponent();
@@ -21,7 +23,7 @@ namespace Campeonato
             Times = new EquipeDados();
         }
 
-        
+
 
         private void cmd_Processar_Click(object sender, EventArgs e)
         {
@@ -127,6 +129,102 @@ namespace Campeonato
             }
         }
 
-       
+        private void cmdImprimir_Click(object sender, EventArgs e)
+        {
+            PrintDocument pd = new PrintDocument();
+            pd.DocumentName = "Relatorio de Jogadores";
+            pd.BeginPrint += Pd_BeginPrint;
+            pd.PrintPage += Imprimir;
+
+            PrintPreviewDialog ppd = new PrintPreviewDialog();
+            ppd.Document = pd;
+            ppd.ShowDialog();
+        }
+        private void Pd_BeginPrint(object sender, PrintEventArgs e)
+        {
+            i = 0;
+        }
+        private void Imprimir(object sender, PrintPageEventArgs ev)
+        {
+            //Configurações da Página
+            float linhaPorPagina = 0;
+            float PosicaoHorizontal = 0;
+            float ContadordeLinhas = 0;
+            float MargemEsquerda = 20;
+            float MargemDireita = 20;
+            float MargemSuperior = 20;
+            float AlturadaFonte = 0;
+            string Linha = "";
+            Font fonte = new Font("Arial", 14);
+            AlturadaFonte = fonte.GetHeight(ev.Graphics);//Retorna a altura da linha em pixels::Ev graphics trata-se da pagina
+            linhaPorPagina = Convert.ToInt32(ev.MarginBounds.Height / AlturadaFonte);
+
+            int auxiliar = 0;
+
+            ///Título:
+            Linha = "Lista de Jogadores";
+            PosicaoHorizontal = MargemSuperior + ContadordeLinhas * AlturadaFonte;
+            ev.Graphics.DrawString(Linha, fonte, Brushes.Black, MargemEsquerda, PosicaoHorizontal);
+            ContadordeLinhas += 4;
+
+            DataSet ds = Jogador.ListarDadosJogador();
+
+            if (ds.Tables[0] != null)
+            {
+                while ((i < ds.Tables[0].Rows.Count) && (ContadordeLinhas < linhaPorPagina))
+                {
+                    DataRow item = ds.Tables[0].Rows[i];
+
+                    //Subtítulo
+                    if (auxiliar != int.Parse(item["idEquipe"].ToString()))
+                    {
+                        Times.IdEquipe = int.Parse(item["idEquipe"].ToString());
+                        Times.ConsultarDados();
+
+                        Linha = "Time: " + Times.NomeEquipe;
+                        PosicaoHorizontal = MargemSuperior + ContadordeLinhas * AlturadaFonte;
+                        ev.Graphics.DrawString(Linha, fonte, Brushes.Blue, MargemEsquerda, PosicaoHorizontal);
+                        ContadordeLinhas += 2;
+
+                        Linha = "Camisa";
+                        PosicaoHorizontal = MargemSuperior + ContadordeLinhas * AlturadaFonte;
+                        ev.Graphics.DrawString(Linha, fonte, Brushes.Red, MargemEsquerda, PosicaoHorizontal);
+
+                        Linha = "Jogador";
+                        PosicaoHorizontal = MargemSuperior + ContadordeLinhas * AlturadaFonte;
+                        ev.Graphics.DrawString(Linha, fonte, Brushes.Red, MargemEsquerda + 200, PosicaoHorizontal);
+
+                        auxiliar = int.Parse(item["idEquipe"].ToString());
+
+                        ContadordeLinhas += 2;
+                    }
+
+                    //Dados
+                    Linha = item["numeroCamisa"].ToString();
+                    PosicaoHorizontal = MargemSuperior + ContadordeLinhas * AlturadaFonte;
+                    ev.Graphics.DrawString(Linha, fonte, Brushes.Black, MargemEsquerda, PosicaoHorizontal);
+
+                    Linha = item["nomeJogador"].ToString();
+                    PosicaoHorizontal = MargemSuperior + ContadordeLinhas * AlturadaFonte;
+                    ev.Graphics.DrawString(Linha, fonte, Brushes.Black, MargemEsquerda + 200, PosicaoHorizontal);
+
+                    ContadordeLinhas += 2;
+                    i++;//Contador de Registros
+                }
+            }
+            else
+            {
+                MessageBox.Show("Não há registros");
+            }
+            if (ContadordeLinhas > linhaPorPagina)
+            {
+                ev.HasMorePages = true;
+            }
+            else
+            {
+                ev.HasMorePages = false;
+            }
+        }
     }
 }
+ 

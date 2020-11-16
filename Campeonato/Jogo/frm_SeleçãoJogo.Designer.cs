@@ -41,6 +41,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.cmd_Localizar = new MetroFramework.Controls.MetroButton();
             this.cmd_Excluir = new MetroFramework.Controls.MetroButton();
+            this.cmd_relatorio = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // cmd_Ok
@@ -166,11 +167,21 @@
             this.cmd_Excluir.Visible = false;
             this.cmd_Excluir.Click += new System.EventHandler(this.cmd_Excluir_Click);
             // 
+            // cmd_relatorio
+            // 
+            this.cmd_relatorio.Location = new System.Drawing.Point(465, 287);
+            this.cmd_relatorio.Name = "cmd_relatorio";
+            this.cmd_relatorio.Size = new System.Drawing.Size(170, 30);
+            this.cmd_relatorio.TabIndex = 17;
+            this.cmd_relatorio.Text = "Relatório de Jogos Marcados";
+            this.cmd_relatorio.Click += new System.EventHandler(this.cmd_relatorio_Click);
+            // 
             // frm_SeleçãoJogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(676, 358);
+            this.Controls.Add(this.cmd_relatorio);
             this.Controls.Add(this.cmd_Excluir);
             this.Controls.Add(this.cmd_Localizar);
             this.Controls.Add(this.dateTimePicker1);
@@ -207,5 +218,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private MetroFramework.Controls.MetroButton cmd_Localizar;
         private MetroFramework.Controls.MetroButton cmd_Excluir;
+        private MetroFramework.Controls.MetroButton cmd_relatorio;
     }
 }

@@ -105,5 +105,11 @@ namespace Campeonato
             ViceCampeao = aux[5];
 
         }
+        public DataSet RelatorioJogos()
+        {
+            string sql = "";
+            sql = "Select * from RelatorioJogos order by idCampeonato";
+            return obj.Listar(sql);
+        }
     }
 }

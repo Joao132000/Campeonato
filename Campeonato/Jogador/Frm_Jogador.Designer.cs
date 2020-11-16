@@ -40,6 +40,7 @@
             this.cmd_Excluir = new MetroFramework.Controls.MetroButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Mtxt_Data = new System.Windows.Forms.MaskedTextBox();
+            this.cmdImprimir = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -140,7 +141,7 @@
             // 
             this.panel1.BackgroundImage = global::Campeonato.Properties.Resources.Jogador_de_Futebol_1;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(327, 63);
+            this.panel1.Location = new System.Drawing.Point(327, 13);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(237, 305);
             this.panel1.TabIndex = 12;
@@ -154,11 +155,21 @@
             this.Mtxt_Data.TabIndex = 14;
             this.Mtxt_Data.ValidatingType = typeof(System.DateTime);
             // 
+            // cmdImprimir
+            // 
+            this.cmdImprimir.Location = new System.Drawing.Point(327, 339);
+            this.cmdImprimir.Name = "cmdImprimir";
+            this.cmdImprimir.Size = new System.Drawing.Size(237, 31);
+            this.cmdImprimir.TabIndex = 15;
+            this.cmdImprimir.Text = "Relátorio de Jogadores";
+            this.cmdImprimir.Click += new System.EventHandler(this.cmdImprimir_Click);
+            // 
             // Frm_Jogador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(569, 393);
+            this.Controls.Add(this.cmdImprimir);
             this.Controls.Add(this.Mtxt_Data);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cmd_Excluir);
@@ -193,5 +204,6 @@
         private MetroFramework.Controls.MetroButton cmd_Excluir;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.MaskedTextBox Mtxt_Data;
+        private MetroFramework.Controls.MetroButton cmdImprimir;
     }
 }
