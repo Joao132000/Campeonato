@@ -32,6 +32,10 @@ namespace Campeonato
             dados.IdJogo = a;
             dataGridView1.DataSource = dados.ListarDadosJogadorParaEditar().Tables[0];
             dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[2].Visible = false;
+            dataGridView1.Columns[3].Visible = false;
+            dataGridView1.Columns[4].Visible = false;
+
             dataGridView1.ReadOnly = true;
             dataGridView1.MultiSelect = false;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -57,5 +61,7 @@ namespace Campeonato
        
 
         }
+
+        
     }
 }
