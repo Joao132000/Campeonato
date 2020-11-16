@@ -76,6 +76,7 @@ namespace Campeonato
             cmbCartao.Enabled = true;
         }
 
+        int x;
         private void cmdSalvar_Click(object sender, EventArgs e)
         {
             cmdNovo.Enabled = true;
@@ -101,24 +102,17 @@ namespace Campeonato
                 {
                     dados.Cartao = cmbCartao.SelectedItem.ToString();
                     
-                    Gols=dados.Gol;//
+                    Gols=dados.Gol;
+                    x = dados.Gol;
                     
                     dados.Gol = int.Parse(cmbGols.SelectedIndex.ToString());
-                    //
+                    
                     if (Gols != dados.Gol)
                     {
-                        if (Gols < dados.Gol)
-                        {
-                            Gols += dados.Gol;
-                            identificador = 1;
-                        }
-                        else
-                        {
-                            Gols -= dados.Gol;
-                            identificador = 0;
-                        }
+                        Gols = dados.Gol-x;
+                        identificador = 2;
                     }
-                    //
+                    
                     dados.AlterarDados();
                     MessageBox.Show("Registro alterado com sucesso!!!!");
                 }
@@ -151,15 +145,10 @@ namespace Campeonato
             cmbJogador.Text = dadosjogador.NomeJogador;
 
 
-
-            //dados.IdSumula = ES.Id;
-            // dados.ConsultarDados();
-
             cmbCartao.Text = dados.Cartao;
             cmbGols.Text = dados.Gol.ToString();
+          
            
-
-            // dados.ConsultarDados();
             dadosjogo.IdJogo = dados.IdJogo;
             dadosjogo.ConsultarDados();
             dadosjogo.ConsultarDadosJogo();

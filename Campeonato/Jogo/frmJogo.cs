@@ -200,15 +200,15 @@ namespace Campeonato
             {
                 if(S.Identificador==1)
                     txt_gols1.Text = (int.Parse(txt_gols1.Text) + gol).ToString();
-                else
-                    txt_gols1.Text = (int.Parse(txt_gols1.Text) - gol).ToString();
+                else if (S.Identificador == 2)
+                    txt_gols1.Text = (int.Parse(txt_gols1.Text) + gol).ToString();
             }
             else
             {
                 if (S.Identificador == 1)
                     txt_gols2.Text = (int.Parse(txt_gols2.Text) + gol).ToString();
-                else
-                    txt_gols2.Text = (int.Parse(txt_gols2.Text) - gol).ToString();
+                else if (S.Identificador == 2)
+                    txt_gols2.Text = (int.Parse(txt_gols2.Text) + gol).ToString();
             }
         }
     }
