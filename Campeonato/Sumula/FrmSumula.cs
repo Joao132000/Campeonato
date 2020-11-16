@@ -127,7 +127,7 @@ namespace Campeonato
             cmdSalvar.Enabled = true;
             cmdNovo.Enabled = false;
             cmdExcluir.Enabled = true;
-            cmbTime.Enabled = true;
+            cmbTime.Enabled = false;
             cmbGols.Enabled = true;
             cmbCartao.Enabled = true;
 

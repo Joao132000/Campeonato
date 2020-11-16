@@ -124,7 +124,7 @@ namespace Campeonato
             if (cmd_Iniciar.Text == "Iniciar 2º Tempo")
             {
                 Tempo[0] = R;
-                Tempo[1] = 2;
+                Tempo[1] = 59;
             }
             if (cmd_Iniciar.Text == "Pausar")
             {
@@ -137,28 +137,38 @@ namespace Campeonato
                 Jogo.ConsultarDados();
                 Org.IdCampeonato = Jogo.IdCampeonato;
                 Org.ConsultarDados();
+
+                
                 if ((int.Parse(txt_gols1.Text)) > (int.Parse(txt_gols2.Text)))
                 {
+                    
                     PontosDentro = 3;
                     Org.IdEquipe = Equipe1.IdEquipe;
+                    Org.ConsultarDadosCampeonatoEquipe();
                     Org.Pontos += PontosDentro;
                     Org.AlterarDados();
                 }
-                if((int.Parse(txt_gols2.Text)) > (int.Parse(txt_gols1.Text)))
+                else if((int.Parse(txt_gols2.Text)) > (int.Parse(txt_gols1.Text)))
                 {
+                    
                     PontosFora = 3;
                     Org.IdEquipe = Equipe2.IdEquipe;
+                    Org.ConsultarDadosCampeonatoEquipe();
                     Org.Pontos += PontosFora;
                     Org.AlterarDados();
                 }
-                if ((int.Parse(txt_gols2.Text)) == (int.Parse(txt_gols1.Text)))
+                else 
                 {
-                    PontosDentro = 1;
+                    
                     Org.IdEquipe = Equipe1.IdEquipe;
+                    Org.ConsultarDadosCampeonatoEquipe();
+                    PontosDentro = 1;
                     Org.Pontos += PontosDentro;
                     Org.AlterarDados();
-                    PontosFora = 1;
+                    
                     Org.IdEquipe = Equipe2.IdEquipe;
+                    Org.ConsultarDadosCampeonatoEquipe();
+                    PontosFora = 1;
                     Org.Pontos += PontosFora;
                     Org.AlterarDados();
                 }

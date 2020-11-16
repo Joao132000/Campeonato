@@ -38,6 +38,17 @@ namespace Campeonato
             IdEquipe = int.Parse(aux[1]);
             Pontos = int.Parse(aux[2].ToString());
         }
+
+        public void ConsultarDadosCampeonatoEquipe()
+        {
+            string sql = "";
+            sql = "Select * from Organizacao_Campeonato where idCampeonato = " + IdCampeonato.ToString()+" and idEquipe = " + IdEquipe.ToString();
+            obj.Consultar(sql);
+            string[] aux = obj.Campos.Split(';');
+            IdCampeonato = int.Parse(aux[0]);
+            IdEquipe = int.Parse(aux[1]);
+            Pontos = int.Parse(aux[2].ToString());
+        }
         public void AlterarDados()
         {
             string sql = "";
