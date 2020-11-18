@@ -52,7 +52,8 @@ namespace Campeonato
         public void AlterarDados()
         {
             string sql = "";
-            sql += "Update Organizacao_Campeonato set pontos = '" + Pontos + "' where idEquipe= " + IdEquipe.ToString();
+            sql += "Update Organizacao_Campeonato set pontos = '" + Pontos + 
+                "'  where idCampeonato = " + IdCampeonato.ToString() + " and idEquipe = " + IdEquipe.ToString();
             obj.Executar(sql);
         }
 

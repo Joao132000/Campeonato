@@ -247,7 +247,7 @@ namespace Campeonato
                         ev.Graphics.DrawString(Linha, fonte, Brushes.DarkGray, MargemEsquerda, PosicaoHorizontal);
                         Linha = "Data:";
                         PosicaoHorizontal = MargemSuperior + ContadordeLinhas * AlturadaFonte;
-                        ev.Graphics.DrawString(Linha, fonte, Brushes.DarkGray, MargemEsquerda + 300, PosicaoHorizontal);
+                        ev.Graphics.DrawString(Linha, fonte, Brushes.DarkGray, MargemEsquerda + 320, PosicaoHorizontal);
                         Linha = "Estadio";
                         PosicaoHorizontal = MargemSuperior + ContadordeLinhas * AlturadaFonte;
                         ev.Graphics.DrawString(Linha, fonte, Brushes.DarkGray, MargemEsquerda + 450, PosicaoHorizontal);
@@ -265,7 +265,7 @@ namespace Campeonato
                     D = DateTime.Parse(item["Data"].ToString());
                     Linha = D.ToString("d");
                     PosicaoHorizontal = MargemSuperior + ContadordeLinhas * AlturadaFonte;
-                    ev.Graphics.DrawString(Linha, fonte, Brushes.Black, MargemEsquerda + 300, PosicaoHorizontal);
+                    ev.Graphics.DrawString(Linha, fonte, Brushes.Black, MargemEsquerda + 320, PosicaoHorizontal);
 
                     Linha = item["Estadio"].ToString();
                     PosicaoHorizontal = MargemSuperior + ContadordeLinhas * AlturadaFonte;

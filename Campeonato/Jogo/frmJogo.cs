@@ -79,9 +79,11 @@ namespace Campeonato
                 if (aux == 2)
                 {
                     MessageBox.Show("Partida Encerrada");
+                    cmd_Iniciar.Enabled = true;
                     cmd_Iniciar.Text = "Sair";
                 }else if (aux == 1)
                 {
+                    cmd_Iniciar.Enabled = true;
                     cmd_Iniciar.Text = "Iniciar 2º Tempo";
                 }
             }
@@ -126,7 +128,7 @@ namespace Campeonato
                 Tempo[0] = R;
                 Tempo[1] = 59;
             }
-            if (cmd_Iniciar.Text == "Pausar")
+            if (cmd_Iniciar.Text == "Jogo em Andamento")
             {
                 timer1.Stop();
                 cmd_Iniciar.Text = "Continuar";
@@ -135,6 +137,10 @@ namespace Campeonato
             {
                 Jogo.IdJogo = Id;
                 Jogo.ConsultarDados();
+                Jogo.ResultadoEquipe1 = int.Parse(txt_gols1.Text);
+                Jogo.ResultadoEquipe2 = int.Parse(txt_gols2.Text);
+                Jogo.AlterarDados();
+
                 Org.IdCampeonato = Jogo.IdCampeonato;
                 Org.ConsultarDados();
 
@@ -179,13 +185,17 @@ namespace Campeonato
                 aux++;
                 lbl_tempos.Text = aux+"º Tempo";
                 timer1.Start();
-                cmd_Iniciar.Text = "Pausar";
+                cmd_Iniciar.Text = "Jogo em Andamento";
+                cmd_Iniciar.Enabled = false;
+
             }
             else
             {
                 aux++;
                 lbl_tempos.Text = aux + "º Tempo";
-                cmd_Iniciar.Text = "Pausar";
+                cmd_Iniciar.Text = "Jogo em Andamento";
+                cmd_Iniciar.Enabled = false;
+
                 timer1.Start();
             }
         }

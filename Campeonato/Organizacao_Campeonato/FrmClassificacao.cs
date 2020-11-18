@@ -209,11 +209,115 @@ namespace Campeonato
 
 
         }
-
         private void cmdAddResult_Click(object sender, EventArgs e)
         {
             FrmCampeao_ViceCampeao cv = new FrmCampeao_ViceCampeao();
             cv.ShowDialog();
+        }
+
+        ///-------------------------------------------------------------------------------------------------------------------
+
+
+        private void cmd_relatorio_Click(object sender, EventArgs e)
+        {
+            PrintDocument pd = new PrintDocument();
+            pd.DocumentName = "Relatório de jogos por Campeonato";
+            pd.BeginPrint += Pd_BeginPrint1;
+            pd.PrintPage += Imprimir1;
+
+            PrintPreviewDialog PPD = new PrintPreviewDialog();
+            PPD.Document = pd;
+            PPD.ShowDialog();
+        }
+        private void Pd_BeginPrint1(object sender, PrintEventArgs e)
+        {
+            i = 0;
+        }
+
+        private void Imprimir1(object sender, PrintPageEventArgs ev)
+        {
+            //Configurações da Página
+            float linhaPorPagina = 0;
+            float PosicaoHorizontal = 0;
+            float ContadordeLinhas = 0;
+            float MargemEsquerda = 20;
+            float MargemDireita = 20;
+            float MargemSuperior = 20;
+            float AlturadaFonte = 0;
+            string Linha = "";
+            Font fonte = new Font("Arial", 14);
+            AlturadaFonte = fonte.GetHeight(ev.Graphics);//Retorna a altura da linha em pixels::Ev graphics trata-se da pagina
+            linhaPorPagina = Convert.ToInt32(ev.MarginBounds.Height / AlturadaFonte);
+
+            int auxiliar = 0;
+            Linha = "Resultado dos Jogos por Campeonato:";
+            PosicaoHorizontal = MargemSuperior + ContadordeLinhas * AlturadaFonte;
+            ev.Graphics.DrawString(Linha, fonte, Brushes.Red, MargemEsquerda, PosicaoHorizontal);
+            ContadordeLinhas += 4;
+
+            //Dados
+
+            DataSet ds = dadosCampenato.RelatorioJogos();
+            if (ds.Tables[0] != null)
+            {
+                while ((i < ds.Tables[0].Rows.Count) && (ContadordeLinhas < linhaPorPagina))
+                {
+                    DataRow item = ds.Tables[0].Rows[i];
+                    if (auxiliar != int.Parse(item["idCampeonato"].ToString()))
+                    {
+                        ContadordeLinhas += 2;
+                    }
+                    if (auxiliar != int.Parse(item["idCampeonato"].ToString()))
+                    {
+                        dadosCampenato.IdCampeonato = int.Parse(item["idCampeonato"].ToString());
+                        dadosCampenato.ConsultarDados();
+                        Linha = "Campeonato: " + dadosCampenato.NomeCampeonato;
+                        PosicaoHorizontal = MargemSuperior + ContadordeLinhas * AlturadaFonte;
+                        ev.Graphics.DrawString(Linha, fonte, Brushes.Blue, MargemEsquerda, PosicaoHorizontal);
+                        ContadordeLinhas += 3;
+
+                        Linha = "Jogo";
+                        PosicaoHorizontal = MargemSuperior + ContadordeLinhas * AlturadaFonte;
+                        ev.Graphics.DrawString(Linha, fonte, Brushes.DarkGray, MargemEsquerda, PosicaoHorizontal);
+                        Linha = "Resultado:";
+                        PosicaoHorizontal = MargemSuperior + ContadordeLinhas * AlturadaFonte;
+                        ev.Graphics.DrawString(Linha, fonte, Brushes.DarkGray, MargemEsquerda + 320, PosicaoHorizontal);
+                       
+
+                        ContadordeLinhas += 1;
+                        auxiliar = int.Parse(item["idCampeonato"].ToString());
+                        ContadordeLinhas++;
+                    }
+
+                    Linha = item["Jogo"].ToString();
+                    PosicaoHorizontal = MargemSuperior + ContadordeLinhas * AlturadaFonte;
+                    ev.Graphics.DrawString(Linha, fonte, Brushes.Black, MargemEsquerda, PosicaoHorizontal);
+
+                    
+                    Linha =item["resultadoEquipe1"].ToString();
+                    PosicaoHorizontal = MargemSuperior + ContadordeLinhas * AlturadaFonte;
+                    ev.Graphics.DrawString(Linha, fonte, Brushes.Black, MargemEsquerda + 320, PosicaoHorizontal);
+
+                    Linha = "  x " + item["resultadoEquipe2"].ToString();
+                    PosicaoHorizontal = MargemSuperior + ContadordeLinhas * AlturadaFonte;
+                    ev.Graphics.DrawString(Linha, fonte, Brushes.Black, MargemEsquerda + 326, PosicaoHorizontal);
+                    ContadordeLinhas += 2;
+
+                    i++;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Não há registros");
+            }
+            if (ContadordeLinhas > linhaPorPagina)
+            {
+                ev.HasMorePages = true;
+            }
+            else
+            {
+                ev.HasMorePages = false;
+            }
         }
     }
 }

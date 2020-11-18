@@ -74,6 +74,7 @@
             this.cmb_Campeonato.Name = "cmb_Campeonato";
             this.cmb_Campeonato.Size = new System.Drawing.Size(133, 29);
             this.cmb_Campeonato.TabIndex = 8;
+            this.cmb_Campeonato.SelectedIndexChanged += new System.EventHandler(this.cmb_Campeonato_SelectedIndexChanged);
             // 
             // frm_EditarJogo
             // 

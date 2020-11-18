@@ -41,7 +41,7 @@ namespace Campeonato
         }
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            Jogo.Pesquisa = cmb_Campeonato.SelectedText.ToString();
+            Jogo.Pesquisa = cmb_Campeonato.Text;
             dataGridView1.DataSource = Jogo.PesquisarPorCampeonato().Tables[0];
         }
 
@@ -53,6 +53,11 @@ namespace Campeonato
         private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             Id = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+        }
+
+        private void cmb_Campeonato_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

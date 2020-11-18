@@ -39,6 +39,7 @@
             this.lblCamp = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.lblVice = new MetroFramework.Controls.MetroLabel();
+            this.cmd_relatorio = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -141,11 +142,21 @@
             this.lblVice.Size = new System.Drawing.Size(0, 0);
             this.lblVice.TabIndex = 19;
             // 
+            // cmd_relatorio
+            // 
+            this.cmd_relatorio.Location = new System.Drawing.Point(468, 63);
+            this.cmd_relatorio.Name = "cmd_relatorio";
+            this.cmd_relatorio.Size = new System.Drawing.Size(170, 30);
+            this.cmd_relatorio.TabIndex = 20;
+            this.cmd_relatorio.Text = "Relatório de Jogos Marcados";
+            this.cmd_relatorio.Click += new System.EventHandler(this.cmd_relatorio_Click);
+            // 
             // FrmClassificacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(711, 507);
+            this.Controls.Add(this.cmd_relatorio);
             this.Controls.Add(this.lblVice);
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.lblCamp);
@@ -180,5 +191,6 @@
         private MetroFramework.Controls.MetroLabel lblCamp;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel lblVice;
+        private MetroFramework.Controls.MetroButton cmd_relatorio;
     }
 }
