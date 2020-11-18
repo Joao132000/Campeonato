@@ -257,7 +257,7 @@ namespace Campeonato
 
             //Dados
 
-            DataSet ds = dadosCampenato.RelatorioJogos();
+            DataSet ds = dadosCampenato.RelatorioResultadoJogos();
             if (ds.Tables[0] != null)
             {
                 while ((i < ds.Tables[0].Rows.Count) && (ContadordeLinhas < linhaPorPagina))
@@ -281,7 +281,7 @@ namespace Campeonato
                         ev.Graphics.DrawString(Linha, fonte, Brushes.DarkGray, MargemEsquerda, PosicaoHorizontal);
                         Linha = "Resultado:";
                         PosicaoHorizontal = MargemSuperior + ContadordeLinhas * AlturadaFonte;
-                        ev.Graphics.DrawString(Linha, fonte, Brushes.DarkGray, MargemEsquerda + 320, PosicaoHorizontal);
+                        ev.Graphics.DrawString(Linha, fonte, Brushes.DarkGray, MargemEsquerda + 360, PosicaoHorizontal);
                        
 
                         ContadordeLinhas += 1;
@@ -289,19 +289,33 @@ namespace Campeonato
                         ContadordeLinhas++;
                     }
 
-                    Linha = item["Jogo"].ToString();
-                    PosicaoHorizontal = MargemSuperior + ContadordeLinhas * AlturadaFonte;
-                    ev.Graphics.DrawString(Linha, fonte, Brushes.Black, MargemEsquerda, PosicaoHorizontal);
+                    if (int.Parse(item["resultadoEquipe2"].ToString())!=-1) {
+                        Linha = item["Jogo"].ToString();
+                        PosicaoHorizontal = MargemSuperior + ContadordeLinhas * AlturadaFonte;
+                        ev.Graphics.DrawString(Linha, fonte, Brushes.Black, MargemEsquerda, PosicaoHorizontal);
 
+
+                        Linha = item["resultadoEquipe1"].ToString();
+                        PosicaoHorizontal = MargemSuperior + ContadordeLinhas * AlturadaFonte;
+                        ev.Graphics.DrawString(Linha, fonte, Brushes.Black, MargemEsquerda + 360, PosicaoHorizontal);
+
+                        Linha = "  x " + item["resultadoEquipe2"].ToString();
+                        PosicaoHorizontal = MargemSuperior + ContadordeLinhas * AlturadaFonte;
+                        ev.Graphics.DrawString(Linha, fonte, Brushes.Black, MargemEsquerda + 366, PosicaoHorizontal);
+                        ContadordeLinhas += 2;
+                    }
+                    else
+                    {
+                        Linha = item["Jogo"].ToString();
+                        PosicaoHorizontal = MargemSuperior + ContadordeLinhas * AlturadaFonte;
+                        ev.Graphics.DrawString(Linha, fonte, Brushes.Black, MargemEsquerda, PosicaoHorizontal);
+                       
+                        Linha = " Jogo não ocorreu ainda";
+                        PosicaoHorizontal = MargemSuperior + ContadordeLinhas * AlturadaFonte;
+                        ev.Graphics.DrawString(Linha, fonte, Brushes.Black, MargemEsquerda + 360, PosicaoHorizontal);
+                        ContadordeLinhas += 2;
+                    }
                     
-                    Linha =item["resultadoEquipe1"].ToString();
-                    PosicaoHorizontal = MargemSuperior + ContadordeLinhas * AlturadaFonte;
-                    ev.Graphics.DrawString(Linha, fonte, Brushes.Black, MargemEsquerda + 320, PosicaoHorizontal);
-
-                    Linha = "  x " + item["resultadoEquipe2"].ToString();
-                    PosicaoHorizontal = MargemSuperior + ContadordeLinhas * AlturadaFonte;
-                    ev.Graphics.DrawString(Linha, fonte, Brushes.Black, MargemEsquerda + 326, PosicaoHorizontal);
-                    ContadordeLinhas += 2;
 
                     i++;
                 }

@@ -50,8 +50,8 @@ namespace Campeonato
                     Jogo.IdEstadio = int.Parse(cmb_Estadio.SelectedValue.ToString());
                     Jogo.IdCampeonato = int.Parse(cmb_Campeonato.SelectedValue.ToString());
                     Jogo.DataJogo = dateTimePicker1.Value.ToString();
-                    Jogo.ResultadoEquipe1 = 0;
-                    Jogo.ResultadoEquipe2 = 0;
+                    Jogo.ResultadoEquipe1 = -1;
+                    Jogo.ResultadoEquipe2 = -1;
                     Jogo.InlcuirDados();
                     MessageBox.Show("Adicionado com sucesso!");
                 }

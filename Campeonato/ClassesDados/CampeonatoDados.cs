@@ -108,6 +108,13 @@ namespace Campeonato
         public DataSet RelatorioJogos()
         {
             string sql = "";
+            sql = "Select * from RelatorioJogos order by idCampeonato";
+            return obj.Listar(sql);
+        }
+
+        public DataSet RelatorioResultadoJogos()
+        {
+            string sql = "";
             sql = "Select * from RelatorioResultadoJogos order by idCampeonato";
             return obj.Listar(sql);
         }

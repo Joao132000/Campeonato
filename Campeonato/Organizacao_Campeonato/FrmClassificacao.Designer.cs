@@ -144,11 +144,11 @@
             // 
             // cmd_relatorio
             // 
-            this.cmd_relatorio.Location = new System.Drawing.Point(468, 63);
+            this.cmd_relatorio.Location = new System.Drawing.Point(474, 79);
             this.cmd_relatorio.Name = "cmd_relatorio";
             this.cmd_relatorio.Size = new System.Drawing.Size(170, 30);
             this.cmd_relatorio.TabIndex = 20;
-            this.cmd_relatorio.Text = "Relatório de Jogos Marcados";
+            this.cmd_relatorio.Text = "Resultados";
             this.cmd_relatorio.Click += new System.EventHandler(this.cmd_relatorio_Click);
             // 
             // FrmClassificacao

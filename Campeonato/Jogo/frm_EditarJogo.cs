@@ -32,7 +32,8 @@ namespace Campeonato
             cmb_Campeonato.DataSource = Camp.ListarDados().Tables[0];
             dataGridView1.DataSource = Jogo.ListarDadosEdicao().Tables[0];
             dataGridView1.Columns[0].Visible = false;
-            //dataGridView1.Columns[1].Visible = false;
+            dataGridView1.Columns[2].Visible = false;
+            dataGridView1.Columns[4].Visible = false;
             dataGridView1.ReadOnly = true;
             dataGridView1.MultiSelect = false;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
