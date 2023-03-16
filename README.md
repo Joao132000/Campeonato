@@ -20,12 +20,12 @@ Jogo = Game
 <img width="565" alt="image" src="https://user-images.githubusercontent.com/71353908/225515914-188e3597-646c-4be1-ba32-84dd3ea3d0f9.png">
 
 ### Home Page
-Left side buttons are for data registration such as to add new players, edit a team, or delete a stadium from the database. Right side buttons are for the tournament creation and organization.  
+Buttons on the left are mainly for data registration such as to add new players, edit a team, or delete a stadium from the database. Buttons on the right side are for the tournament creation and organization.  
  
 <img width="547" alt="image" src="https://user-images.githubusercontent.com/71353908/225516068-16be3cb7-71ff-4211-8423-ae065d064d33.png">
 
 ### Team 
-Here a new team can be added to the database as well as deleted and updated. Required fields are name of the Team, City and Logo. Also, it is possible to check all team already in the database and filter by the team’s name.
+Here a new team can be added to the database as well as deleted and updated. Required fields are name of the team, city and logo. Also, it is possible to check all teams already in the database and filter by the team’s name.
 
 <img width="553" alt="image" src="https://user-images.githubusercontent.com/71353908/225516134-814325c1-ab32-4674-98df-15c7e6a9a1a0.png">
 
@@ -39,7 +39,7 @@ The “Relatorio de Jogadores” button lists all players on their respective te
 <img width="565" alt="image" src="https://user-images.githubusercontent.com/71353908/225516236-25d7ae25-0501-4308-9f98-09885787f50d.png">
 
 ### Stadium and Tournament
-It works just like the players and teams’ forms. It is possible to create a new, update an existing, and delete a stadium or a tournament.
+It works just like the players and teams’ forms. It is possible to create a new, update, and delete a stadium or a tournament.
  
 <img width="554" alt="image" src="https://user-images.githubusercontent.com/71353908/225516264-8f707784-a8cb-47ab-9462-aecbf2ab75af.png">
 
@@ -58,7 +58,7 @@ The “Relatorio de Jogos Marcados” button reports all games divided by tourna
 <img width="568" alt="image" src="https://user-images.githubusercontent.com/71353908/225516383-08c1a86d-3d7b-4729-8166-d7b105ffbdd5.png">
 
 ### Game
-Choose a tournament and all games registered for that tournament (games that have not happened yet) are going to be available. Set the time and press “Iniciar Jogo” to start the game.
+Choose a tournament and all games registered for that tournament (games that have not yet happened) are going to be available. Set the time and press “Iniciar Jogo” to start the game.
  
 <img width="546" alt="image" src="https://user-images.githubusercontent.com/71353908/225516408-fb7e2802-609e-48f5-997c-612c7228aa05.png">
  
